@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 193, 7, 0.3) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(255, 193, 7, 0.3);
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: rgba(255, 193, 7, 0.3);
+    color: #ffd54f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-dark-800/50 backdrop-blur-xl border border-white/5 rounded-2xl;
+  }
+
+  /* Gold gradient text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #ffa000, #ffc107, #ffd54f, #ffe082);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Neon gradient text */
+  .text-neon-gradient {
+    background: linear-gradient(135deg, #00f5ff, #ff00e5, #39ff14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Badge styles */
+  .badge-durable {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider;
+    @apply bg-gradient-to-r from-saffron-700/20 to-saffron-500/20 text-saffron-300 border border-saffron-500/30;
+  }
+
+  .badge-neon {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider;
+    background: linear-gradient(135deg, rgba(0,245,255,0.15), rgba(255,0,229,0.15));
+    color: #00f5ff;
+    border: 1px solid rgba(0,245,255,0.3);
+  }
+
+  /* Premium button */
+  .btn-gold {
+    @apply relative px-8 py-3.5 font-display font-semibold text-sm uppercase tracking-widest rounded-xl overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #ffa000, #ffc107);
+    color: #0a0a0f;
+    box-shadow: 0 4px 25px rgba(255, 193, 7, 0.25);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(255, 193, 7, 0.4);
+  }
+
+  .btn-neon {
+    @apply relative px-8 py-3.5 font-display font-semibold text-sm uppercase tracking-widest rounded-xl overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #00f5ff, #b026ff);
+    color: #0a0a0f;
+    box-shadow: 0 4px 25px rgba(0, 245, 255, 0.25);
+  }
+
+  .btn-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(0, 245, 255, 0.4);
+  }
+
+  .btn-outline-gold {
+    @apply px-8 py-3.5 font-display font-semibold text-sm uppercase tracking-widest rounded-xl transition-all duration-300;
+    @apply border-2 border-saffron-500/50 text-saffron-400 bg-transparent;
+  }
+
+  .btn-outline-gold:hover {
+    @apply bg-saffron-500/10 border-saffron-400;
+    transform: translateY(-2px);
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  /* Product card hover */
+  .product-card {
+    @apply glass-card overflow-hidden transition-all duration-500 cursor-pointer;
+  }
+
+  .product-card:hover {
+    @apply border-white/10;
+    transform: translateY(-8px);
+  }
+
+  /* Glow ring effect */
+  .glow-ring-gold {
+    box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.1),
+                0 0 30px rgba(255, 193, 7, 0.05),
+                inset 0 0 30px rgba(255, 193, 7, 0.02);
+  }
+
+  .glow-ring-neon {
+    box-shadow: 0 0 0 1px rgba(0, 245, 255, 0.1),
+                0 0 30px rgba(0, 245, 255, 0.05),
+                inset 0 0 30px rgba(0, 245, 255, 0.02);
+  }
+
+  /* Upload zone */
+  .upload-zone {
+    @apply border-2 border-dashed rounded-2xl p-8 text-center transition-all duration-300 cursor-pointer;
+    border-color: rgba(0, 245, 255, 0.3);
+    background: rgba(0, 245, 255, 0.03);
+  }
+
+  .upload-zone:hover, .upload-zone.drag-over {
+    border-color: rgba(0, 245, 255, 0.6);
+    background: rgba(0, 245, 255, 0.08);
+    box-shadow: 0 0 40px rgba(0, 245, 255, 0.1);
+  }
+
+  /* Input field */
+  .input-spiritual {
+    @apply w-full px-5 py-3.5 rounded-xl bg-dark-700/50 border border-saffron-500/20 text-white font-body;
+    @apply placeholder:text-white/30 focus:outline-none focus:border-saffron-400/50 focus:ring-2 focus:ring-saffron-500/20;
+    @apply transition-all duration-300;
+  }
+
+  .input-default {
+    @apply w-full px-5 py-3.5 rounded-xl bg-dark-700/50 border border-white/10 text-white font-body;
+    @apply placeholder:text-white/30 focus:outline-none focus:border-neon-cyan/50 focus:ring-2 focus:ring-neon-cyan/20;
+    @apply transition-all duration-300;
+  }
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Grain texture overlay */
+.grain-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
