@@ -13,6 +13,7 @@ import os
 import json
 from datetime import datetime
 from dotenv import load_dotenv
+from supabase import create_client, Client
 
 load_dotenv()
 
@@ -28,6 +29,13 @@ RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID", "rzp_test_XXXXXXXXXX")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET", "your_razorpay_secret")
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "uploads")
 ORDERS_FILE = os.path.join(os.path.dirname(__file__), "orders.json")
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+if SUPABASE_URL and SUPABASE_KEY:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+else:
+    supabase = None
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -165,9 +173,18 @@ async def create_order(
     }
 
     # Persist order
-    orders = load_orders()
-    orders.append(order)
-    save_orders(orders)
+    if supabase:
+        try:
+            supabase.table("orders").insert(order).execute()
+        except Exception as e:
+            print(f"Supabase insert error: {e}")
+            orders = load_orders()
+            orders.append(order)
+            save_orders(orders)
+    else:
+        orders = load_orders()
+        orders.append(order)
+        save_orders(orders)
 
     # Create Razorpay order
     amount_paise = int(total_price * 100)
@@ -190,12 +207,26 @@ async def create_order(
 @app.get("/orders")
 async def list_orders():
     """List all orders (admin use)."""
+    if supabase:
+        try:
+            res = supabase.table("orders").select("*").execute()
+            return {"orders": res.data}
+        except Exception as e:
+            print(f"Supabase select error: {e}")
     return {"orders": load_orders()}
 
 
 @app.get("/orders/{order_id}")
 async def get_order(order_id: str):
     """Get a specific order by ID."""
+    if supabase:
+        try:
+            res = supabase.table("orders").select("*").eq("order_id", order_id).execute()
+            if res.data:
+                return {"order": res.data[0]}
+        except Exception as e:
+            print(f"Supabase select error: {e}")
+            
     orders = load_orders()
     for o in orders:
         if o["order_id"] == order_id:

@@ -14,6 +14,7 @@ import uuid
 import os
 import json
 from datetime import datetime
+from supabase import create_client, Client
 
 # ── Optional: Razorpay SDK ──
 try:
@@ -26,7 +27,14 @@ except ImportError:
 RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID", "rzp_test_XXXXXXXXXX")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET", "your_razorpay_secret")
 
-# In-memory store for serverless (use a database in production)
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+if SUPABASE_URL and SUPABASE_KEY:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+else:
+    supabase = None
+
+# In-memory fallback
 orders_store = []
 
 # ── App ──
@@ -147,7 +155,14 @@ async def create_order(
         "created_at": datetime.utcnow().isoformat(),
     }
 
-    orders_store.append(order)
+    if supabase:
+        try:
+            supabase.table("orders").insert(order).execute()
+        except Exception as e:
+            print(f"Supabase insert error: {e}")
+            orders_store.append(order)
+    else:
+        orders_store.append(order)
 
     # Create Razorpay order
     amount_paise = int(total_price * 100)
@@ -170,12 +185,26 @@ async def create_order(
 @app.get("/api/orders")
 async def list_orders():
     """List all orders."""
+    if supabase:
+        try:
+            res = supabase.table("orders").select("*").execute()
+            return {"orders": res.data}
+        except Exception as e:
+            print(f"Supabase select error: {e}")
     return {"orders": orders_store}
 
 
 @app.get("/api/orders/{order_id}")
 async def get_order(order_id: str):
     """Get a specific order by ID."""
+    if supabase:
+        try:
+            res = supabase.table("orders").select("*").eq("order_id", order_id).execute()
+            if res.data:
+                return {"order": res.data[0]}
+        except Exception as e:
+            print(f"Supabase select error: {e}")
+
     for o in orders_store:
         if o["order_id"] == order_id:
             return {"order": o}

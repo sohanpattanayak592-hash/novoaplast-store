@@ -3,3 +3,4 @@ mangum>=0.17.0
 python-multipart>=0.0.9
 pydantic>=2.7.0
 razorpay>=1.4.1
+supabase>=2.3.4
