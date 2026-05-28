@@ -71,6 +71,91 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== ANIMATED SHOWCASE & OFFER ===== */}
+      <section className="py-24 px-4 bg-dark-950 overflow-hidden relative" id="promo-showcase">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+           <motion.div 
+             animate={{ rotate: 360 }}
+             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+             className="absolute top-[-50%] left-[-20%] w-[1000px] h-[1000px] bg-gradient-to-r from-saffron-500/20 to-neon-cyan/20 rounded-full blur-[120px]"
+           />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Animated Text & Offer */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-bold tracking-widest uppercase mb-6 animate-pulse">
+                <Sparkles className="w-4 h-4" /> Limited Time Offer
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
+                We Build <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-saffron-400 to-neon-purple">
+                  Indestructible
+                </span><br/>
+                Memories.
+              </h2>
+              <p className="text-white/50 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
+                Here is our legendary collection. We print your most cherished moments, sacred texts, and boldest designs on non-tearable, 100% waterproof substrates. 
+              </p>
+              
+              <div className="glass-card glow-ring-gold p-6 border-saffron-500/30 bg-saffron-500/5 hover:bg-saffron-500/10 transition-colors">
+                <h3 className="text-2xl font-display font-bold text-saffron-400 mb-2">Grab 20% OFF Today!</h3>
+                <p className="text-white/60 mb-6 text-sm">Use code <span className="font-mono bg-dark-900 px-2 py-1 rounded text-white font-bold border border-white/10 shadow-inner">NOVO20</span> at checkout. Valid across all collections.</p>
+                <a href="#products-section" className="btn-gold w-full flex justify-center items-center gap-2 group">
+                  Claim Your Offer Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right: Floating Animation Showcase */}
+            <div className="relative h-[500px] lg:h-[600px] w-full hidden md:block">
+              {/* Center Main Display */}
+              <motion.div 
+                animate={{ y: [0, -20, 0] }} 
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 lg:w-72 h-80 lg:h-96 rounded-2xl overflow-hidden glass-card glow-ring-gold z-20 border-2 border-saffron-500/30 shadow-[0_0_40px_rgba(245,158,11,0.2)]"
+              >
+                <img src="/spiritual-hero.png" alt="Showcase Spiritual" className="w-full h-full object-cover opacity-90" />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
+                  <span className="badge-durable">Spiritual Canvas</span>
+                </div>
+              </motion.div>
+
+              {/* Top Right Float */}
+              <motion.div 
+                animate={{ y: [0, 20, 0], rotate: [5, 10, 5] }} 
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute top-4 lg:top-10 right-0 lg:right-4 w-48 lg:w-56 h-64 lg:h-72 rounded-2xl overflow-hidden glass-card glow-ring-neon z-10 opacity-80"
+              >
+                <img src="/stickers-hero.png" alt="Showcase Stickers" className="w-full h-full object-cover" />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
+                  <span className="badge-neon">Custom Stickers</span>
+                </div>
+              </motion.div>
+
+              {/* Bottom Left Float */}
+              <motion.div 
+                animate={{ y: [0, -15, 0], rotate: [-5, -10, -5] }} 
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                className="absolute bottom-4 lg:bottom-10 left-0 lg:left-4 w-56 lg:w-64 h-56 lg:h-64 rounded-2xl overflow-hidden glass-card glow-ring-gold z-30 opacity-90"
+              >
+                <img src="/poster-hero.png" alt="Showcase Posters" className="w-full h-full object-cover" />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
+                  <span className="badge-durable">Premium Posters</span>
+                </div>
+              </motion.div>
+
+              {/* Decorative particles */}
+              <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-neon-cyan rounded-full shadow-[0_0_20px_#00f0ff] animate-ping" style={{ animationDuration: '3s' }} />
+              <div className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-saffron-400 rounded-full shadow-[0_0_20px_#f59e0b] animate-ping" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+              <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-neon-purple rounded-full shadow-[0_0_15px_#d946ef] animate-ping" style={{ animationDelay: '2s', animationDuration: '2.5s' }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== PRODUCT GRID ===== */}
       <section className="py-24 px-4" id="products-section">
         <div className="max-w-7xl mx-auto">
