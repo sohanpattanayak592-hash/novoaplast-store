@@ -22,9 +22,7 @@ export default function ProductPage() {
   const [personalization, setPersonalization] = useState('')
   const [selectedShloka, setSelectedShloka] = useState(null)
   const [uploadedFile, setUploadedFile] = useState(null)
-  const [contactInfo, setContactInfo] = useState({ name: '', email: '', phone: '' })
-  const [submitting, setSubmitting] = useState(false)
-  const [orderSuccess, setOrderSuccess] = useState(false)
+  const [uploadedFile, setUploadedFile] = useState(null)
 
   if (!product) {
     return (
@@ -45,95 +43,23 @@ export default function ProductPage() {
   const qtyMultiplier = product.quantities ? product.quantities[selectedQty]?.multiplier || 1 : 1
   const totalPrice = Math.round(currentPrice * qtyMultiplier)
 
-  const handleOrder = async () => {
-    if (!contactInfo.name || !contactInfo.email || !contactInfo.phone) {
-      alert('Please fill in your contact details.'); return
-    }
+  const handleCheckoutRedirect = () => {
     if (product.hasUpload && !uploadedFile) {
       alert('Please upload your design.'); return
     }
 
-    setSubmitting(true)
-    const formData = new FormData()
-    formData.append('product_id', product.id)
-    formData.append('product_name', product.name)
-    formData.append('size', product.sizes[selectedSize]?.label || '')
-    formData.append('quantity', product.quantities ? product.quantities[selectedQty]?.label : '1')
-    formData.append('personalization_text', personalization)
-    formData.append('shloka', selectedShloka || '')
-    formData.append('total_price', totalPrice)
-    formData.append('customer_name', contactInfo.name)
-    formData.append('customer_email', contactInfo.email)
-    formData.append('customer_phone', contactInfo.phone)
-    if (uploadedFile) formData.append('design_file', uploadedFile)
-
-    try {
-      const res = await fetch('/api/orders', { method: 'POST', body: formData })
-      if (res.ok) {
-        const data = await res.json()
-        setOrderSuccess(true)
-        // Razorpay integration
-        if (data.razorpay_order_id && window.Razorpay) {
-          const options = {
-            key: data.razorpay_key_id,
-            amount: data.amount,
-            currency: 'INR',
-            name: 'NOVOPLAST',
-            description: product.name,
-            order_id: data.razorpay_order_id,
-            handler: () => alert('Payment successful! Your order is confirmed.'),
-            prefill: { name: contactInfo.name, email: contactInfo.email, contact: contactInfo.phone },
-            theme: { color: '#ffa000' },
-            config: {
-              display: {
-                blocks: {
-                  upi: {
-                    name: "Pay via UPI",
-                    instruments: [
-                      { method: "upi" }
-                    ]
-                  },
-                  other: {
-                    name: "Other Payment Modes",
-                    instruments: [
-                      { method: "card" },
-                      { method: "netbanking" },
-                      { method: "wallet" }
-                    ]
-                  }
-                },
-                sequence: ["block.upi", "block.other"],
-                preferences: {
-                  show_default_blocks: false
-                }
-              }
-            }
-          }
-          new window.Razorpay(options).open()
-        }
-      } else alert('Failed to place order. Please try again.')
-    } catch {
-      alert('Network error. Please try again.')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
-  if (orderSuccess) {
-    return (
-      <div className="min-h-screen flex items-center justify-center pt-20 px-4">
-        <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
-          className="glass-card glow-ring-gold p-12 text-center max-w-md"
-        >
-          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-500/10 flex items-center justify-center">
-            <Check className="w-10 h-10 text-green-400" />
-          </div>
-          <h2 className="font-display text-2xl font-bold text-white mb-2">Order Placed!</h2>
-          <p className="text-white/50 mb-8">We'll reach out with payment details and a proof before printing.</p>
-          <button onClick={() => { setOrderSuccess(false); navigate('/') }} className="btn-gold">Back to Home</button>
-        </motion.div>
-      </div>
-    )
+    // Pass the state to the Checkout page
+    navigate('/checkout', {
+      state: {
+        product: product,
+        selectedSize: product.sizes[selectedSize]?.label || '',
+        selectedQty: product.quantities ? product.quantities[selectedQty]?.label : '1',
+        personalization: personalization,
+        shloka: selectedShloka || '',
+        totalPrice: totalPrice,
+        uploadedFile: uploadedFile // Note: Passing File objects in location state works in memory
+      }
+    })
   }
 
   return (
@@ -273,35 +199,16 @@ export default function ProductPage() {
               </motion.div>
             )}
 
-            {/* Contact Info */}
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={6} className="space-y-4">
-              <label className={`block text-sm font-display font-semibold ${isNeon ? 'text-neon-cyan' : 'text-saffron-300'}`}>
-                Your Details
-              </label>
-              <input type="text" placeholder="Full Name" value={contactInfo.name}
-                onChange={(e) => setContactInfo({ ...contactInfo, name: e.target.value })}
-                className={isSpiritual ? 'input-spiritual' : 'input-default'} id="contact-name"
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="email" placeholder="Email" value={contactInfo.email}
-                  onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })}
-                  className={isSpiritual ? 'input-spiritual' : 'input-default'} id="contact-email"
-                />
-                <input type="tel" placeholder="Phone Number" value={contactInfo.phone}
-                  onChange={(e) => setContactInfo({ ...contactInfo, phone: e.target.value })}
-                  className={isSpiritual ? 'input-spiritual' : 'input-default'} id="contact-phone"
-                />
-              </div>
-            </motion.div>
+
 
             {/* Buy Button */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={7} className="space-y-4">
-              <button onClick={handleOrder} disabled={submitting}
-                className={`w-full flex items-center justify-center gap-3 text-lg ${isNeon ? 'btn-neon' : 'btn-gold'} ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                id="buy-now-button"
+              <button onClick={handleCheckoutRedirect}
+                className={`w-full flex items-center justify-center gap-3 text-lg ${isNeon ? 'btn-neon' : 'btn-gold'}`}
+                id="continue-checkout-button"
               >
-                <CreditCard className="w-5 h-5" />
-                {submitting ? 'Placing Order...' : `Buy Now — ${product.currency}${totalPrice}`}
+                <ShoppingBag className="w-5 h-5" />
+                Continue to Checkout — {product.currency}{totalPrice}
               </button>
 
               <div className="flex items-center justify-center gap-6 text-white/30 text-xs">
