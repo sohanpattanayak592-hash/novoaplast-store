@@ -103,7 +103,7 @@ async def root():
     }
 
 
-@app.post("/orders")
+@app.post("/api/orders")
 async def create_order(
     product_id: str = Form(...),
     product_name: str = Form(...),
@@ -204,7 +204,7 @@ async def create_order(
     return response
 
 
-@app.get("/orders")
+@app.get("/api/orders")
 async def list_orders():
     """List all orders (admin use)."""
     if supabase:
@@ -216,7 +216,7 @@ async def list_orders():
     return {"orders": load_orders()}
 
 
-@app.get("/orders/{order_id}")
+@app.get("/api/orders/{order_id}")
 async def get_order(order_id: str):
     """Get a specific order by ID."""
     if supabase:
