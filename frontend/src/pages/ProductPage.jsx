@@ -22,7 +22,6 @@ export default function ProductPage() {
   const [personalization, setPersonalization] = useState('')
   const [selectedShloka, setSelectedShloka] = useState(null)
   const [uploadedFile, setUploadedFile] = useState(null)
-  const [uploadedFile, setUploadedFile] = useState(null)
 
   if (!product) {
     return (
