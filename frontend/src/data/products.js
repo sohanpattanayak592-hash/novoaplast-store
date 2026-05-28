@@ -24,7 +24,7 @@ export const products = {
       { label: 'A1 (23.4" × 33.1")', price: 1299 },
     ],
     hasPersonalization: true,
-    hasUpload: false,
+    hasUpload: true,
   },
   'spiritual-prints': {
     id: 'spiritual-prints',

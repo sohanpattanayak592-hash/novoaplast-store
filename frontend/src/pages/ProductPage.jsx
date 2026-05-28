@@ -255,6 +255,13 @@ export default function ProductPage() {
               </motion.div>
             )}
 
+            {/* File Upload (stickers and posters) */}
+            {product.hasUpload && (
+              <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={4.5}>
+                <StickerUploader onFileSelect={setUploadedFile} variant={isNeon ? 'neon' : 'default'} />
+              </motion.div>
+            )}
+
             {/* Personalization Input */}
             {product.hasPersonalization && (
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={5}>
@@ -263,13 +270,6 @@ export default function ProductPage() {
                   onChange={setPersonalization}
                   variant={isSpiritual ? 'spiritual' : 'default'}
                 />
-              </motion.div>
-            )}
-
-            {/* File Upload (stickers) */}
-            {product.hasUpload && (
-              <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={5}>
-                <StickerUploader onFileSelect={setUploadedFile} />
               </motion.div>
             )}
 
