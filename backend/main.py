@@ -30,6 +30,11 @@ RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET", "your_razorpay_secret")
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "uploads")
 ORDERS_FILE = os.path.join(os.path.dirname(__file__), "orders.json")
 
+# Fallback to /tmp in serverless environments (like Vercel)
+if os.environ.get("VERCEL") or not os.access(os.path.dirname(__file__), os.W_OK):
+    UPLOAD_DIR = "/tmp/uploads"
+    ORDERS_FILE = "/tmp/orders.json"
+
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 if SUPABASE_URL and SUPABASE_KEY:
@@ -37,7 +42,10 @@ if SUPABASE_URL and SUPABASE_KEY:
 else:
     supabase = None
 
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+try:
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+except Exception:
+    pass
 
 # ── App ──
 app = FastAPI(
@@ -67,8 +75,11 @@ def load_orders():
 
 
 def save_orders(orders):
-    with open(ORDERS_FILE, "w") as f:
-        json.dump(orders, f, indent=2, default=str)
+    try:
+        with open(ORDERS_FILE, "w") as f:
+            json.dump(orders, f, indent=2, default=str)
+    except Exception as e:
+        print(f"Could not save orders locally (likely read-only filesystem): {e}")
 
 
 def create_razorpay_order(amount_paise: int):
