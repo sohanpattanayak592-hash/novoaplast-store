@@ -18,9 +18,9 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero-section">
         {/* BG image */}
         <div className="absolute inset-0">
-          <img src="/hero-banner.png" alt="NOVOPLAST Hero" className="w-full h-full object-cover opacity-30" />
+          <img src="/aesthetic_candid_poster.png" alt="NOVOPLAST Hero" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-900/60 via-dark-900/80 to-dark-900" />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark-900 via-transparent to-dark-900 opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark-900/80 via-transparent to-dark-900/80 opacity-80" />
         </div>
 
         {/* Floating orbs */}
