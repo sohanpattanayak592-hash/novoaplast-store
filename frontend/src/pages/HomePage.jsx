@@ -71,6 +71,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== REAL EMOTIONS ===== */}
+      <section className="py-24 px-4 bg-dark-900 border-t border-b border-white/5" id="emotions-section">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <span className="badge-durable mb-4 inline-flex">Real Moments</span>
+            <h2 className="section-heading text-white mt-2">
+              The <span className="text-gold-gradient">Impact</span> of Forever
+            </h2>
+            <p className="text-white/40 mt-4 max-w-xl mx-auto">See how our indestructible prints are bringing joy and style to homes and lives everywhere.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { img: '/aesthetic_candid_poster.png', title: 'Home Décor that Endures', desc: 'Premium posters that won\'t fade in the sun.' },
+              { img: '/aesthetic_candid_spiritual.png', title: 'Sacred & Serene', desc: 'Spiritual prints that bring peace and elegance.' },
+              { img: '/aesthetic_candid_sticker.png', title: 'Vibrant Expressions', desc: 'Custom vinyl stickers for your personal gear.' },
+            ].map((item, i) => (
+              <motion.div key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}
+                className="group relative rounded-3xl overflow-hidden glass-card aspect-[4/5]"
+              >
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/40 to-transparent opacity-80" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <h3 className="font-display font-bold text-xl text-white mb-2">{item.title}</h3>
+                  <p className="text-white/60 text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== ANIMATED SHOWCASE & OFFER ===== */}
       <section className="py-24 px-4 bg-dark-950 overflow-hidden relative" id="promo-showcase">
         {/* Animated Background Elements */}
