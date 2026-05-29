@@ -149,7 +149,7 @@ export default function HomePage() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 lg:w-72 h-80 lg:h-96 rounded-2xl overflow-hidden glass-card glow-ring-gold z-20 border-2 border-saffron-500/30 shadow-[0_0_40px_rgba(245,158,11,0.2)]"
               >
-                <img src="/spiritual-hero.png" alt="Showcase Spiritual" className="w-full h-full object-cover opacity-90" />
+                <img src="/aesthetic_candid_spiritual.png" alt="Showcase Spiritual" className="w-full h-full object-cover opacity-90" />
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
                   <span className="badge-durable">Spiritual Canvas</span>
                 </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute top-4 lg:top-10 right-0 lg:right-4 w-48 lg:w-56 h-64 lg:h-72 rounded-2xl overflow-hidden glass-card glow-ring-neon z-10 opacity-80"
               >
-                <img src="/stickers-hero.png" alt="Showcase Stickers" className="w-full h-full object-cover" />
+                <img src="/aesthetic_candid_sticker.png" alt="Showcase Stickers" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
                   <span className="badge-neon">Custom Stickers</span>
                 </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                 className="absolute bottom-4 lg:bottom-10 left-0 lg:left-4 w-56 lg:w-64 h-56 lg:h-64 rounded-2xl overflow-hidden glass-card glow-ring-gold z-30 opacity-90"
               >
-                <img src="/poster-hero.png" alt="Showcase Posters" className="w-full h-full object-cover" />
+                <img src="/aesthetic_candid_poster.png" alt="Showcase Posters" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-dark-950 to-transparent">
                   <span className="badge-durable">Premium Posters</span>
                 </div>
