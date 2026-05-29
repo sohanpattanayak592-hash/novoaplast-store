@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { ShoppingBag, ArrowLeft, Check, Package, Truck, CreditCard } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ShoppingBag, ArrowLeft, Check, Package, Truck, CreditCard, Plus } from 'lucide-react'
 import { products } from '../data/products'
 import { DurabilityBadges, DurabilityStrip } from '../components/DurabilityBadges'
 import PersonalizationInput from '../components/PersonalizationInput'
 import StickerUploader from '../components/StickerUploader'
+import { useCart } from '../context/CartContext'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -22,6 +23,8 @@ export default function ProductPage() {
   const [personalization, setPersonalization] = useState('')
   const [selectedShloka, setSelectedShloka] = useState(null)
   const [uploadedFile, setUploadedFile] = useState(null)
+  const [showToast, setShowToast] = useState(false)
+  const { addToCart } = useCart()
 
   if (!product) {
     return (
@@ -42,23 +45,39 @@ export default function ProductPage() {
   const qtyMultiplier = product.quantities ? product.quantities[selectedQty]?.multiplier || 1 : 1
   const totalPrice = Math.round(currentPrice * qtyMultiplier)
 
-  const handleCheckoutRedirect = () => {
-    if (product.hasUpload && !uploadedFile) {
-      alert('Please upload your design.'); return
+  const buildCartItem = () => {
+    return {
+      productId: product.id,
+      productName: product.name,
+      image: product.image,
+      currency: product.currency,
+      variant: product.variant,
+      selectedSize: product.sizes[selectedSize]?.label || '',
+      selectedQty: product.quantities ? product.quantities[selectedQty]?.label : '1',
+      personalization: personalization,
+      shloka: selectedShloka || '',
+      totalPrice: totalPrice,
+      // Note: File objects can't be serialized to localStorage
+      // We store the file name for display; the actual file must be re-uploaded at checkout if needed
+      uploadedFileName: uploadedFile?.name || null,
     }
+  }
 
-    // Pass the state to the Checkout page
-    navigate('/checkout', {
-      state: {
-        product: product,
-        selectedSize: product.sizes[selectedSize]?.label || '',
-        selectedQty: product.quantities ? product.quantities[selectedQty]?.label : '1',
-        personalization: personalization,
-        shloka: selectedShloka || '',
-        totalPrice: totalPrice,
-        uploadedFile: uploadedFile // Note: Passing File objects in location state works in memory
-      }
-    })
+  const handleAddToCart = () => {
+    if (product.hasUpload && !uploadedFile) {
+      alert('Please upload your design first.'); return
+    }
+    addToCart(buildCartItem())
+    setShowToast(true)
+    setTimeout(() => setShowToast(false), 3000)
+  }
+
+  const handleBuyNow = () => {
+    if (product.hasUpload && !uploadedFile) {
+      alert('Please upload your design first.'); return
+    }
+    addToCart(buildCartItem())
+    navigate('/checkout')
   }
 
   return (
@@ -200,15 +219,26 @@ export default function ProductPage() {
 
 
 
-            {/* Buy Button */}
+            {/* Action Buttons */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={7} className="space-y-4">
-              <button onClick={handleCheckoutRedirect}
-                className={`w-full flex items-center justify-center gap-3 text-lg ${isNeon ? 'btn-neon' : 'btn-gold'}`}
-                id="continue-checkout-button"
-              >
-                <ShoppingBag className="w-5 h-5" />
-                Continue to Checkout — {product.currency}{totalPrice}
-              </button>
+              <div className="grid grid-cols-2 gap-3">
+                <button onClick={handleAddToCart}
+                  className={`flex items-center justify-center gap-2 py-4 rounded-2xl font-display font-semibold text-base border transition-all duration-300 ${
+                    isNeon
+                      ? 'border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/10'
+                      : 'border-saffron-500/30 text-saffron-400 hover:bg-saffron-500/10'
+                  }`}
+                  id="add-to-cart-button"
+                >
+                  <Plus className="w-5 h-5" /> Add to Cart
+                </button>
+                <button onClick={handleBuyNow}
+                  className={`flex items-center justify-center gap-2 text-base ${isNeon ? 'btn-neon' : 'btn-gold'}`}
+                  id="buy-now-button"
+                >
+                  <CreditCard className="w-5 h-5" /> Buy Now
+                </button>
+              </div>
 
               <div className="flex items-center justify-center gap-6 text-white/30 text-xs">
                 <span className="flex items-center gap-1.5"><Package className="w-3.5 h-3.5" /> Free Packaging</span>
@@ -238,6 +268,20 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 80 }}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-green-500/90 backdrop-blur-xl text-dark-900 px-6 py-3 rounded-2xl font-display font-semibold flex items-center gap-2 shadow-2xl"
+          >
+            <Check className="w-5 h-5" /> Added to cart!
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
