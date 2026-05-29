@@ -17,30 +17,18 @@ export default {
           600: '#252530',
           500: '#2e2e3a',
         },
-        // Gold/Saffron for spiritual prints
-        saffron: {
-          50: '#fff8e1',
-          100: '#ffecb3',
-          200: '#ffe082',
-          300: '#ffd54f',
-          400: '#ffca28',
-          500: '#ffc107',
-          600: '#ffb300',
-          700: '#ffa000',
-          800: '#ff8f00',
-          900: '#ff6f00',
-        },
-        gold: {
-          50: '#fdf6e3',
-          100: '#f5e6c8',
-          200: '#e8d5a3',
-          300: '#d4bc7c',
-          400: '#c5a55a',
-          500: '#b8943f',
-          600: '#a07d35',
-          700: '#86662b',
-          800: '#6d5023',
-          900: '#5a411d',
+        // Novoplast core green
+        novo: {
+          50: '#f4fbf0',
+          100: '#e6f7de',
+          200: '#cceebb',
+          300: '#a3de8a',
+          400: '#7ac959',
+          500: '#8bcc63', // logo core lime green
+          600: '#69b342',
+          700: '#4d8a2f',
+          800: '#3c6b25',
+          900: '#325721',
         },
         // Neon accents for stickers
         neon: {
@@ -60,7 +48,7 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gold-shimmer': 'linear-gradient(135deg, #ffa000, #ffc107, #ffd54f, #ffc107, #ffa000)',
+        'novo-shimmer': 'linear-gradient(135deg, #69b342, #8bcc63, #a3de8a, #8bcc63, #69b342)',
         'neon-glow': 'linear-gradient(135deg, #00f5ff, #ff00e5, #39ff14)',
       },
       animation: {
@@ -81,8 +69,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(255, 193, 7, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(255, 193, 7, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(139, 204, 99, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(139, 204, 99, 0.6)' },
         },
         'slide-up': {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
@@ -99,8 +87,8 @@ export default {
         },
       },
       boxShadow: {
-        'gold': '0 0 30px rgba(255, 193, 7, 0.15)',
-        'gold-lg': '0 0 60px rgba(255, 193, 7, 0.25)',
+        'novo': '0 0 30px rgba(139, 204, 99, 0.15)',
+        'novo-lg': '0 0 60px rgba(139, 204, 99, 0.25)',
         'neon': '0 0 30px rgba(0, 245, 255, 0.15)',
         'neon-lg': '0 0 60px rgba(0, 245, 255, 0.25)',
         'glass': '0 8px 32px rgba(0, 0, 0, 0.36)',

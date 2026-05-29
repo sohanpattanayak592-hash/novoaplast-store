@@ -31,7 +31,7 @@ export default function ProductPage() {
       <div className="min-h-screen flex items-center justify-center pt-20">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-white mb-4">Product Not Found</h2>
-          <button onClick={() => navigate('/')} className="btn-gold">Go Home</button>
+          <button onClick={() => navigate('/')} className="btn-novo">Go Home</button>
         </div>
       </div>
     )
@@ -39,7 +39,7 @@ export default function ProductPage() {
 
   const isNeon = product.variant === 'neon'
   const isSpiritual = product.variant === 'spiritual'
-  const badgeVariant = isNeon ? 'neon' : 'gold'
+  const badgeVariant = isNeon ? 'neon' : 'novo'
 
   const currentPrice = product.sizes[selectedSize]?.price || product.price
   const qtyMultiplier = product.quantities ? product.quantities[selectedQty]?.multiplier || 1 : 1
@@ -93,7 +93,7 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* LEFT — Product Image */}
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-            <div className={`relative rounded-3xl overflow-hidden ${isNeon ? 'glow-ring-neon' : 'glow-ring-gold'}`}>
+            <div className={`relative rounded-3xl overflow-hidden ${isNeon ? 'glow-ring-neon' : 'glow-ring-novo'}`}>
               <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
@@ -108,7 +108,7 @@ export default function ProductPage() {
               <span className={isNeon ? 'badge-neon' : 'badge-durable'}>
                 {isSpiritual ? '🕉 Spiritual Collection' : isNeon ? '✨ Custom Design' : '🖼 Premium Posters'}
               </span>
-              <h1 className={`font-display font-bold text-3xl md:text-4xl mt-4 mb-2 ${isNeon ? 'text-neon-cyan' : isSpiritual ? 'text-saffron-300' : 'text-white'}`}>
+              <h1 className={`font-display font-bold text-3xl md:text-4xl mt-4 mb-2 ${isNeon ? 'text-neon-cyan' : isSpiritual ? 'text-novo-300' : 'text-white'}`}>
                 {product.name}
               </h1>
               <p className="text-white/40 leading-relaxed">{product.description}</p>
@@ -116,10 +116,10 @@ export default function ProductPage() {
 
             {/* Price */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={2}
-              className={`glass-card p-4 sm:p-6 ${isNeon ? 'glow-ring-neon' : 'glow-ring-gold'}`}
+              className={`glass-card p-4 sm:p-6 ${isNeon ? 'glow-ring-neon' : 'glow-ring-novo'}`}
             >
               <div className="flex items-baseline gap-2">
-                <span className={`font-display font-bold text-3xl sm:text-4xl ${isNeon ? 'text-neon-cyan' : 'text-saffron-400'}`}>
+                <span className={`font-display font-bold text-3xl sm:text-4xl ${isNeon ? 'text-neon-cyan' : 'text-novo-400'}`}>
                   {product.currency}{totalPrice}
                 </span>
                 <span className="text-white/30 text-sm">incl. GST</span>
@@ -128,7 +128,7 @@ export default function ProductPage() {
 
             {/* Size Selection */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3}>
-              <label className={`block text-sm font-display font-semibold mb-3 ${isNeon ? 'text-neon-cyan' : 'text-saffron-300'}`}>
+              <label className={`block text-sm font-display font-semibold mb-3 ${isNeon ? 'text-neon-cyan' : 'text-novo-300'}`}>
                 Select Size
               </label>
               <div className="grid grid-cols-2 gap-3">
@@ -138,7 +138,7 @@ export default function ProductPage() {
                       selectedSize === i
                         ? isNeon
                           ? 'border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan'
-                          : 'border-saffron-500/50 bg-saffron-500/10 text-saffron-300'
+                          : 'border-novo-500/50 bg-novo-500/10 text-novo-300'
                         : 'border-white/5 bg-dark-800/50 text-white/60 hover:border-white/10'
                     }`}
                     id={`size-option-${i}`}
@@ -176,7 +176,7 @@ export default function ProductPage() {
             {/* Shloka Selector (spiritual only) */}
             {product.shlokas && (
               <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={4}>
-                <label className="block text-sm font-display font-semibold text-saffron-300 mb-3">
+                <label className="block text-sm font-display font-semibold text-novo-300 mb-3">
                   Choose Shloka / Arti
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -184,12 +184,12 @@ export default function ProductPage() {
                     <button key={s.name} onClick={() => setSelectedShloka(s.name)}
                       className={`p-4 rounded-xl border text-left transition-all ${
                         selectedShloka === s.name
-                          ? 'border-saffron-500/50 bg-saffron-500/10'
+                          ? 'border-novo-500/50 bg-novo-500/10'
                           : 'border-white/5 bg-dark-800/50 hover:border-white/10'
                       }`}
                       id={`shloka-${s.name.replace(/\s/g, '-').toLowerCase()}`}
                     >
-                      <span className={`text-sm font-medium block ${selectedShloka === s.name ? 'text-saffron-300' : 'text-white/70'}`}>
+                      <span className={`text-sm font-medium block ${selectedShloka === s.name ? 'text-novo-300' : 'text-white/70'}`}>
                         {s.name}
                       </span>
                       <span className="text-white/30 text-xs mt-1 block">{s.text}</span>
@@ -226,14 +226,14 @@ export default function ProductPage() {
                   className={`flex items-center justify-center gap-2 py-4 rounded-2xl font-display font-semibold text-base border transition-all duration-300 ${
                     isNeon
                       ? 'border-neon-cyan/30 text-neon-cyan hover:bg-neon-cyan/10'
-                      : 'border-saffron-500/30 text-saffron-400 hover:bg-saffron-500/10'
+                      : 'border-novo-500/30 text-novo-400 hover:bg-novo-500/10'
                   }`}
                   id="add-to-cart-button"
                 >
                   <Plus className="w-5 h-5" /> Add to Cart
                 </button>
                 <button onClick={handleBuyNow}
-                  className={`flex items-center justify-center gap-2 text-base ${isNeon ? 'btn-neon' : 'btn-gold'}`}
+                  className={`flex items-center justify-center gap-2 text-base ${isNeon ? 'btn-neon' : 'btn-novo'}`}
                   id="buy-now-button"
                 >
                   <CreditCard className="w-5 h-5" /> Buy Now
@@ -248,13 +248,13 @@ export default function ProductPage() {
 
             {/* Features */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={8}>
-              <h3 className={`font-display font-semibold text-sm uppercase tracking-widest mb-4 ${isNeon ? 'text-neon-cyan/70' : 'text-saffron-400/70'}`}>
+              <h3 className={`font-display font-semibold text-sm uppercase tracking-widest mb-4 ${isNeon ? 'text-neon-cyan/70' : 'text-novo-400/70'}`}>
                 Features
               </h3>
               <ul className="space-y-3">
                 {product.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-white/50 text-sm">
-                    <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isNeon ? 'text-neon-cyan' : 'text-saffron-400'}`} />
+                    <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isNeon ? 'text-neon-cyan' : 'text-novo-400'}`} />
                     {f}
                   </li>
                 ))}

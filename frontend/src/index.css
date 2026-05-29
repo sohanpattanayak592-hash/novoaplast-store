@@ -17,13 +17,13 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background: rgba(255, 193, 7, 0.3);
+    background: rgba(139, 204, 99, 0.3);
     border-radius: 3px;
   }
 
   ::selection {
-    background: rgba(255, 193, 7, 0.3);
-    color: #ffd54f;
+    background: rgba(139, 204, 99, 0.3);
+    color: #8bcc63;
   }
 
   html {
@@ -37,9 +37,9 @@
     @apply bg-dark-800/50 backdrop-blur-xl border border-white/5 rounded-2xl;
   }
 
-  /* Gold gradient text */
-  .text-gold-gradient {
-    background: linear-gradient(135deg, #ffa000, #ffc107, #ffd54f, #ffe082);
+  /* Novo green gradient text */
+  .text-novo-gradient {
+    background: linear-gradient(135deg, #4d8a2f, #69b342, #8bcc63, #cceebb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -56,7 +56,7 @@
   /* Badge styles */
   .badge-durable {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider;
-    @apply bg-gradient-to-r from-saffron-700/20 to-saffron-500/20 text-saffron-300 border border-saffron-500/30;
+    @apply bg-gradient-to-r from-novo-700/20 to-novo-500/20 text-novo-300 border border-novo-500/30;
   }
 
   .badge-neon {
@@ -67,16 +67,16 @@
   }
 
   /* Premium button */
-  .btn-gold {
+  .btn-novo {
     @apply relative px-8 py-3.5 font-display font-semibold text-sm uppercase tracking-widest rounded-xl overflow-hidden transition-all duration-300;
-    background: linear-gradient(135deg, #ffa000, #ffc107);
+    background: linear-gradient(135deg, #4d8a2f, #8bcc63);
     color: #0a0a0f;
-    box-shadow: 0 4px 25px rgba(255, 193, 7, 0.25);
+    box-shadow: 0 4px 25px rgba(139, 204, 99, 0.25);
   }
 
-  .btn-gold:hover {
+  .btn-novo:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 40px rgba(255, 193, 7, 0.4);
+    box-shadow: 0 8px 40px rgba(139, 204, 99, 0.4);
   }
 
   .btn-neon {
@@ -91,13 +91,13 @@
     box-shadow: 0 8px 40px rgba(0, 245, 255, 0.4);
   }
 
-  .btn-outline-gold {
+  .btn-outline-novo {
     @apply px-8 py-3.5 font-display font-semibold text-sm uppercase tracking-widest rounded-xl transition-all duration-300;
-    @apply border-2 border-saffron-500/50 text-saffron-400 bg-transparent;
+    @apply border-2 border-novo-500/50 text-novo-400 bg-transparent;
   }
 
-  .btn-outline-gold:hover {
-    @apply bg-saffron-500/10 border-saffron-400;
+  .btn-outline-novo:hover {
+    @apply bg-novo-500/10 border-novo-400;
     transform: translateY(-2px);
   }
 
@@ -117,10 +117,10 @@
   }
 
   /* Glow ring effect */
-  .glow-ring-gold {
-    box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.1),
-                0 0 30px rgba(255, 193, 7, 0.05),
-                inset 0 0 30px rgba(255, 193, 7, 0.02);
+  .glow-ring-novo {
+    box-shadow: 0 0 0 1px rgba(139, 204, 99, 0.1),
+                0 0 30px rgba(139, 204, 99, 0.05),
+                inset 0 0 30px rgba(139, 204, 99, 0.02);
   }
 
   .glow-ring-neon {
@@ -143,9 +143,9 @@
   }
 
   /* Input field */
-  .input-spiritual {
-    @apply w-full px-5 py-3.5 rounded-xl bg-dark-700/50 border border-saffron-500/20 text-white font-body;
-    @apply placeholder:text-white/30 focus:outline-none focus:border-saffron-400/50 focus:ring-2 focus:ring-saffron-500/20;
+  .input-novo {
+    @apply w-full px-5 py-3.5 rounded-xl bg-dark-700/50 border border-novo-500/20 text-white font-body;
+    @apply placeholder:text-white/30 focus:outline-none focus:border-novo-400/50 focus:ring-2 focus:ring-novo-500/20;
     @apply transition-all duration-300;
   }
 

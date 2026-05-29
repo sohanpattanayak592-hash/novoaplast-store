@@ -105,7 +105,7 @@ export default function OrdersPage() {
               <button key={type} onClick={() => setSearchType(type)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   searchType === type
-                    ? 'bg-saffron-500/20 text-saffron-400 border border-saffron-500/30'
+                    ? 'bg-novo-500/20 text-novo-400 border border-novo-500/30'
                     : 'text-white/40 border border-white/5 hover:border-white/10'
                 }`}
               >
@@ -124,7 +124,7 @@ export default function OrdersPage() {
               id="order-search-input"
             />
             <button onClick={handleSearch} disabled={loading}
-              className="btn-gold px-6 flex items-center gap-2"
+              className="btn-novo px-6 flex items-center gap-2"
               id="order-search-button"
             >
               <Search className="w-4 h-4" /> {loading ? 'Searching...' : 'Search'}
@@ -138,7 +138,7 @@ export default function OrdersPage() {
             <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               className="text-center py-16"
             >
-              <div className="w-10 h-10 border-2 border-saffron-500/30 border-t-saffron-500 rounded-full animate-spin mx-auto mb-4" />
+              <div className="w-10 h-10 border-2 border-novo-500/30 border-t-novo-500 rounded-full animate-spin mx-auto mb-4" />
               <p className="text-white/40">Fetching your orders...</p>
             </motion.div>
           ) : searched && orders.length === 0 ? (
@@ -168,7 +168,7 @@ export default function OrdersPage() {
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <span className="text-white/40 text-xs">Order</span>
-                          <span className="text-saffron-400 font-display font-bold">{order.order_id}</span>
+                          <span className="text-novo-400 font-display font-bold">{order.order_id}</span>
                         </div>
                         <p className="text-white/30 text-xs">{formatDate(order.created_at)}</p>
                       </div>
@@ -181,7 +181,7 @@ export default function OrdersPage() {
                     {/* Product Info */}
                     <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/5">
                       <div className="w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center flex-shrink-0">
-                        <Package className="w-6 h-6 text-saffron-400/50" />
+                        <Package className="w-6 h-6 text-novo-400/50" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h4 className="text-white font-medium text-sm">{order.product_name}</h4>
@@ -190,7 +190,7 @@ export default function OrdersPage() {
                           {order.quantity && order.quantity !== '1' && ` · Qty: ${order.quantity}`}
                         </p>
                       </div>
-                      <p className="text-saffron-400 font-display font-bold">₹{order.total_price}</p>
+                      <p className="text-novo-400 font-display font-bold">₹{order.total_price}</p>
                     </div>
 
                     {/* Progress Tracker */}
@@ -203,15 +203,15 @@ export default function OrdersPage() {
                             <React.Fragment key={step}>
                               <div className="flex flex-col items-center flex-1">
                                 <div className={`w-3 h-3 rounded-full transition-all ${
-                                  isCompleted ? 'bg-saffron-500' : 'bg-white/10'
-                                } ${isCurrent ? 'ring-2 ring-saffron-500/30' : ''}`} />
+                                  isCompleted ? 'bg-novo-500' : 'bg-white/10'
+                                } ${isCurrent ? 'ring-2 ring-novo-500/30' : ''}`} />
                                 <span className={`text-[9px] mt-1 text-center leading-tight ${
-                                  isCompleted ? 'text-saffron-400' : 'text-white/20'
+                                  isCompleted ? 'text-novo-400' : 'text-white/20'
                                 }`}>{step}</span>
                               </div>
                               {idx < STEPS.length - 1 && (
                                 <div className={`h-0.5 flex-1 rounded -mt-3 ${
-                                  (idx + 1) < status.step ? 'bg-saffron-500' : 'bg-white/10'
+                                  (idx + 1) < status.step ? 'bg-novo-500' : 'bg-white/10'
                                 }`} />
                               )}
                             </React.Fragment>

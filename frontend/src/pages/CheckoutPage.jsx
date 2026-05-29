@@ -118,16 +118,16 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen flex items-center justify-center pt-20 px-4">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-          className="glass-card glow-ring-gold p-12 text-center max-w-lg"
+          className="glass-card glow-ring-novo p-12 text-center max-w-lg"
         >
-          <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-saffron-500/10 flex items-center justify-center">
-            <ShoppingBag className="w-10 h-10 text-saffron-400" />
+          <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-novo-500/10 flex items-center justify-center">
+            <ShoppingBag className="w-10 h-10 text-novo-400" />
           </div>
           <h2 className="font-display text-2xl font-bold text-white mb-3">Your Cart is Empty</h2>
           <p className="text-white/40 mb-8 leading-relaxed">
             Browse our collection of non-tearable prints and add items to your cart.
           </p>
-          <Link to="/" className="btn-gold inline-flex items-center gap-2" id="checkout-browse">
+          <Link to="/" className="btn-novo inline-flex items-center gap-2" id="checkout-browse">
             Browse Products <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
@@ -140,7 +140,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen flex items-center justify-center pt-20 px-4">
         <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
-          className="glass-card glow-ring-gold p-12 text-center max-w-md"
+          className="glass-card glow-ring-novo p-12 text-center max-w-md"
         >
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-500/10 flex items-center justify-center">
             <Check className="w-10 h-10 text-green-400" />
@@ -150,12 +150,12 @@ export default function CheckoutPage() {
           <div className="my-4 p-3 rounded-lg bg-dark-800/50 border border-white/10">
             <p className="text-white/40 text-xs mb-1">Order ID(s)</p>
             {orderResult.orderIds.map((id) => (
-              <p key={id} className="text-saffron-400 font-display font-bold text-lg">{id}</p>
+              <p key={id} className="text-novo-400 font-display font-bold text-lg">{id}</p>
             ))}
           </div>
           <p className="text-white/40 text-sm mb-6">We'll send updates to your email.</p>
           <div className="flex gap-3 justify-center">
-            <button onClick={() => navigate('/orders')} className="btn-gold inline-flex items-center gap-2">
+            <button onClick={() => navigate('/orders')} className="btn-novo inline-flex items-center gap-2">
               <Package className="w-4 h-4" /> Track Orders
             </button>
             <button onClick={() => navigate('/')}
@@ -206,7 +206,7 @@ export default function CheckoutPage() {
                         )}
                       </div>
                       <div className="text-right flex-shrink-0">
-                        <p className="text-saffron-400 font-display font-bold">{item.currency}{item.totalPrice}</p>
+                        <p className="text-novo-400 font-display font-bold">{item.currency}{item.totalPrice}</p>
                         <button onClick={() => removeFromCart(item.cartId)}
                           className="text-white/30 hover:text-red-400 transition-colors mt-1"
                         >
@@ -269,7 +269,7 @@ export default function CheckoutPage() {
           {/* RIGHT — Order Summary */}
           <div className="lg:col-span-5">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}
-              className="glass-card glow-ring-gold p-6 sticky top-24"
+              className="glass-card glow-ring-novo p-6 sticky top-24"
             >
               <h3 className="font-display font-bold text-xl text-white mb-6">Order Summary</h3>
 
@@ -280,7 +280,7 @@ export default function CheckoutPage() {
                     <input type="text" placeholder="Promo code" value={promoInput} onChange={(e) => setPromoInput(e.target.value)}
                       className="input-default flex-1 !bg-dark-800/50" id="promo-input"
                     />
-                    <button onClick={handleApplyPromo} className="px-4 rounded-xl font-medium bg-saffron-500/20 text-saffron-400 hover:bg-saffron-500/30 transition-colors">
+                    <button onClick={handleApplyPromo} className="px-4 rounded-xl font-medium bg-novo-500/20 text-novo-400 hover:bg-novo-500/30 transition-colors">
                       Apply
                     </button>
                   </div>
@@ -312,12 +312,12 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between text-white font-display font-bold text-xl pt-3 border-t border-white/10">
                   <span>Total</span>
-                  <span className="text-saffron-400">₹{finalPrice}</span>
+                  <span className="text-novo-400">₹{finalPrice}</span>
                 </div>
               </div>
 
               <button onClick={handleOrder} disabled={submitting}
-                className={`w-full flex items-center justify-center gap-3 text-lg btn-gold ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`w-full flex items-center justify-center gap-3 text-lg btn-novo ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 id="place-order-button"
               >
                 <CreditCard className="w-5 h-5" />

@@ -43,13 +43,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-700 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-novo-500 to-novo-700 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
                 <Sparkles className="w-5 h-5 text-dark-900" />
               </div>
-              <div className="absolute inset-0 w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-700 blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
+              <div className="absolute inset-0 w-10 h-10 rounded-xl bg-gradient-to-br from-novo-500 to-novo-700 blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
             </div>
             <div>
-              <h1 className="font-display font-bold text-xl tracking-wider text-white group-hover:text-saffron-300 transition-colors">
+              <h1 className="font-display font-bold text-xl tracking-wider text-white group-hover:text-novo-300 transition-colors">
                 NOVOPLAST
               </h1>
               <p className="text-[10px] font-medium tracking-[0.3em] text-white/40 uppercase">
@@ -66,7 +66,7 @@ export default function Navbar() {
                 to={link.path}
                 className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === link.path
-                    ? 'text-saffron-400'
+                    ? 'text-novo-400'
                     : 'text-white/60 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -74,7 +74,7 @@ export default function Navbar() {
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-saffron-500 to-saffron-300 rounded-full"
+                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-novo-500 to-novo-300 rounded-full"
                   />
                 )}
               </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   key={itemCount}
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className="absolute -top-1 -right-1 w-5 h-5 bg-saffron-500 rounded-full text-[10px] font-bold text-dark-900 flex items-center justify-center"
+                  className="absolute -top-1 -right-1 w-5 h-5 bg-novo-500 rounded-full text-[10px] font-bold text-dark-900 flex items-center justify-center"
                 >
                   {itemCount}
                 </motion.span>
@@ -134,7 +134,7 @@ export default function Navbar() {
                     to={link.path}
                     className={`block px-4 py-4 rounded-xl text-base font-medium transition-all ${
                       location.pathname === link.path
-                        ? 'bg-saffron-500/10 text-saffron-400'
+                        ? 'bg-novo-500/10 text-novo-400'
                         : 'text-white/60 hover:text-white hover:bg-white/5'
                     }`}
                   >

@@ -6,14 +6,14 @@ export default function Footer() {
   return (
     <footer className="relative bg-dark-950 border-t border-white/5">
       {/* Glow accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-saffron-500/50 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-novo-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-saffron-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-novo-500 to-novo-700 flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-dark-900" />
               </div>
               <div>
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-saffron-400 mb-5">Products</h4>
+            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-novo-400 mb-5">Products</h4>
             <ul className="space-y-3">
               {[
                 { name: 'Custom Posters', path: '/product/custom-posters' },
@@ -37,7 +37,7 @@ export default function Footer() {
                 { name: 'Custom Stickers', path: '/product/custom-stickers' },
               ].map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-white/40 hover:text-saffron-300 text-sm transition-colors duration-300">
+                  <Link to={item.path} className="text-white/40 hover:text-novo-300 text-sm transition-colors duration-300">
                     {item.name}
                   </Link>
                 </li>
@@ -47,11 +47,11 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-saffron-400 mb-5">Company</h4>
+            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-novo-400 mb-5">Company</h4>
             <ul className="space-y-3">
               {['About Us', 'Our Process', 'Sustainability', 'Blog'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-white/40 hover:text-saffron-300 text-sm transition-colors duration-300">
+                  <a href="#" className="text-white/40 hover:text-novo-300 text-sm transition-colors duration-300">
                     {item}
                   </a>
                 </li>
@@ -61,23 +61,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-saffron-400 mb-5">Contact</h4>
+            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-novo-400 mb-5">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/40 text-sm">
-                <Mail className="w-4 h-4 text-saffron-500/60" />
+                <Mail className="w-4 h-4 text-novo-500/60" />
                 hello@novoplast.in
               </li>
               <li className="flex items-center gap-3 text-white/40 text-sm">
-                <Phone className="w-4 h-4 text-saffron-500/60" />
+                <Phone className="w-4 h-4 text-novo-500/60" />
                 +91 98765 43210
               </li>
               <li className="flex items-center gap-3 text-white/40 text-sm">
-                <MapPin className="w-4 h-4 text-saffron-500/60" />
+                <MapPin className="w-4 h-4 text-novo-500/60" />
                 New Delhi, India
               </li>
             </ul>
             <div className="flex items-center gap-3 mt-5">
-              <a href="#" className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-saffron-500/10 hover:border-saffron-500/30 transition-all">
+              <a href="#" className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-novo-500/10 hover:border-novo-500/30 transition-all">
                 <Instagram className="w-4 h-4 text-white/50" />
               </a>
             </div>
