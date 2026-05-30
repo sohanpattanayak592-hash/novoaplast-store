@@ -158,9 +158,26 @@ export default function SearchPage() {
                     <div>
                       <h4 className="text-white font-bold font-display truncate mb-1">{poster.title}</h4>
                       <div className="flex items-center gap-3">
-                        <Link to={`/collections/${poster.collectionId}`} className="text-xs font-semibold bg-white text-dark-950 px-3 py-1.5 rounded-full hover:bg-white/90">
-                          {poster.collectionTitle}
-                        </Link>
+                        <button 
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const item = {
+                              productId: poster.id,
+                              productName: poster.title,
+                              image: poster.image,
+                              currency: '₹',
+                              variant: 'standard',
+                              selectedSize: 'A4 - 8.2" x 11.7"',
+                              selectedQty: '1',
+                              totalPrice: poster.price || 299,
+                            }
+                            addToCart(item);
+                            navigate('/checkout');
+                          }}
+                          className="text-xs font-semibold bg-novo-500 text-dark-950 px-4 py-2 rounded-full hover:bg-novo-400 shadow-[0_0_15px_rgba(139,204,99,0.3)] transition-all"
+                        >
+                          Buy Now
+                        </button>
                       </div>
                     </div>
                   </div>

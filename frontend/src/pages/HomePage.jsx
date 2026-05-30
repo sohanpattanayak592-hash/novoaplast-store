@@ -49,6 +49,9 @@ export default function HomePage() {
             <Link to="/product/custom-posters" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
               Shop Now <ArrowRight className="w-4 h-4" />
             </Link>
+            <Link to="/collections" className="btn-outline-novo flex items-center justify-center gap-2 w-full sm:w-auto">
+              Explore Collections
+            </Link>
           </motion.div>
 
           {/* Trust strip */}
