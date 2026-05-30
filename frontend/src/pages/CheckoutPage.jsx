@@ -3,10 +3,12 @@ import { useNavigate, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingBag, ArrowRight, ArrowLeft, Check, CreditCard, Tag, Truck, Trash2, Package } from 'lucide-react'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 export default function CheckoutPage() {
   const navigate = useNavigate()
   const { items, removeFromCart, clearCart, getCartTotal } = useCart()
+  const { session } = useAuth()
 
   const [contactInfo, setContactInfo] = useState({
     name: '', email: '', phone: '', address: '', city: '', state: '', pincode: ''
@@ -58,9 +60,14 @@ export default function CheckoutPage() {
         totalAmount: getCartTotal()
       }
 
+      const headers = { 'Content-Type': 'application/json' }
+      if (session) {
+        headers['Authorization'] = `Bearer ${session.access_token}`
+      }
+
       const res = await fetch('/api/orders', { 
         method: 'POST', 
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify(orderPayload) 
       })
 

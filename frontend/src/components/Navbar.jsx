@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ShoppingBag, Sparkles, Search } from 'lucide-react'
+import { Menu, X, ShoppingBag, Search, User, Truck } from 'lucide-react'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const location = useLocation()
   const navigate = useNavigate()
   const { itemCount } = useCart()
+  const { user } = useAuth()
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -86,6 +88,15 @@ export default function Navbar() {
           {/* Actions */}
           <div className="flex items-center gap-2 sm:gap-4">
             
+            <div className="hidden sm:flex items-center gap-2 mr-2">
+              <Link to="/track" className="p-2 text-white/60 hover:text-white transition-colors" title="Track Order">
+                <Truck className="w-5 h-5" />
+              </Link>
+              <Link to={user ? "/account" : "/login"} className="p-2 text-white/60 hover:text-white transition-colors" title={user ? "My Account" : "Sign In"}>
+                <User className="w-5 h-5" />
+              </Link>
+            </div>
+
             {/* Quick Search */}
             <form onSubmit={handleSearch} className="hidden sm:flex items-center relative">
               <input 
