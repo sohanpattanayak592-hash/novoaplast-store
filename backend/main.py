@@ -177,13 +177,12 @@ async def create_order(payload: OrderPayload, authorization: Optional[str] = Hea
             "total_price": item.totalPrice,
             "customer": payload.contactInfo.dict(),
             "promo_code": payload.promo.code if payload.promo else None,
-            "design_file": file_info,
+            "design_file_url": file_info["filename"] if file_info else None,
             "status": "pending",
             "tracking_status": "Placed",
             "razorpay_order_id": rzp_id,
             "created_at": datetime.utcnow().isoformat(),
         }
-
         if supabase:
             try:
                 supabase.table("orders").insert(order).execute()
