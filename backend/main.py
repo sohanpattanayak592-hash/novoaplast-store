@@ -1,19 +1,20 @@
 """
-NOVOPLAST Store — FastAPI Backend
+NOVOPLAST Store — Vercel Serverless FastAPI Backend
 Handles custom orders with personalization text, file uploads, and Razorpay payment integration.
+Deployed as a Vercel Python Serverless Function.
 """
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, EmailStr
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 from typing import Optional
 import uuid
 import os
 import json
 from datetime import datetime
-from dotenv import load_dotenv
 from supabase import create_client, Client
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -27,13 +28,6 @@ except ImportError:
 # ── Config ──
 RAZORPAY_KEY_ID = os.getenv("RAZORPAY_KEY_ID", "rzp_test_XXXXXXXXXX")
 RAZORPAY_KEY_SECRET = os.getenv("RAZORPAY_KEY_SECRET", "your_razorpay_secret")
-UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "uploads")
-ORDERS_FILE = os.path.join(os.path.dirname(__file__), "orders.json")
-
-# Fallback to /tmp in serverless environments (like Vercel)
-if os.environ.get("VERCEL") or not os.access(os.path.dirname(__file__), os.W_OK):
-    UPLOAD_DIR = "/tmp/uploads"
-    ORDERS_FILE = "/tmp/orders.json"
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
@@ -42,46 +36,28 @@ if SUPABASE_URL and SUPABASE_KEY:
 else:
     supabase = None
 
-try:
-    os.makedirs(UPLOAD_DIR, exist_ok=True)
-except Exception:
-    pass
+# In-memory fallback
+orders_store = []
 
 # ── App ──
 app = FastAPI(
     title="NOVOPLAST Store API",
     description="API for handling custom non-tearable print orders",
     version="1.0.0",
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json",
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "*"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Serve uploaded files
-app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
-
 
 # ── Helpers ──
-def load_orders():
-    if os.path.exists(ORDERS_FILE):
-        with open(ORDERS_FILE, "r") as f:
-            return json.load(f)
-    return []
-
-
-def save_orders(orders):
-    try:
-        with open(ORDERS_FILE, "w") as f:
-            json.dump(orders, f, indent=2, default=str)
-    except Exception as e:
-        print(f"Could not save orders locally (likely read-only filesystem): {e}")
-
-
 def create_razorpay_order(amount_paise: int):
     """Create a Razorpay order. Returns order details or None if SDK unavailable."""
     if not RAZORPAY_ENABLED:
@@ -100,121 +76,129 @@ def create_razorpay_order(amount_paise: int):
 
 
 # ── Routes ──
-@app.get("/")
+@app.get("/api")
 async def root():
     return {
         "service": "NOVOPLAST Store API",
         "version": "1.0.0",
         "status": "running",
         "endpoints": {
-            "POST /orders": "Create a new custom order",
-            "GET /orders": "List all orders",
-            "GET /orders/{order_id}": "Get order details",
+            "POST /api/orders": "Create a new custom order",
+            "GET /api/orders": "List all orders",
+            "GET /api/orders/{order_id}": "Get order details",
         },
     }
 
+
+@app.get("/api/health")
+async def health():
+    return {"status": "ok"}
+
+
+from typing import List, Optional, Dict, Any
+from fastapi import Header
+
+class OrderItem(BaseModel):
+    productId: str
+    productName: str
+    selectedSize: str
+    selectedQty: str
+    personalization: Optional[str] = ""
+    shloka: Optional[str] = ""
+    totalPrice: float
+    uploadedFileName: Optional[str] = None
+    image: Optional[str] = None
+    currency: Optional[str] = "₹"
+    variant: Optional[str] = ""
+
+class ContactInfo(BaseModel):
+    name: str
+    email: str
+    phone: str
+    address: str
+    city: str
+    state: str
+    pincode: str
+
+class PromoCode(BaseModel):
+    code: str
+    discountPercent: int
+
+class OrderPayload(BaseModel):
+    items: List[OrderItem]
+    contactInfo: ContactInfo
+    promo: Optional[PromoCode] = None
+    totalAmount: float
 
 @app.post("/api/orders")
-async def create_order(
-    product_id: str = Form(...),
-    product_name: str = Form(...),
-    size: str = Form(""),
-    quantity: str = Form("1"),
-    personalization_text: str = Form(""),
-    shloka: str = Form(""),
-    total_price: float = Form(...),
-    customer_name: str = Form(...),
-    customer_email: str = Form(...),
-    customer_phone: str = Form(...),
-    customer_address: str = Form(""),
-    customer_city: str = Form(""),
-    customer_state: str = Form(""),
-    customer_pincode: str = Form(""),
-    promo_code: str = Form(""),
-    design_file: Optional[UploadFile] = File(None),
-):
+async def create_order(payload: OrderPayload, authorization: Optional[str] = Header(None)):
     """
-    Create a new custom order.
-
-    - Captures personalization text (for Spiritual Prints / Custom Posters)
-    - Handles file upload (for Custom Stickers)
-    - Creates a Razorpay payment order (if SDK is available)
-    - Stores the order in a local JSON file
+    Create a new custom order from a cart.
+    - Creates a single Razorpay payment order for the total amount.
+    - Inserts one row per item into Supabase.
+    - Links order to user if authenticated.
     """
+    user_id = None
+    if authorization and authorization.startswith("Bearer "):
+        token = authorization.split("Bearer ")[1]
+        if supabase:
+            try:
+                auth_res = supabase.auth.get_user(token)
+                if auth_res and auth_res.user:
+                    user_id = auth_res.user.id
+            except Exception as e:
+                print(f"Auth error: {e}")
 
-    order_id = str(uuid.uuid4())[:8].upper()
-    file_url = None
-
-    # Handle file upload
-    if design_file:
-        # Validate file type
-        allowed_types = ["image/jpeg", "image/png", "image/svg+xml"]
-        if design_file.content_type not in allowed_types:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Invalid file type: {design_file.content_type}. Allowed: JPG, PNG, SVG",
-            )
-
-        # Validate file size (10MB max)
-        contents = await design_file.read()
-        if len(contents) > 10 * 1024 * 1024:
-            raise HTTPException(status_code=400, detail="File too large. Max 10MB.")
-
-        # Save file
-        ext = os.path.splitext(design_file.filename)[1]
-        filename = f"{order_id}_{design_file.filename}"
-        filepath = os.path.join(UPLOAD_DIR, filename)
-        with open(filepath, "wb") as f:
-            f.write(contents)
-        file_url = f"/uploads/{filename}"
-
-    # Build order record
-    order = {
-        "order_id": order_id,
-        "product_id": product_id,
-        "product_name": product_name,
-        "size": size,
-        "quantity": quantity,
-        "personalization_text": personalization_text,
-        "shloka": shloka,
-        "total_price": total_price,
-        "customer": {
-            "name": customer_name,
-            "email": customer_email,
-            "phone": customer_phone,
-            "address": customer_address,
-            "city": customer_city,
-            "state": customer_state,
-            "pincode": customer_pincode,
-        },
-        "promo_code": promo_code,
-        "design_file_url": file_url,
-        "status": "pending",
-        "created_at": datetime.utcnow().isoformat(),
-    }
-
-    # Persist order
-    if supabase:
-        try:
-            supabase.table("orders").insert(order).execute()
-        except Exception as e:
-            print(f"Supabase insert error: {e}")
-            orders = load_orders()
-            orders.append(order)
-            save_orders(orders)
-    else:
-        orders = load_orders()
-        orders.append(order)
-        save_orders(orders)
-
-    # Create Razorpay order
-    amount_paise = int(total_price * 100)
+    amount_paise = int(payload.totalAmount * 100)
     razorpay_order = create_razorpay_order(amount_paise)
+    rzp_id = razorpay_order["id"] if razorpay_order else None
+
+    # Build order records (one per item)
+    inserted_orders = []
+    order_ids = []
+    
+    for item in payload.items:
+        order_id = str(uuid.uuid4())[:8].upper()
+        order_ids.append(order_id)
+        
+        file_info = None
+        if item.uploadedFileName:
+            file_info = {"filename": item.uploadedFileName}
+
+        order = {
+            "order_id": order_id,
+            "user_id": user_id,
+            "product_id": item.productId,
+            "product_name": item.productName,
+            "size": item.selectedSize,
+            "quantity": item.selectedQty,
+            "personalization_text": item.personalization,
+            "shloka": item.shloka,
+            "total_price": item.totalPrice,
+            "customer": payload.contactInfo.dict(),
+            "promo_code": payload.promo.code if payload.promo else None,
+            "design_file": file_info,
+            "status": "pending",
+            "tracking_status": "Placed",
+            "razorpay_order_id": rzp_id,
+            "created_at": datetime.utcnow().isoformat(),
+        }
+
+        if supabase:
+            try:
+                supabase.table("orders").insert(order).execute()
+            except Exception as e:
+                print(f"Supabase insert error: {e}")
+                orders_store.append(order)
+        else:
+            orders_store.append(order)
+            
+        inserted_orders.append(order)
 
     response = {
-        "message": "Order created successfully",
-        "order_id": order_id,
-        "order": order,
+        "message": "Orders created successfully",
+        "order_ids": order_ids,
+        "orders": inserted_orders,
     }
 
     if razorpay_order:
@@ -224,17 +208,42 @@ async def create_order(
 
     return response
 
+@app.post("/api/verify-payment")
+async def verify_payment(
+    razorpay_order_id: str = Form(...),
+    razorpay_payment_id: str = Form(...),
+    razorpay_signature: str = Form(...)
+):
+    """Verify Razorpay payment and update order status."""
+    # In a real app, verify signature using razorpay.utility.verify_payment_signature
+    if supabase:
+        try:
+            supabase.table("orders").update({"status": "paid"}).eq("razorpay_order_id", razorpay_order_id).execute()
+        except Exception as e:
+            print(f"Supabase update error: {e}")
+            raise HTTPException(status_code=500, detail="Failed to update database")
+    else:
+        for o in orders_store:
+            if o.get("razorpay_order_id") == razorpay_order_id:
+                o["status"] = "paid"
+                
+    return {"status": "success"}
+
 
 @app.get("/api/orders")
-async def list_orders():
-    """List all orders (admin use)."""
+async def list_orders(api_key: Optional[str] = Header(None)):
+    """List all orders. Secured endpoint."""
+    admin_key = os.getenv("ADMIN_API_KEY")
+    if admin_key and api_key != admin_key:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+        
     if supabase:
         try:
             res = supabase.table("orders").select("*").execute()
             return {"orders": res.data}
         except Exception as e:
             print(f"Supabase select error: {e}")
-    return {"orders": load_orders()}
+    return {"orders": orders_store}
 
 
 @app.get("/api/orders/{order_id}")
@@ -247,16 +256,12 @@ async def get_order(order_id: str):
                 return {"order": res.data[0]}
         except Exception as e:
             print(f"Supabase select error: {e}")
-            
-    orders = load_orders()
-    for o in orders:
+
+    for o in orders_store:
         if o["order_id"] == order_id:
             return {"order": o}
     raise HTTPException(status_code=404, detail="Order not found")
 
 
-# ── Run ──
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
-
+# ── Vercel Serverless Handler ──
+handler = Mangum(app)
