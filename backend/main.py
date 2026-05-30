@@ -8,7 +8,7 @@ from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 import uuid
 import os
 import json
@@ -261,7 +261,3 @@ async def get_order(order_id: str):
         if o["order_id"] == order_id:
             return {"order": o}
     raise HTTPException(status_code=404, detail="Order not found")
-
-
-# ── Vercel Serverless Handler ──
-handler = Mangum(app)

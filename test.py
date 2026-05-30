@@ -3,7 +3,7 @@ import urllib.error
 import json
 
 req = urllib.request.Request(
-    'http://localhost:8001/api/orders',
+    'https://novoplast-store.vercel.app/api/orders',
     data=json.dumps({
         'items': [{
             'productId': '1', 
