@@ -50,62 +50,64 @@ export default function CheckoutPage() {
     const orderIds = []
 
     try {
-      // Submit one order per cart item
-      for (const item of items) {
-        const formData = new FormData()
-        formData.append('product_id', item.productId)
-        formData.append('product_name', item.productName)
-        formData.append('size', item.selectedSize)
-        formData.append('quantity', item.selectedQty)
-        formData.append('personalization_text', item.personalization || '')
-        formData.append('shloka', item.shloka || '')
-        // Apply proportional discount per item
-        const itemDiscount = appliedPromo
-          ? Math.round(item.totalPrice * appliedPromo.discountPercent / 100)
-          : 0
-        formData.append('total_price', item.totalPrice - itemDiscount)
-        formData.append('customer_name', contactInfo.name)
-        formData.append('customer_email', contactInfo.email)
-        formData.append('customer_phone', contactInfo.phone)
-        formData.append('customer_address', contactInfo.address)
-        formData.append('customer_city', contactInfo.city)
-        formData.append('customer_state', contactInfo.state)
-        formData.append('customer_pincode', contactInfo.pincode)
-        if (appliedPromo) formData.append('promo_code', appliedPromo.code)
-
-        const res = await fetch('/api/orders', { method: 'POST', body: formData })
-        if (res.ok) {
-          const data = await res.json()
-          orderIds.push(data.order_id)
-
-          // Open Razorpay for the last/total order
-          if (data.razorpay_order_id && window.Razorpay) {
-            const options = {
-              key: data.razorpay_key_id,
-              amount: data.amount,
-              currency: 'INR',
-              name: 'NOVOPLAST',
-              description: item.productName,
-              order_id: data.razorpay_order_id,
-              handler: () => {},
-              prefill: { name: contactInfo.name, email: contactInfo.email, contact: contactInfo.phone },
-              theme: { color: '#ffa000' }
-            }
-            new window.Razorpay(options).open()
-          }
-        } else {
-          alert('Failed to place one of the orders. Please try again.')
-          setSubmitting(false)
-          return
-        }
+      // Build the single JSON payload for the entire cart
+      const orderPayload = {
+        items: items,
+        contactInfo: contactInfo,
+        promo: appliedPromo || null,
+        totalAmount: getCartTotal()
       }
 
-      // Save email to localStorage for order tracking
-      localStorage.setItem('novoplast_customer_email', contactInfo.email)
-      localStorage.setItem('novoplast_customer_phone', contactInfo.phone)
+      const res = await fetch('/api/orders', { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderPayload) 
+      })
 
-      setOrderResult({ orderIds })
-      clearCart()
+      if (res.ok) {
+        const data = await res.json()
+        orderIds.push(...data.order_ids)
+
+        // Save email to localStorage for order tracking
+        localStorage.setItem('novoplast_customer_email', contactInfo.email)
+        localStorage.setItem('novoplast_customer_phone', contactInfo.phone)
+
+        // Open Razorpay for the total order
+        if (data.razorpay_order_id && window.Razorpay) {
+          const options = {
+            key: data.razorpay_key_id,
+            amount: data.amount,
+            currency: 'INR',
+            name: 'NOVOPLAST',
+            description: `Order of ${items.length} item(s)`,
+            order_id: data.razorpay_order_id,
+            handler: async (response) => {
+              // Verify payment on backend
+              const verifyFormData = new FormData()
+              verifyFormData.append('razorpay_order_id', response.razorpay_order_id)
+              verifyFormData.append('razorpay_payment_id', response.razorpay_payment_id)
+              verifyFormData.append('razorpay_signature', response.razorpay_signature)
+              
+              await fetch('/api/verify-payment', {
+                method: 'POST',
+                body: verifyFormData
+              })
+              
+              setOrderResult({ orderIds })
+              clearCart()
+            },
+            prefill: { name: contactInfo.name, email: contactInfo.email, contact: contactInfo.phone },
+            theme: { color: '#8BCC63' }
+          }
+          new window.Razorpay(options).open()
+        } else {
+          // No razorpay (fallback or local)
+          setOrderResult({ orderIds })
+          clearCart()
+        }
+      } else {
+        alert('Failed to place order. Please try again.')
+      }
     } catch {
       alert('Network error. Please try again.')
     } finally {

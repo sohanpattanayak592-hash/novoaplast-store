@@ -15,6 +15,9 @@ import os
 import json
 from datetime import datetime
 from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ── Optional: Razorpay SDK ──
 try:
@@ -93,95 +96,97 @@ async def health():
     return {"status": "ok"}
 
 
+from typing import List, Optional, Dict, Any
+from fastapi import Header
+
+class OrderItem(BaseModel):
+    productId: str
+    productName: str
+    selectedSize: str
+    selectedQty: str
+    personalization: Optional[str] = ""
+    shloka: Optional[str] = ""
+    totalPrice: float
+    uploadedFileName: Optional[str] = None
+    image: Optional[str] = None
+    currency: Optional[str] = "₹"
+    variant: Optional[str] = ""
+
+class ContactInfo(BaseModel):
+    name: str
+    email: str
+    phone: str
+    address: str
+    city: str
+    state: str
+    pincode: str
+
+class PromoCode(BaseModel):
+    code: str
+    discountPercent: int
+
+class OrderPayload(BaseModel):
+    items: List[OrderItem]
+    contactInfo: ContactInfo
+    promo: Optional[PromoCode] = None
+    totalAmount: float
+
 @app.post("/api/orders")
-async def create_order(
-    product_id: str = Form(...),
-    product_name: str = Form(...),
-    size: str = Form(""),
-    quantity: str = Form("1"),
-    personalization_text: str = Form(""),
-    shloka: str = Form(""),
-    total_price: float = Form(...),
-    customer_name: str = Form(...),
-    customer_email: str = Form(...),
-    customer_phone: str = Form(...),
-    customer_address: str = Form(""),
-    customer_city: str = Form(""),
-    customer_state: str = Form(""),
-    customer_pincode: str = Form(""),
-    promo_code: str = Form(""),
-    design_file: Optional[UploadFile] = File(None),
-):
+async def create_order(payload: OrderPayload):
     """
-    Create a new custom order.
-
-    - Captures personalization text (for Spiritual Prints / Custom Posters)
-    - Handles file upload metadata (for Custom Stickers)
-    - Creates a Razorpay payment order (if SDK is available)
+    Create a new custom order from a cart.
+    - Creates a single Razorpay payment order for the total amount.
+    - Inserts one row per item into Supabase.
     """
 
-    order_id = str(uuid.uuid4())[:8].upper()
-    file_info = None
+    amount_paise = int(payload.totalAmount * 100)
+    razorpay_order = create_razorpay_order(amount_paise)
+    rzp_id = razorpay_order["id"] if razorpay_order else None
 
-    # Handle file upload metadata
-    if design_file:
-        allowed_types = ["image/jpeg", "image/png", "image/svg+xml"]
-        if design_file.content_type not in allowed_types:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Invalid file type: {design_file.content_type}. Allowed: JPG, PNG, SVG",
-            )
-        contents = await design_file.read()
-        if len(contents) > 10 * 1024 * 1024:
-            raise HTTPException(status_code=400, detail="File too large. Max 10MB.")
-        file_info = {
-            "filename": design_file.filename,
-            "content_type": design_file.content_type,
-            "size": len(contents),
+    # Build order records (one per item)
+    inserted_orders = []
+    order_ids = []
+    
+    for item in payload.items:
+        order_id = str(uuid.uuid4())[:8].upper()
+        order_ids.append(order_id)
+        
+        file_info = None
+        if item.uploadedFileName:
+            file_info = {"filename": item.uploadedFileName}
+
+        order = {
+            "order_id": order_id,
+            "product_id": item.productId,
+            "product_name": item.productName,
+            "size": item.selectedSize,
+            "quantity": item.selectedQty,
+            "personalization_text": item.personalization,
+            "shloka": item.shloka,
+            "total_price": item.totalPrice,
+            "customer": payload.contactInfo.dict(),
+            "promo_code": payload.promo.code if payload.promo else None,
+            "design_file": file_info,
+            "status": "pending",
+            "razorpay_order_id": rzp_id,
+            "created_at": datetime.utcnow().isoformat(),
         }
 
-    # Build order record
-    order = {
-        "order_id": order_id,
-        "product_id": product_id,
-        "product_name": product_name,
-        "size": size,
-        "quantity": quantity,
-        "personalization_text": personalization_text,
-        "shloka": shloka,
-        "total_price": total_price,
-        "customer": {
-            "name": customer_name,
-            "email": customer_email,
-            "phone": customer_phone,
-            "address": customer_address,
-            "city": customer_city,
-            "state": customer_state,
-            "pincode": customer_pincode,
-        },
-        "promo_code": promo_code,
-        "design_file": file_info,
-        "status": "pending",
-        "created_at": datetime.utcnow().isoformat(),
-    }
-
-    if supabase:
-        try:
-            supabase.table("orders").insert(order).execute()
-        except Exception as e:
-            print(f"Supabase insert error: {e}")
+        if supabase:
+            try:
+                supabase.table("orders").insert(order).execute()
+            except Exception as e:
+                print(f"Supabase insert error: {e}")
+                orders_store.append(order)
+        else:
             orders_store.append(order)
-    else:
-        orders_store.append(order)
-
-    # Create Razorpay order
-    amount_paise = int(total_price * 100)
-    razorpay_order = create_razorpay_order(amount_paise)
+            
+        inserted_orders.append(order)
 
     response = {
-        "message": "Order created successfully",
-        "order_id": order_id,
-        "order": order,
+        "message": "Orders created successfully",
+        "order_ids": order_ids,
+        "orders": inserted_orders,
     }
 
     if razorpay_order:
@@ -191,10 +196,35 @@ async def create_order(
 
     return response
 
+@app.post("/api/verify-payment")
+async def verify_payment(
+    razorpay_order_id: str = Form(...),
+    razorpay_payment_id: str = Form(...),
+    razorpay_signature: str = Form(...)
+):
+    """Verify Razorpay payment and update order status."""
+    # In a real app, verify signature using razorpay.utility.verify_payment_signature
+    if supabase:
+        try:
+            supabase.table("orders").update({"status": "paid"}).eq("razorpay_order_id", razorpay_order_id).execute()
+        except Exception as e:
+            print(f"Supabase update error: {e}")
+            raise HTTPException(status_code=500, detail="Failed to update database")
+    else:
+        for o in orders_store:
+            if o.get("razorpay_order_id") == razorpay_order_id:
+                o["status"] = "paid"
+                
+    return {"status": "success"}
+
 
 @app.get("/api/orders")
-async def list_orders():
-    """List all orders."""
+async def list_orders(api_key: Optional[str] = Header(None)):
+    """List all orders. Secured endpoint."""
+    admin_key = os.getenv("ADMIN_API_KEY")
+    if admin_key and api_key != admin_key:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+        
     if supabase:
         try:
             res = supabase.table("orders").select("*").execute()

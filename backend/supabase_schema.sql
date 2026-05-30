@@ -18,3 +18,12 @@ BEGIN
     ALTER TABLE orders ADD COLUMN promo_code TEXT;
   END IF;
 END $$;
+
+-- 3. Add razorpay_order_id to track payments
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                 WHERE table_name='orders' AND column_name='razorpay_order_id') THEN
+    ALTER TABLE orders ADD COLUMN razorpay_order_id TEXT;
+  END IF;
+END $$;
