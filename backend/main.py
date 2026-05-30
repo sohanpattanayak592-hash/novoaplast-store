@@ -166,8 +166,6 @@ async def create_order(payload: OrderPayload):
             "design_file_url": file_info["filename"] if file_info else None,
             "status": "pending",
             "tracking_status": "Placed",
-            "razorpay_order_id": rzp_id,
-            "created_at": datetime.utcnow().isoformat(),
         }
         if supabase:
             try:

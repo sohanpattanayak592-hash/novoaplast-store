@@ -205,7 +205,7 @@ export default function CheckoutPage() {
                 <button 
                   onClick={() => {
                     // Navigate to auth page but save the contact info to context or just let the redirect handle it
-                    navigate('/auth?redirect=/checkout')
+                    navigate('/login', { state: { from: { pathname: '/checkout' } } })
                   }}
                   className="btn-novo py-3 flex justify-center items-center font-bold w-full"
                 >
