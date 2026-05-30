@@ -17,6 +17,7 @@ export default function CheckoutPage() {
   const [appliedPromo, setAppliedPromo] = useState(null)
   const [submitting, setSubmitting] = useState(false)
   const [orderResult, setOrderResult] = useState(null) // { orderId, orderIds[] }
+  const [showAuthPopup, setShowAuthPopup] = useState(false)
 
   const handleApplyPromo = () => {
     if (!promoInput.trim()) return
@@ -38,13 +39,18 @@ export default function CheckoutPage() {
   const discount = appliedPromo ? Math.round(subtotal * appliedPromo.discountPercent / 100) : 0
   const finalPrice = subtotal - discount
 
-  const handleOrder = async () => {
+  const handleOrder = async (bypassAuth = false) => {
     if (!contactInfo.name || !contactInfo.email || !contactInfo.phone || !contactInfo.address || !contactInfo.city || !contactInfo.pincode) {
       alert('Please fill in all required fields.')
       return
     }
     if (items.length === 0) {
       alert('Your cart is empty.')
+      return
+    }
+
+    if (!session && !bypassAuth) {
+      setShowAuthPopup(true)
       return
     }
 
@@ -179,7 +185,47 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4">
+    <>
+      <AnimatePresence>
+        {showAuthPopup && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="bg-dark-900 border border-white/10 rounded-2xl p-8 max-w-md w-full shadow-2xl relative"
+            >
+              <h2 className="text-2xl font-display font-bold text-white mb-2">Track Your Order! 📦</h2>
+              <p className="text-white/60 mb-6">
+                Sign in or create an account to easily track your order status and view your order history.
+              </p>
+              
+              <div className="flex flex-col gap-3">
+                <button 
+                  onClick={() => {
+                    // Navigate to auth page but save the contact info to context or just let the redirect handle it
+                    navigate('/auth?redirect=/checkout')
+                  }}
+                  className="btn-novo py-3 flex justify-center items-center font-bold w-full"
+                >
+                  Sign In / Register
+                </button>
+                <button 
+                  onClick={() => {
+                    setShowAuthPopup(false)
+                    handleOrder(true) // bypass auth popup
+                  }}
+                  className="py-3 px-4 rounded-xl border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-colors font-medium w-full"
+                >
+                  Continue as Guest
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      <div className="min-h-screen bg-dark-950 pt-32 pb-24">
       <div className="max-w-6xl mx-auto">
         <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-white/40 hover:text-white text-sm mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Continue Shopping
@@ -325,7 +371,7 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              <button onClick={handleOrder} disabled={submitting}
+              <button onClick={() => handleOrder(false)} disabled={submitting}
                 className={`w-full flex items-center justify-center gap-3 text-lg btn-novo ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 id="place-order-button"
               >
@@ -340,5 +386,6 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
