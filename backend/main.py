@@ -129,26 +129,12 @@ class OrderPayload(BaseModel):
     contactInfo: ContactInfo
     promo: Optional[PromoCode] = None
     totalAmount: float
+    user_id: Optional[str] = None
 
 @app.post("/api/orders")
-async def create_order(payload: OrderPayload, authorization: Optional[str] = Header(None)):
-    """
-    Create a new custom order from a cart.
-    - Creates a single Razorpay payment order for the total amount.
-    - Inserts one row per item into Supabase.
-    - Links order to user if authenticated.
-    """
-    user_id = None
-    if authorization and authorization.startswith("Bearer "):
-        token = authorization.split("Bearer ")[1]
-        if supabase:
-            try:
-                auth_res = supabase.auth.get_user(token)
-                if auth_res and auth_res.user:
-                    user_id = auth_res.user.id
-            except Exception as e:
-                print(f"Auth error: {e}")
-
+async def create_order(payload: OrderPayload):
+    user_id = payload.user_id
+    
     amount_paise = int(payload.totalAmount * 100)
     razorpay_order = create_razorpay_order(amount_paise)
     rzp_id = razorpay_order["id"] if razorpay_order else None

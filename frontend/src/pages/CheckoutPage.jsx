@@ -63,7 +63,8 @@ export default function CheckoutPage() {
         items: items,
         contactInfo: contactInfo,
         promo: appliedPromo || null,
-        totalAmount: getCartTotal()
+        totalAmount: getCartTotal(),
+        user_id: session?.user?.id || null
       }
 
       const headers = { 'Content-Type': 'application/json' }
