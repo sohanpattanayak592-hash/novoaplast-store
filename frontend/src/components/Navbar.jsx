@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext'
 
 const navLinks = [
   { name: 'Home', path: '/' },
+  { name: 'Collections', path: '/collections' },
   { name: 'Custom Posters', path: '/product/custom-posters' },
   { name: 'Spiritual Prints', path: '/product/spiritual-prints' },
   { name: 'Custom Stickers', path: '/product/custom-stickers' },
