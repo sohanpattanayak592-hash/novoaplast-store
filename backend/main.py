@@ -226,10 +226,11 @@ async def list_orders(api_key: Optional[str] = Header(None)):
     if supabase:
         try:
             res = supabase.table("orders").select("*").execute()
-            return {"orders": res.data}
+            return {"source": "supabase", "orders": res.data}
         except Exception as e:
             print(f"Supabase select error: {e}")
-    return {"orders": orders_store}
+            return {"source": f"supabase_error: {e}", "orders": orders_store}
+    return {"source": "memory_no_supabase", "orders": orders_store}
 
 
 @app.get("/api/orders/{order_id}")
