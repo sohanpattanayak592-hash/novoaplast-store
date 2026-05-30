@@ -10,6 +10,7 @@ import CheckoutPage from './pages/CheckoutPage'
 import OrdersPage from './pages/OrdersPage'
 import CollectionsHub from './pages/CollectionsHub'
 import CollectionDetails from './pages/CollectionDetails'
+import SearchPage from './pages/SearchPage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/collections" element={<CollectionsHub />} />
               <Route path="/collections/:id" element={<CollectionDetails />} />
+              <Route path="/search" element={<SearchPage />} />
               <Route path="/product/:slug" element={<ProductPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/orders" element={<OrdersPage />} />

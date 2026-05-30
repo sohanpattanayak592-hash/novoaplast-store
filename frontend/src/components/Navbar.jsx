@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ShoppingBag, Sparkles } from 'lucide-react'
+import { Menu, X, ShoppingBag, Sparkles, Search } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 
 const navLinks = [
@@ -16,7 +16,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const { itemCount } = useCart()
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    const q = e.target.elements.q.value
+    if (q.trim()) {
+      navigate(`/search?q=${encodeURIComponent(q)}`)
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30)
@@ -83,7 +92,21 @@ export default function Navbar() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-4">
+            
+            {/* Quick Search */}
+            <form onSubmit={handleSearch} className="hidden sm:flex items-center relative">
+              <input 
+                type="text" 
+                name="q"
+                placeholder="Search..."
+                className="bg-dark-800/80 border border-white/10 rounded-full py-1.5 pl-4 pr-8 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-novo-500/50 w-32 focus:w-48 transition-all"
+              />
+              <button type="submit" className="absolute right-2.5 top-1/2 -translate-y-1/2 text-white/40 hover:text-novo-400">
+                <Search className="w-3.5 h-3.5" />
+              </button>
+            </form>
+
             <Link
               to="/checkout"
               className="relative p-2.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all duration-300"
@@ -129,11 +152,13 @@ export default function Navbar() {
                   key={link.path}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ delay: i * 0.05 }}
                 >
                   <Link
                     to={link.path}
-                    className={`block px-4 py-4 rounded-xl text-base font-medium transition-all ${
+                    onClick={() => setMobileOpen(false)}
+                    className={`block py-3 px-4 rounded-xl font-display font-semibold transition-colors ${
                       location.pathname === link.path
                         ? 'bg-novo-500/10 text-novo-400'
                         : 'text-white/60 hover:text-white hover:bg-white/5'
@@ -143,6 +168,26 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ delay: 0.3 }}
+                className="pt-4 pb-2 px-4"
+              >
+                <form onSubmit={(e) => { handleSearch(e); setMobileOpen(false); }} className="relative">
+                  <input 
+                    type="text" 
+                    name="q"
+                    placeholder="Search..."
+                    className="w-full bg-dark-900 border border-white/10 rounded-xl py-3 pl-4 pr-10 text-white placeholder:text-white/40 focus:outline-none focus:border-novo-500/50"
+                  />
+                  <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-novo-400">
+                    <Search className="w-4 h-4" />
+                  </button>
+                </form>
+              </motion.div>
             </nav>
           </motion.div>
         )}

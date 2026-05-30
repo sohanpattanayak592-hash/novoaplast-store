@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Heart, Search, ArrowLeft, Download, Plus, Check } from 'lucide-react'
+import { Heart, Search, ArrowLeft, Download, Plus, Check, ShoppingBag } from 'lucide-react'
 import { collectionsData, getSimilarCollections } from '../data/collectionsData'
 import { useEngagement } from '../context/EngagementContext'
+import { useCart } from '../context/CartContext'
 
 export default function CollectionDetails() {
   const { id } = useParams()
   const collection = collectionsData.find(c => c.id === id)
   
   const { isFavorite, toggleFavorite, isFollowed, toggleFollowCollection } = useEngagement()
+  const { addToCart } = useCart()
   
   const [displayedPosters, setDisplayedPosters] = useState([])
   const [page, setPage] = useState(1)
@@ -147,8 +149,30 @@ export default function CollectionDetails() {
                   <img src={poster.image} alt={poster.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                   
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
-                    <div className="flex justify-end">
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
+                    <div className="flex justify-between items-start">
+                      <button 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const item = {
+                            productId: poster.id,
+                            productName: poster.title,
+                            image: poster.image,
+                            currency: '₹',
+                            variant: 'standard',
+                            selectedSize: 'A4 - 8.2" x 11.7"',
+                            selectedQty: '1',
+                            totalPrice: poster.price || 299,
+                          }
+                          addToCart(item);
+                          alert('Added to Cart!');
+                        }}
+                        className="p-2.5 rounded-full backdrop-blur-md transition-all bg-dark-900/60 text-white hover:bg-novo-500 hover:text-dark-950"
+                        title="Add to Cart"
+                      >
+                        <ShoppingBag className="w-5 h-5" />
+                      </button>
+
                       <button 
                         onClick={(e) => {
                           e.preventDefault();
@@ -166,7 +190,7 @@ export default function CollectionDetails() {
                       <h4 className="text-white font-bold font-display truncate mb-1">{poster.title}</h4>
                       <div className="flex items-center gap-3">
                         <Link to={`/product/custom-posters`} className="text-xs font-semibold bg-white text-dark-950 px-3 py-1.5 rounded-full hover:bg-white/90">
-                          View Details
+                          Customize
                         </Link>
                         <span className="text-white/60 text-xs flex items-center gap-1">
                           <Download className="w-3 h-3" /> {poster.downloads}
