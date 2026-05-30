@@ -67,6 +67,8 @@ export default function CheckoutPage() {
         user_id: session?.user?.id || null
       }
 
+      console.log('[CHECKOUT] Sending order payload:', JSON.stringify(orderPayload))
+
       const headers = { 'Content-Type': 'application/json' }
       if (session) {
         headers['Authorization'] = `Bearer ${session.access_token}`
@@ -78,51 +80,27 @@ export default function CheckoutPage() {
         body: JSON.stringify(orderPayload) 
       })
 
+      console.log('[CHECKOUT] Response status:', res.status)
+
       if (res.ok) {
         const data = await res.json()
+        console.log('[CHECKOUT] Order created:', JSON.stringify(data))
         orderIds.push(...data.order_ids)
 
         // Save email to localStorage for order tracking
         localStorage.setItem('novoplast_customer_email', contactInfo.email)
         localStorage.setItem('novoplast_customer_phone', contactInfo.phone)
 
-        // Open Razorpay for the total order
-        if (data.razorpay_order_id && window.Razorpay) {
-          const options = {
-            key: data.razorpay_key_id,
-            amount: data.amount,
-            currency: 'INR',
-            name: 'NOVOPLAST',
-            description: `Order of ${items.length} item(s)`,
-            order_id: data.razorpay_order_id,
-            handler: async (response) => {
-              // Verify payment on backend
-              const verifyFormData = new FormData()
-              verifyFormData.append('razorpay_order_id', response.razorpay_order_id)
-              verifyFormData.append('razorpay_payment_id', response.razorpay_payment_id)
-              verifyFormData.append('razorpay_signature', response.razorpay_signature)
-              
-              await fetch('/api/verify-payment', {
-                method: 'POST',
-                body: verifyFormData
-              })
-              
-              setOrderResult({ orderIds })
-              clearCart()
-            },
-            prefill: { name: contactInfo.name, email: contactInfo.email, contact: contactInfo.phone },
-            theme: { color: '#8BCC63' }
-          }
-          new window.Razorpay(options).open()
-        } else {
-          // No razorpay (fallback or local)
-          setOrderResult({ orderIds })
-          clearCart()
-        }
+        // Order saved successfully — show success
+        setOrderResult({ orderIds })
+        clearCart()
       } else {
+        const errText = await res.text()
+        console.error('[CHECKOUT] API error:', res.status, errText)
         alert('Failed to place order. Please try again.')
       }
-    } catch {
+    } catch (err) {
+      console.error('[CHECKOUT] Network error:', err)
       alert('Network error. Please try again.')
     } finally {
       setSubmitting(false)
