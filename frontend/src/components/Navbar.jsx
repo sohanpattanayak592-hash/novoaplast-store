@@ -50,22 +50,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-novo-500 to-novo-700 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-                <Sparkles className="w-5 h-5 text-dark-900" />
-              </div>
-              <div className="absolute inset-0 w-10 h-10 rounded-xl bg-gradient-to-br from-novo-500 to-novo-700 blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
-            </div>
-            <div>
-              <h1 className="font-display font-bold text-xl tracking-wider text-white group-hover:text-novo-300 transition-colors">
-                NOVOPLAST
-              </h1>
-              <p className="text-[10px] font-medium tracking-[0.3em] text-white/40 uppercase">
-                Non-Tearable Prints
-              </p>
-            </div>
+          {/* Exact Logo Match */}
+          <Link to="/" className="flex flex-col items-center justify-center group py-2">
+            <h1 className="font-display font-black text-2xl tracking-normal text-novo-500 group-hover:text-novo-400 transition-colors leading-none">
+              NOVOPLAST
+            </h1>
+            <p className="text-[10px] font-medium text-white/80 mt-1">
+              recycle.reuse.flaunt.
+            </p>
           </Link>
 
           {/* Desktop Nav */}
