@@ -83,8 +83,8 @@ const generateCollections = () => {
         posters.push({
           id: `p_${idCounter}_${i}`,
           title: `${category} Poster ${i + 1}`,
-          // Generate a specific random unsplash image
-          image: `https://source.unsplash.com/random/400x600/?${encodeURIComponent(category)},${i}`,
+          // Generate a specific random loremflickr image
+          image: `https://loremflickr.com/400/600/${encodeURIComponent(category.replace(' ', ''))}?random=${i}`,
           price: 299,
           downloads: Math.floor(Math.random() * 5000),
           tags: [category, genre.name, 'Premium', 'Poster']
@@ -96,7 +96,7 @@ const generateCollections = () => {
         title: category,
         genre: genre.id,
         genreName: genre.name,
-        thumbnail: `https://source.unsplash.com/random/800x600/?${encodeURIComponent(thumbnailKeywords[genre.id] + ',' + category)}`,
+        thumbnail: `https://loremflickr.com/800/600/${encodeURIComponent(thumbnailKeywords[genre.id].split(',')[0])}?random=${idCounter}`,
         popularityScore,
         posters,
         isNew: Math.random() > 0.8 // 20% chance to be "New"
