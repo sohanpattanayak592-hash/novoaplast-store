@@ -188,6 +188,7 @@ async def create_order(payload: OrderPayload, authorization: Optional[str] = Hea
                 supabase.table("orders").insert(order).execute()
             except Exception as e:
                 print(f"Supabase insert error: {e}")
+                order["_error"] = str(e)
                 orders_store.append(order)
         else:
             orders_store.append(order)
