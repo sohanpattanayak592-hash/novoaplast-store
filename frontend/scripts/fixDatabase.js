@@ -5,122 +5,40 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Import the existing data (must read as string to avoid module caching issues if we rewrite)
 const dataFilePath = path.join(__dirname, '../src/data/collectionsData.js');
 
-// Curated high-quality Unsplash image IDs grouped by category
-const curatedImages = {
-  cricket: [
-    '1540747913346-19e32dc3e97e', // Stadium
-    '1593341646782-e0bf8b1115b8', // Cricket gear
-    '1531415074955-060416999e52', // Cricket field
-    '1608228079968-c14ec76e036e', // Cricket ball
-    '1518605368461-1ee790672e42'  // Stadium lights
-  ],
-  football: [
-    '1518609878373-06d740f60d8b', // Football stadium
-    '1522778119026-d647f0596c20', // Football match
-    '1508098682722-e99c43a406b2', // Football field
-    '1553158022-79361a49f506',    // Messi/Barca style
-    '1489944440615-453fc2b6604e'  // Ronaldo/Real Madrid style
-  ],
-  motivation: [
-    '1519834785169-f8ee0c690184', // Do something great
-    '1492684223066-81342ee5ff30', // Never give up
-    '1552664730-d307ca884978',    // Success
-    '1506784951209-6834ab01a750', // Hustle
-    '1528698827591-e408bfb0ffdc'  // Neon quotes
-  ],
-  anime: [
-    '1578632767115-351597cf2477', // Anime style street
-    '1580477659159-4ba3ff710dfb', // Japan neon
-    '1613376023733-f54247055e81', // Manga style
-    '1578632767115-351597cf2477', // Anime scenery
-    '1605806616949-1e87b487cb2a'  // Cyberpunk anime
-  ],
-  gaming: [
-    '1550745165-9bc0b252726f', // Retro gaming
-    '1542751371-adc38448a05e', // Esports arena
-    '1538481199705-c710c4e965fc', // Console controller
-    '1552820728-8b83bb6b7738', // PC setup
-    '1542751371-adc38448a05e'  // Neon gaming
-  ],
-  abstract: [
-    '1550684848-fac1c5b4e853', // Abstract neon
-    '1563089145-599997674d42', // Abstract fluid
-    '1557672172-298e090bd0f1', // Abstract geometry
-    '1618005182384-a83a8bd57fbe', // Fluid dark
-    '1604871000636-074fa5117945'  // Cyberpunk textures
-  ],
-  movies: [
-    '1536440136628-849c177e76a1', // Movie theater
-    '1485846234645-a62644f84728', // Film slate
-    '1440404653325-ab127d49abc1', // Cinema
-    '1585647347345-d86895b6a718', // Hollywood
-    '1489599874457-3f9f31548e24'  // Popcorn/Movies
-  ],
-  music: [
-    '1511671782636-81141c26b5fa', // Concert
-    '1493225457224-06c1388b7da5', // Guitar
-    '1514525253161-7a46d19cd819', // DJ
-    '1459749411175-04bf5292ceea', // Piano
-    '1510915361894-08966d9f4ba7'  // Neon music
-  ],
-  superhero: [
-    '1608889175123-8ee3a41b518a', // Super hero figure
-    '1534809027769-6218f9c84e18', // Comic books
-    '1586348633757-ee3f938a1682', // Heroic pose
-    '1612036782180-6f0b6cd846fe', // Marvel style
-    '1585507119565-d602db0ef4ab'  // Action figure
-  ],
-  nature: [
-    '1472214103451-9374bd1c798e', // Nature landscape
-    '1441974231531-c6227dbb6b4e', // Forest
-    '1470071131385-9fe8d90f1118', // Mountains
-    '1465146849373-b292e5971597', // Ocean
-    '1501854140801-50d01698950b'  // Stars
-  ]
+const collectionImages = {
+  col_1: ['1540747913346-19e32dc3e97e', '1593341646782-e0bf8b1115b8'], // IPL 2025
+  col_2: ['1518609878373-06d740f60d8b', '1522778119026-d647f0596c20'], // FIFA
+  col_3: ['1531415074955-060416999e52', '1582236528828-5d8f61587399'], // ICC
+  col_4: ['1508098682722-e99c43a406b2', '1489944440615-453fc2b6604e'], // UEFA
+  col_5: ['1517026575980-3e1e2fd0af62', '1563249023456-4ed8c4e0f49c'], // F1
+  col_6: ['1540747913346-19e32dc3e97e', '1531415074955-060416999e52'], // Virat
+  col_7: ['1518609878373-06d740f60d8b', '1522778119026-d647f0596c20'], // Messi
+  col_8: ['1593341646782-e0bf8b1115b8', '1582236528828-5d8f61587399'], // Dhoni
+  col_9: ['1508098682722-e99c43a406b2', '1489944440615-453fc2b6604e'], // Ronaldo
+  col_10: ['1540747913346-19e32dc3e97e'], // Virat Col
+  col_11: ['1593341646782-e0bf8b1115b8'], // MS Dhoni
+  col_12: ['1531415074955-060416999e52'], // Rohit
+  col_13: ['1518609878373-06d740f60d8b'], // Ronaldo
+  col_14: ['1522778119026-d647f0596c20'], // Messi
+  col_15: ['1508098682722-e99c43a406b2'], // Neymar
+  col_16: ['1540747913346-19e32dc3e97e'], // RCB Fan
+  col_17: ['1593341646782-e0bf8b1115b8'], // CSK Fan
+  col_18: ['1531415074955-060416999e52'], // MI Fan
+  col_19: ['1518609878373-06d740f60d8b'], // Real Madrid
+  col_20: ['1522778119026-d647f0596c20'], // Barcelona
+  col_21: ['1552519507-da3b142c6e3d', '1503376712394-6d9b0ccb5125'], // Supercars
+  col_22: ['1578632767115-351597cf2477', '1580477659159-4ba3ff710dfb'], // Anime
+  col_23: ['1472214103451-9374bd1c798e', '1441974231531-c6227dbb6b4e'], // Travel
+  col_24: ['1528698827591-e408bfb0ffdc', '1552664730-d307ca884978', '1492684223066-81342ee5ff30'], // Motivation
+  col_25: ['1552820728-8b83bb6b7738', '1542751371-adc38448a05e', '1538481199705-c710c4e965fc'], // Gaming
 };
 
-// Map collections/tags to category keys
-const categoryMapping = {
-  'cricket': 'cricket',
-  'sports': 'cricket', // Assume cricket by default for this store's sports
-  'football': 'football',
-  'soccer': 'football',
-  'motivation': 'motivation',
-  'anime': 'anime',
-  'gaming': 'gaming',
-  'abstract': 'abstract',
-  'movie': 'movies',
-  'movies': 'movies',
-  'music': 'music',
-  'superhero': 'superhero',
-  'nature': 'nature',
-  'art': 'abstract',
-  'cars': 'abstract' // fallback
-};
-
-function getCuratedImage(collection, title, posterId) {
-  // Determine best category
-  let matchedCategory = 'abstract'; // default
-  
-  const searchString = `${collection.title} ${collection.description} ${collection.tags?.join(' ')} ${title}`.toLowerCase();
-  
-  for (const [key, category] of Object.entries(categoryMapping)) {
-    if (searchString.includes(key)) {
-      matchedCategory = category;
-      break;
-    }
-  }
-
-  // Get images for category
-  const images = curatedImages[matchedCategory] || curatedImages['abstract'];
-  
-  // Deterministic pick based on posterId string to ensure same poster gets same image
+function getCuratedImage(collectionId, posterId) {
+  const images = collectionImages[collectionId] || ['1550684848-fac1c5b4e853']; // fallback to abstract neon
   const idHash = posterId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
   const imageId = images[idHash % images.length];
-
   return `https://images.unsplash.com/photo-${imageId}?auto=format&fit=crop&w=800&q=80`;
 }
 
@@ -128,7 +46,6 @@ async function fixDatabase() {
   console.log('Reading collectionsData.js...');
   let content = fs.readFileSync(dataFilePath, 'utf-8');
   
-  // Extract the array by finding the start of the array and counting brackets
   const startIndex = content.indexOf('export const collectionsData = [') + 'export const collectionsData = '.length;
   let bracketCount = 0;
   let endIndex = -1;
@@ -154,28 +71,21 @@ async function fixDatabase() {
   let fixedCount = 0;
   
   collections.forEach(collection => {
-    // Fix collection thumbnail
-    if (collection.thumbnail && (collection.thumbnail.includes('loremflickr') || collection.thumbnail.includes('picsum'))) {
-      collection.thumbnail = getCuratedImage(collection, collection.title, collection.id);
-      fixedCount++;
-    }
+    // ALWAYS override thumbnail to ensure it perfectly matches the mapping
+    collection.thumbnail = getCuratedImage(collection.id, collection.id);
+    fixedCount++;
     
-    // Fix poster images
     if (collection.posters) {
       collection.posters.forEach(poster => {
-        if (poster.image && (poster.image.includes('loremflickr') || poster.image.includes('picsum'))) {
-          poster.image = getCuratedImage(collection, poster.title, poster.id);
-          fixedCount++;
-        }
+        poster.image = getCuratedImage(collection.id, poster.id);
+        fixedCount++;
       });
     }
   });
   
-  console.log(`Replaced ${fixedCount} generic images with highly relevant curated URLs.`);
+  console.log(`Updated ${fixedCount} images with perfectly mapped Unsplash IDs.`);
   
-  // Re-serialize the file
   const newContent = content.substring(0, startIndex) + JSON.stringify(collections, null, 2) + content.substring(endIndex);
-  
   fs.writeFileSync(dataFilePath, newContent, 'utf-8');
   console.log('✅ collectionsData.js updated successfully!');
 }
