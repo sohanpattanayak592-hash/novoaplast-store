@@ -19,7 +19,7 @@ export const collectionsData = [
       {
         "id": "p_1",
         "title": "IPL 2025 Champions Moment 1",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 3574,
         "tags": [
@@ -34,7 +34,7 @@ export const collectionsData = [
       {
         "id": "p_2",
         "title": "IPL 2025 Champions Moment 2",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 4227,
         "tags": [
@@ -49,7 +49,7 @@ export const collectionsData = [
       {
         "id": "p_3",
         "title": "IPL 2025 Champions Moment 3",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 1413,
         "tags": [
@@ -64,7 +64,7 @@ export const collectionsData = [
       {
         "id": "p_4",
         "title": "IPL 2025 Champions Moment 4",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 4790,
         "tags": [
@@ -79,7 +79,7 @@ export const collectionsData = [
       {
         "id": "p_5",
         "title": "IPL 2025 Champions Moment 5",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 1065,
         "tags": [
@@ -94,7 +94,7 @@ export const collectionsData = [
       {
         "id": "p_6",
         "title": "IPL 2025 Champions Moment 6",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 3269,
         "tags": [
@@ -109,7 +109,7 @@ export const collectionsData = [
       {
         "id": "p_7",
         "title": "IPL 2025 Champions Moment 7",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 970,
         "tags": [
@@ -124,7 +124,7 @@ export const collectionsData = [
       {
         "id": "p_8",
         "title": "IPL 2025 Champions Moment 8",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 2014,
         "tags": [
@@ -139,7 +139,7 @@ export const collectionsData = [
       {
         "id": "p_9",
         "title": "IPL 2025 Champions Moment 9",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 1160,
         "tags": [
@@ -154,7 +154,7 @@ export const collectionsData = [
       {
         "id": "p_10",
         "title": "IPL 2025 Champions Moment 10",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ipl2025champions.jpg",
         "price": 199,
         "downloads": 3558,
         "tags": [
@@ -167,7 +167,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/ipl2025champions.jpg"
   },
   {
     "id": "col_2",
@@ -853,7 +853,7 @@ export const collectionsData = [
       {
         "id": "p_51",
         "title": "Virat Kohli Trophy Celebrations Poster 1",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 3222,
         "tags": [
@@ -868,7 +868,7 @@ export const collectionsData = [
       {
         "id": "p_52",
         "title": "Virat Kohli Trophy Celebrations Poster 2",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 4273,
         "tags": [
@@ -883,7 +883,7 @@ export const collectionsData = [
       {
         "id": "p_53",
         "title": "Virat Kohli Trophy Celebrations Poster 3",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 1399,
         "tags": [
@@ -898,7 +898,7 @@ export const collectionsData = [
       {
         "id": "p_54",
         "title": "Virat Kohli Trophy Celebrations Poster 4",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 339,
         "tags": [
@@ -913,7 +913,7 @@ export const collectionsData = [
       {
         "id": "p_55",
         "title": "Virat Kohli Trophy Celebrations Poster 5",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 1589,
         "tags": [
@@ -928,7 +928,7 @@ export const collectionsData = [
       {
         "id": "p_56",
         "title": "Virat Kohli Trophy Celebrations Poster 6",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 2045,
         "tags": [
@@ -943,7 +943,7 @@ export const collectionsData = [
       {
         "id": "p_57",
         "title": "Virat Kohli Trophy Celebrations Poster 7",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 4720,
         "tags": [
@@ -958,7 +958,7 @@ export const collectionsData = [
       {
         "id": "p_58",
         "title": "Virat Kohli Trophy Celebrations Poster 8",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 3041,
         "tags": [
@@ -971,7 +971,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/virat.jpg"
   },
   {
     "id": "col_7",
@@ -989,7 +989,7 @@ export const collectionsData = [
       {
         "id": "p_59",
         "title": "Messi World Cup Trophy Lift Poster 1",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 2951,
         "tags": [
@@ -1004,7 +1004,7 @@ export const collectionsData = [
       {
         "id": "p_60",
         "title": "Messi World Cup Trophy Lift Poster 2",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 3506,
         "tags": [
@@ -1019,7 +1019,7 @@ export const collectionsData = [
       {
         "id": "p_61",
         "title": "Messi World Cup Trophy Lift Poster 3",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 2036,
         "tags": [
@@ -1034,7 +1034,7 @@ export const collectionsData = [
       {
         "id": "p_62",
         "title": "Messi World Cup Trophy Lift Poster 4",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 4176,
         "tags": [
@@ -1049,7 +1049,7 @@ export const collectionsData = [
       {
         "id": "p_63",
         "title": "Messi World Cup Trophy Lift Poster 5",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 1610,
         "tags": [
@@ -1064,7 +1064,7 @@ export const collectionsData = [
       {
         "id": "p_64",
         "title": "Messi World Cup Trophy Lift Poster 6",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 2041,
         "tags": [
@@ -1079,7 +1079,7 @@ export const collectionsData = [
       {
         "id": "p_65",
         "title": "Messi World Cup Trophy Lift Poster 7",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 1451,
         "tags": [
@@ -1094,7 +1094,7 @@ export const collectionsData = [
       {
         "id": "p_66",
         "title": "Messi World Cup Trophy Lift Poster 8",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 386,
         "tags": [
@@ -1107,7 +1107,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/messi.jpg"
   },
   {
     "id": "col_8",
@@ -1261,7 +1261,7 @@ export const collectionsData = [
       {
         "id": "p_75",
         "title": "Ronaldo Champions League Poster 1",
-        "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6604e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 2264,
         "tags": [
@@ -1276,7 +1276,7 @@ export const collectionsData = [
       {
         "id": "p_76",
         "title": "Ronaldo Champions League Poster 2",
-        "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 1866,
         "tags": [
@@ -1291,7 +1291,7 @@ export const collectionsData = [
       {
         "id": "p_77",
         "title": "Ronaldo Champions League Poster 3",
-        "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6604e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 3831,
         "tags": [
@@ -1306,7 +1306,7 @@ export const collectionsData = [
       {
         "id": "p_78",
         "title": "Ronaldo Champions League Poster 4",
-        "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 2070,
         "tags": [
@@ -1321,7 +1321,7 @@ export const collectionsData = [
       {
         "id": "p_79",
         "title": "Ronaldo Champions League Poster 5",
-        "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6604e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 3928,
         "tags": [
@@ -1336,7 +1336,7 @@ export const collectionsData = [
       {
         "id": "p_80",
         "title": "Ronaldo Champions League Poster 6",
-        "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6604e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 909,
         "tags": [
@@ -1351,7 +1351,7 @@ export const collectionsData = [
       {
         "id": "p_81",
         "title": "Ronaldo Champions League Poster 7",
-        "image": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 3309,
         "tags": [
@@ -1366,7 +1366,7 @@ export const collectionsData = [
       {
         "id": "p_82",
         "title": "Ronaldo Champions League Poster 8",
-        "image": "https://images.unsplash.com/photo-1489944440615-453fc2b6604e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 3492,
         "tags": [
@@ -1379,7 +1379,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/ronaldo.jpg"
   },
   {
     "id": "col_10",
@@ -1397,7 +1397,7 @@ export const collectionsData = [
       {
         "id": "p_83",
         "title": "Virat Kohli Legend Poster 1",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 2499,
         "tags": [
@@ -1412,7 +1412,7 @@ export const collectionsData = [
       {
         "id": "p_84",
         "title": "Virat Kohli Legend Poster 2",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 864,
         "tags": [
@@ -1427,7 +1427,7 @@ export const collectionsData = [
       {
         "id": "p_85",
         "title": "Virat Kohli Legend Poster 3",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 637,
         "tags": [
@@ -1442,7 +1442,7 @@ export const collectionsData = [
       {
         "id": "p_86",
         "title": "Virat Kohli Legend Poster 4",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 4485,
         "tags": [
@@ -1457,7 +1457,7 @@ export const collectionsData = [
       {
         "id": "p_87",
         "title": "Virat Kohli Legend Poster 5",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 2471,
         "tags": [
@@ -1472,7 +1472,7 @@ export const collectionsData = [
       {
         "id": "p_88",
         "title": "Virat Kohli Legend Poster 6",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 1627,
         "tags": [
@@ -1487,7 +1487,7 @@ export const collectionsData = [
       {
         "id": "p_89",
         "title": "Virat Kohli Legend Poster 7",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 4568,
         "tags": [
@@ -1502,7 +1502,7 @@ export const collectionsData = [
       {
         "id": "p_90",
         "title": "Virat Kohli Legend Poster 8",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/virat.jpg",
         "price": 199,
         "downloads": 1880,
         "tags": [
@@ -1515,7 +1515,7 @@ export const collectionsData = [
         "badge": "TRENDING"
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/virat.jpg"
   },
   {
     "id": "col_11",
@@ -1805,7 +1805,7 @@ export const collectionsData = [
       {
         "id": "p_107",
         "title": "Cristiano Ronaldo Legend Poster 1",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 681,
         "tags": [
@@ -1820,7 +1820,7 @@ export const collectionsData = [
       {
         "id": "p_108",
         "title": "Cristiano Ronaldo Legend Poster 2",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 4684,
         "tags": [
@@ -1835,7 +1835,7 @@ export const collectionsData = [
       {
         "id": "p_109",
         "title": "Cristiano Ronaldo Legend Poster 3",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 4930,
         "tags": [
@@ -1850,7 +1850,7 @@ export const collectionsData = [
       {
         "id": "p_110",
         "title": "Cristiano Ronaldo Legend Poster 4",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 1685,
         "tags": [
@@ -1865,7 +1865,7 @@ export const collectionsData = [
       {
         "id": "p_111",
         "title": "Cristiano Ronaldo Legend Poster 5",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 843,
         "tags": [
@@ -1880,7 +1880,7 @@ export const collectionsData = [
       {
         "id": "p_112",
         "title": "Cristiano Ronaldo Legend Poster 6",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 2420,
         "tags": [
@@ -1895,7 +1895,7 @@ export const collectionsData = [
       {
         "id": "p_113",
         "title": "Cristiano Ronaldo Legend Poster 7",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 599,
         "tags": [
@@ -1910,7 +1910,7 @@ export const collectionsData = [
       {
         "id": "p_114",
         "title": "Cristiano Ronaldo Legend Poster 8",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/ronaldo.jpg",
         "price": 199,
         "downloads": 2229,
         "tags": [
@@ -1923,7 +1923,7 @@ export const collectionsData = [
         "badge": "FAN FAVORITE"
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/ronaldo.jpg"
   },
   {
     "id": "col_14",
@@ -1941,7 +1941,7 @@ export const collectionsData = [
       {
         "id": "p_115",
         "title": "Lionel Messi Legend Poster 1",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 726,
         "tags": [
@@ -1956,7 +1956,7 @@ export const collectionsData = [
       {
         "id": "p_116",
         "title": "Lionel Messi Legend Poster 2",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 287,
         "tags": [
@@ -1971,7 +1971,7 @@ export const collectionsData = [
       {
         "id": "p_117",
         "title": "Lionel Messi Legend Poster 3",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 342,
         "tags": [
@@ -1986,7 +1986,7 @@ export const collectionsData = [
       {
         "id": "p_118",
         "title": "Lionel Messi Legend Poster 4",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 2815,
         "tags": [
@@ -2001,7 +2001,7 @@ export const collectionsData = [
       {
         "id": "p_119",
         "title": "Lionel Messi Legend Poster 5",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 4087,
         "tags": [
@@ -2016,7 +2016,7 @@ export const collectionsData = [
       {
         "id": "p_120",
         "title": "Lionel Messi Legend Poster 6",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 623,
         "tags": [
@@ -2031,7 +2031,7 @@ export const collectionsData = [
       {
         "id": "p_121",
         "title": "Lionel Messi Legend Poster 7",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 1100,
         "tags": [
@@ -2046,7 +2046,7 @@ export const collectionsData = [
       {
         "id": "p_122",
         "title": "Lionel Messi Legend Poster 8",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/messi.jpg",
         "price": 199,
         "downloads": 1509,
         "tags": [
@@ -2059,7 +2059,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/messi.jpg"
   },
   {
     "id": "col_15",
@@ -2218,7 +2218,7 @@ export const collectionsData = [
       {
         "id": "p_131",
         "title": "RCB Fan Poster 1",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 3957,
         "tags": [
@@ -2233,7 +2233,7 @@ export const collectionsData = [
       {
         "id": "p_132",
         "title": "RCB Fan Poster 2",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 4930,
         "tags": [
@@ -2248,7 +2248,7 @@ export const collectionsData = [
       {
         "id": "p_133",
         "title": "RCB Fan Poster 3",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 4370,
         "tags": [
@@ -2263,7 +2263,7 @@ export const collectionsData = [
       {
         "id": "p_134",
         "title": "RCB Fan Poster 4",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 1100,
         "tags": [
@@ -2278,7 +2278,7 @@ export const collectionsData = [
       {
         "id": "p_135",
         "title": "RCB Fan Poster 5",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 102,
         "tags": [
@@ -2293,7 +2293,7 @@ export const collectionsData = [
       {
         "id": "p_136",
         "title": "RCB Fan Poster 6",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 256,
         "tags": [
@@ -2308,7 +2308,7 @@ export const collectionsData = [
       {
         "id": "p_137",
         "title": "RCB Fan Poster 7",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 3702,
         "tags": [
@@ -2323,7 +2323,7 @@ export const collectionsData = [
       {
         "id": "p_138",
         "title": "RCB Fan Poster 8",
-        "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/rcb.jpg",
         "price": 199,
         "downloads": 2829,
         "tags": [
@@ -2336,7 +2336,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/rcb.jpg"
   },
   {
     "id": "col_17",
@@ -2359,7 +2359,7 @@ export const collectionsData = [
       {
         "id": "p_139",
         "title": "CSK Fan Poster 1",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 2515,
         "tags": [
@@ -2374,7 +2374,7 @@ export const collectionsData = [
       {
         "id": "p_140",
         "title": "CSK Fan Poster 2",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 1725,
         "tags": [
@@ -2389,7 +2389,7 @@ export const collectionsData = [
       {
         "id": "p_141",
         "title": "CSK Fan Poster 3",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 125,
         "tags": [
@@ -2404,7 +2404,7 @@ export const collectionsData = [
       {
         "id": "p_142",
         "title": "CSK Fan Poster 4",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 2680,
         "tags": [
@@ -2419,7 +2419,7 @@ export const collectionsData = [
       {
         "id": "p_143",
         "title": "CSK Fan Poster 5",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 3704,
         "tags": [
@@ -2434,7 +2434,7 @@ export const collectionsData = [
       {
         "id": "p_144",
         "title": "CSK Fan Poster 6",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 1587,
         "tags": [
@@ -2449,7 +2449,7 @@ export const collectionsData = [
       {
         "id": "p_145",
         "title": "CSK Fan Poster 7",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 1556,
         "tags": [
@@ -2464,7 +2464,7 @@ export const collectionsData = [
       {
         "id": "p_146",
         "title": "CSK Fan Poster 8",
-        "image": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/csk.jpg",
         "price": 199,
         "downloads": 4141,
         "tags": [
@@ -2477,7 +2477,7 @@ export const collectionsData = [
         "badge": "BESTSELLER"
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1593341646782-e0bf8b1115b8?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/csk.jpg"
   },
   {
     "id": "col_18",
@@ -2500,7 +2500,7 @@ export const collectionsData = [
       {
         "id": "p_147",
         "title": "MI Fan Poster 1",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 1826,
         "tags": [
@@ -2515,7 +2515,7 @@ export const collectionsData = [
       {
         "id": "p_148",
         "title": "MI Fan Poster 2",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 1039,
         "tags": [
@@ -2530,7 +2530,7 @@ export const collectionsData = [
       {
         "id": "p_149",
         "title": "MI Fan Poster 3",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 3394,
         "tags": [
@@ -2545,7 +2545,7 @@ export const collectionsData = [
       {
         "id": "p_150",
         "title": "MI Fan Poster 4",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 203,
         "tags": [
@@ -2560,7 +2560,7 @@ export const collectionsData = [
       {
         "id": "p_151",
         "title": "MI Fan Poster 5",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 4701,
         "tags": [
@@ -2575,7 +2575,7 @@ export const collectionsData = [
       {
         "id": "p_152",
         "title": "MI Fan Poster 6",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 132,
         "tags": [
@@ -2590,7 +2590,7 @@ export const collectionsData = [
       {
         "id": "p_153",
         "title": "MI Fan Poster 7",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 3940,
         "tags": [
@@ -2605,7 +2605,7 @@ export const collectionsData = [
       {
         "id": "p_154",
         "title": "MI Fan Poster 8",
-        "image": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/mi.jpg",
         "price": 199,
         "downloads": 2590,
         "tags": [
@@ -2618,7 +2618,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1531415074955-060416999e52?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/mi.jpg"
   },
   {
     "id": "col_19",
@@ -2781,7 +2781,7 @@ export const collectionsData = [
       {
         "id": "p_163",
         "title": "Barcelona Fan Poster 1",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 1948,
         "tags": [
@@ -2796,7 +2796,7 @@ export const collectionsData = [
       {
         "id": "p_164",
         "title": "Barcelona Fan Poster 2",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 3038,
         "tags": [
@@ -2811,7 +2811,7 @@ export const collectionsData = [
       {
         "id": "p_165",
         "title": "Barcelona Fan Poster 3",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 4636,
         "tags": [
@@ -2826,7 +2826,7 @@ export const collectionsData = [
       {
         "id": "p_166",
         "title": "Barcelona Fan Poster 4",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 1647,
         "tags": [
@@ -2841,7 +2841,7 @@ export const collectionsData = [
       {
         "id": "p_167",
         "title": "Barcelona Fan Poster 5",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 1988,
         "tags": [
@@ -2856,7 +2856,7 @@ export const collectionsData = [
       {
         "id": "p_168",
         "title": "Barcelona Fan Poster 6",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 522,
         "tags": [
@@ -2871,7 +2871,7 @@ export const collectionsData = [
       {
         "id": "p_169",
         "title": "Barcelona Fan Poster 7",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 4987,
         "tags": [
@@ -2886,7 +2886,7 @@ export const collectionsData = [
       {
         "id": "p_170",
         "title": "Barcelona Fan Poster 8",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "image": "/curated/barcelona.jpg",
         "price": 199,
         "downloads": 3833,
         "tags": [
@@ -2899,7 +2899,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/barcelona.jpg"
   },
   {
     "id": "col_21",
