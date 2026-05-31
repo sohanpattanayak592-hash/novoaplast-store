@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ShoppingBag, Search, User, Truck, ChevronDown } from 'lucide-react'
+import { Menu, X, ShoppingBag, Search, User, Truck, ChevronDown, ArrowRight } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { useAuth } from '../context/AuthContext'
 import { getAllGenres } from '../data/collectionsData'
