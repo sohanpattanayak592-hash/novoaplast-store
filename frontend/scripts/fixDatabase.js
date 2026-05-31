@@ -101,15 +101,27 @@ const categoryMapping = {
   'cars': 'abstract' // fallback
 };
 
-function getCuratedImage(collection, title, posterId, isThumbnail = false) {
-  // We use Pollinations AI to generate a highly-relevant image perfectly matching the poster's actual title and collection.
-  // This solves the problem of "generic stock images" and guarantees high-quality, matched visual content.
-  const basePrompt = `${title} ${collection.title} premium wall poster art masterpiece high quality cinematic lighting`;
-  const width = isThumbnail ? 1200 : 800;
-  const height = isThumbnail ? 800 : 1200;
-  const model = 'flux'; // Using a fast, high quality model
+function getCuratedImage(collection, title, posterId) {
+  // Determine best category
+  let matchedCategory = 'abstract'; // default
   
-  return `https://image.pollinations.ai/prompt/${encodeURIComponent(basePrompt)}?width=${width}&height=${height}&nologo=true&model=${model}&seed=${posterId}`;
+  const searchString = `${collection.title} ${collection.description} ${collection.tags?.join(' ')} ${title}`.toLowerCase();
+  
+  for (const [key, category] of Object.entries(categoryMapping)) {
+    if (searchString.includes(key)) {
+      matchedCategory = category;
+      break;
+    }
+  }
+
+  // Get images for category
+  const images = curatedImages[matchedCategory] || curatedImages['abstract'];
+  
+  // Deterministic pick based on posterId string to ensure same poster gets same image
+  const idHash = posterId.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const imageId = images[idHash % images.length];
+
+  return `https://images.unsplash.com/photo-${imageId}?auto=format&fit=crop&w=800&q=80`;
 }
 
 async function fixDatabase() {
@@ -143,16 +155,16 @@ async function fixDatabase() {
   
   collections.forEach(collection => {
     // Fix collection thumbnail
-    if (collection.thumbnail && (collection.thumbnail.includes('loremflickr') || collection.thumbnail.includes('picsum') || collection.thumbnail.includes('unsplash'))) {
-      collection.thumbnail = getCuratedImage(collection, collection.title, collection.id, true);
+    if (collection.thumbnail && (collection.thumbnail.includes('loremflickr') || collection.thumbnail.includes('picsum'))) {
+      collection.thumbnail = getCuratedImage(collection, collection.title, collection.id);
       fixedCount++;
     }
     
     // Fix poster images
     if (collection.posters) {
       collection.posters.forEach(poster => {
-        if (poster.image && (poster.image.includes('loremflickr') || poster.image.includes('picsum') || poster.image.includes('unsplash'))) {
-          poster.image = getCuratedImage(collection, poster.title, poster.id, false);
+        if (poster.image && (poster.image.includes('loremflickr') || poster.image.includes('picsum'))) {
+          poster.image = getCuratedImage(collection, poster.title, poster.id);
           fixedCount++;
         }
       });
