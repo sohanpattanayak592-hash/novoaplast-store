@@ -57,7 +57,11 @@ const CollectionRow = ({ title, collections }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/40 to-transparent opacity-80" />
             <div className="absolute bottom-0 left-0 w-full p-4">
               <h4 className="text-white font-display font-bold text-lg">{collection.title}</h4>
-              <p className="text-novo-400 text-xs mt-1">{collection.posters.length} Posters</p>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-novo-400 text-xs">{collection.posters.length} Posters</span>
+                <span className="text-white/30 text-[10px]">&bull;</span>
+                <span className="text-white/60 text-[10px] uppercase tracking-wider">A4, A3, A2, A1 Sizes</span>
+              </div>
             </div>
             
             {/* Hover Play Button (Netflix Style) */}
