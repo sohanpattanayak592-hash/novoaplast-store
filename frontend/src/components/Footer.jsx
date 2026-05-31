@@ -47,52 +47,36 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-novo-400 mb-5">Company</h4>
-            <ul className="space-y-3">
-              {['About Us', 'Our Process', 'Sustainability', 'Blog'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-white/40 hover:text-novo-300 text-sm transition-colors duration-300">
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h3 className="font-display font-bold text-white mb-6">Company</h3>
+            <ul className="space-y-4">
+              <li><Link to="/about" className="text-white/40 hover:text-novo-400 transition-colors">About Us</Link></li>
+              <li><Link to="/faq" className="text-white/40 hover:text-novo-400 transition-colors">FAQ</Link></li>
+              <li><Link to="/collections" className="text-white/40 hover:text-novo-400 transition-colors">Collections</Link></li>
+              <li><Link to="/search" className="text-white/40 hover:text-novo-400 transition-colors">Search</Link></li>
             </ul>
           </div>
-
+          
           {/* Contact */}
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-novo-400 mb-5">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-white/40 text-sm">
-                <Mail className="w-4 h-4 text-novo-500/60" />
-                hello@novoplast.in
-              </li>
-              <li className="flex items-center gap-3 text-white/40 text-sm">
-                <Phone className="w-4 h-4 text-novo-500/60" />
-                +91 98765 43210
-              </li>
-              <li className="flex items-center gap-3 text-white/40 text-sm">
-                <MapPin className="w-4 h-4 text-novo-500/60" />
-                New Delhi, India
-              </li>
+            <h3 className="font-display font-bold text-white mb-6">Contact</h3>
+            <ul className="space-y-4">
+              <li><a href="mailto:hello@novoplast.in" className="text-white/40 hover:text-novo-400 transition-colors flex items-center gap-2"><Mail className="w-4 h-4"/> hello@novoplast.in</a></li>
+              <li><a href="tel:+919876543210" className="text-white/40 hover:text-novo-400 transition-colors flex items-center gap-2"><Phone className="w-4 h-4"/> +91 98765 43210</a></li>
+              <li className="text-white/40 flex items-center gap-2"><MapPin className="w-4 h-4"/> New Delhi, India</li>
+              <li className="pt-2"><a href="https://instagram.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-novo-400 hover:bg-white/10 transition-colors"><Instagram className="w-5 h-5"/></a></li>
             </ul>
-            <div className="flex items-center gap-3 mt-5">
-              <a href="#" className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-novo-500/10 hover:border-novo-500/30 transition-all">
-                <Instagram className="w-4 h-4 text-white/50" />
-              </a>
-            </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-14 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs text-center sm:text-left">
-            © 2026 NOVOPLAST. All rights reserved. A product of EVERRLEAF.
+        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white/30 text-sm text-center md:text-left">
+            &copy; {new Date().getFullYear()} NOVOPLAST. A product of EVERRLEAF.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-4 sm:mt-0">
-            <a href="#" className="text-white/30 hover:text-white/60 text-xs transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/30 hover:text-white/60 text-xs transition-colors">Terms of Service</a>
-            <a href="#" className="text-white/30 hover:text-white/60 text-xs transition-colors">Refund Policy</a>
+          <div className="flex gap-6 text-sm">
+            <Link to="/privacy-policy" className="text-white/30 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-white/30 hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link to="/refund-policy" className="text-white/30 hover:text-white transition-colors">Refund Policy</Link>
+            <Link to="/shipping-policy" className="text-white/30 hover:text-white transition-colors">Shipping Policy</Link>
           </div>
         </div>
       </div>
