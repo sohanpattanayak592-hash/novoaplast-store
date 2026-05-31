@@ -5,6 +5,7 @@ import { ArrowRight, Shield, Droplets, Sun, Infinity, Star, Sparkles, Box, Truck
 import { products } from '../data/products'
 import { getTrendingCollections, getBestSellers, getAllGenres, getCollectionsByGenre } from '../data/collectionsData'
 import { fanClubsData } from '../data/fanClubsData'
+import PosterImage from '../components/PosterImage'
 import SEOHead from '../components/SEOHead'
 
 const fadeUp = {
@@ -180,8 +181,11 @@ export default function HomePage() {
               <motion.div key={poster.id} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
                 <Link to={`/collections/${poster.collectionId}`} className="block glass-card rounded-2xl overflow-hidden group">
                   <div className="relative aspect-[3/4] overflow-hidden">
-                    <img src={poster.image} alt={poster.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute top-2 left-2">
+                    <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-2 left-2 flex flex-col gap-1">
+                      <span className="bg-dark-900/80 backdrop-blur border border-white/10 text-white/80 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        {poster.collectionTitle}
+                      </span>
                       {poster.badge && (
                         <span className="bg-novo-500/20 backdrop-blur text-novo-400 border border-novo-500/30 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
                           {poster.badge}

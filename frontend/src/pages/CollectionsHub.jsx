@@ -11,6 +11,7 @@ import {
   getCollectionsByGenre
 } from '../data/collectionsData'
 import { useEngagement } from '../context/EngagementContext'
+import PosterImage from '../components/PosterImage'
 
 // Helper component for horizontal scrolling row
 const CollectionRow = ({ title, collections }) => {
@@ -48,11 +49,10 @@ const CollectionRow = ({ title, collections }) => {
             key={collection.id}
             className="relative flex-none w-[280px] md:w-[320px] aspect-[16/9] rounded-xl overflow-hidden glass-card transition-all duration-300 hover:scale-105 hover:z-30 hover:border-novo-500/50 hover:shadow-[0_0_30px_rgba(139,204,99,0.3)] snap-start group/card"
           >
-            <img 
+            <PosterImage 
               src={collection.thumbnail} 
               alt={collection.title} 
-              className="w-full h-full object-cover"
-              loading="lazy"
+              className="group-hover/card:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/40 to-transparent opacity-80" />
             <div className="absolute bottom-0 left-0 w-full p-4">

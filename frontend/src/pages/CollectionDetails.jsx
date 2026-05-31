@@ -6,6 +6,7 @@ import { collectionsData, getSimilarCollections } from '../data/collectionsData'
 import { POSTER_SIZES, CURRENCY } from '../data/pricingConfig'
 import { useEngagement } from '../context/EngagementContext'
 import { useCart } from '../context/CartContext'
+import PosterImage from '../components/PosterImage'
 
 // Modal Component for Size Selection
 const SizeSelectorModal = ({ poster, isOpen, onClose, onAdd, onBuy }) => {
@@ -282,7 +283,7 @@ export default function CollectionDetails() {
                   className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card cursor-pointer"
                   onClick={() => openSizeSelector(poster)}
                 >
-                  <img src={poster.image} alt={poster.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-700" />
                   
                   {/* Badge */}
                   <div className="absolute top-2 left-2 z-10">

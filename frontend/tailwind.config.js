@@ -85,6 +85,9 @@ export default {
           '50%': { opacity: '0.8' },
           '100%': { opacity: '1' },
         },
+        'shimmer': {
+          '100%': { transform: 'translateX(200%)' },
+        },
       },
       boxShadow: {
         'novo': '0 0 30px rgba(139, 204, 99, 0.15)',

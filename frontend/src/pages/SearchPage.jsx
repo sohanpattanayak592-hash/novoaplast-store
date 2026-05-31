@@ -5,6 +5,7 @@ import { fanClubsData } from '../data/fanClubsData'
 import { Heart, Download, ShoppingBag, Tag, Search, Shield } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { useEngagement } from '../context/EngagementContext'
+import PosterImage from '../components/PosterImage'
 import { motion } from 'framer-motion'
 import { POSTER_SIZES, CURRENCY } from '../data/pricingConfig'
 import SEOHead from '../components/SEOHead'
@@ -162,7 +163,7 @@ export default function SearchPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {fanClubResults.map(club => (
               <Link to={`/fanclub/${club.id}`} key={club.id} className="group relative rounded-2xl overflow-hidden glass-card aspect-video block">
-                <img src={club.banner} alt={club.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy" />
+                <PosterImage src={club.banner} alt={club.name} className="opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent" />
                 <div className="absolute inset-0" style={{ backgroundColor: `${club.primaryColor}20` }} />
                 <div className="absolute bottom-4 left-4">
@@ -181,7 +182,7 @@ export default function SearchPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {collectionResults.map(c => (
               <Link to={`/collections/${c.id}`} key={c.id} className="group rounded-xl overflow-hidden relative aspect-video glass-card">
-                <img src={c.thumbnail} alt={c.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" loading="lazy" />
+                <PosterImage src={c.thumbnail} alt={c.title} className="opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/20 to-transparent" />
                 <span className="absolute bottom-3 left-3 text-white font-display font-bold">{c.title}</span>
               </Link>
@@ -203,7 +204,7 @@ export default function SearchPage() {
                   key={poster.id}
                   className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card cursor-pointer"
                 >
-                  <img src={poster.image} alt={poster.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-700" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4">
