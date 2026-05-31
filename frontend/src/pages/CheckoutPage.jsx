@@ -7,7 +7,7 @@ import { useAuth } from '../context/AuthContext'
 
 export default function CheckoutPage() {
   const navigate = useNavigate()
-  const { items, removeFromCart, clearCart, getCartTotal } = useCart()
+  const { items, removeFromCart, clearCart, getCartSubtotal, getCartTotal, getBundleDiscount } = useCart()
   const { session } = useAuth()
 
   const [contactInfo, setContactInfo] = useState({
@@ -35,9 +35,15 @@ export default function CheckoutPage() {
     setPromoInput('')
   }
 
-  const subtotal = getCartTotal()
-  const discount = appliedPromo ? Math.round(subtotal * appliedPromo.discountPercent / 100) : 0
-  const finalPrice = subtotal - discount
+  // Get cart context pricing
+  const subtotal = getCartSubtotal()
+  const bundleDiscount = getBundleDiscount()
+  
+  // We'll calculate custom promo off the full subtotal:
+  const customPromoDiscount = appliedPromo ? Math.round(subtotal * appliedPromo.discountPercent / 100) : 0
+  
+  // For safety, the final price is what's in getCartTotal(), minus any custom promo.
+  const finalPrice = getCartTotal() - customPromoDiscount
 
   const handleOrder = async (bypassAuth = false) => {
     if (!contactInfo.name || !contactInfo.email || !contactInfo.phone || !contactInfo.address || !contactInfo.city || !contactInfo.pincode) {
@@ -63,7 +69,8 @@ export default function CheckoutPage() {
         items: items,
         contactInfo: contactInfo,
         promo: appliedPromo || null,
-        totalAmount: getCartTotal(),
+        bundleDiscount: bundleDiscount.discountValue > 0 ? bundleDiscount : null,
+        totalAmount: finalPrice,
         user_id: session?.user?.id || null
       }
 
@@ -182,7 +189,6 @@ export default function CheckoutPage() {
               <div className="flex flex-col gap-3">
                 <button 
                   onClick={() => {
-                    // Navigate to auth page but save the contact info to context or just let the redirect handle it
                     navigate('/login', { state: { from: { pathname: '/checkout' } } })
                   }}
                   className="btn-novo py-3 flex justify-center items-center font-bold w-full"
@@ -192,7 +198,7 @@ export default function CheckoutPage() {
                 <button 
                   onClick={() => {
                     setShowAuthPopup(false)
-                    handleOrder(true) // bypass auth popup
+                    handleOrder(true)
                   }}
                   className="py-3 px-4 rounded-xl border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-colors font-medium w-full"
                 >
@@ -205,7 +211,7 @@ export default function CheckoutPage() {
       </AnimatePresence>
 
       <div className="min-h-screen bg-dark-950 pt-32 pb-24">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-white/40 hover:text-white text-sm mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Continue Shopping
         </button>
@@ -334,21 +340,39 @@ export default function CheckoutPage() {
                   <span>Subtotal ({items.length} item{items.length > 1 ? 's' : ''})</span>
                   <span>₹{subtotal}</span>
                 </div>
-                {appliedPromo && (
-                  <div className="flex justify-between text-green-400">
-                    <span>Discount ({appliedPromo.discountPercent}%)</span>
-                    <span>-₹{discount}</span>
+                
+                {/* Display Bundle Discount */}
+                {bundleDiscount.discountValue > 0 && (
+                  <div className="flex justify-between text-green-400 font-medium">
+                    <span className="flex items-center gap-1"><Tag className="w-3.5 h-3.5" /> Bundle Discount ({bundleDiscount.label})</span>
+                    <span>-₹{bundleDiscount.discountValue}</span>
                   </div>
                 )}
+
+                {/* Custom Promo Code */}
+                {appliedPromo && (
+                  <div className="flex justify-between text-green-400">
+                    <span>Promo ({appliedPromo.discountPercent}%)</span>
+                    <span>-₹{customPromoDiscount}</span>
+                  </div>
+                )}
+                
                 <div className="flex justify-between text-white/60">
                   <span>Shipping</span>
                   <span className="text-green-400 font-medium">FREE</span>
                 </div>
+                
                 <div className="flex justify-between text-white font-display font-bold text-xl pt-3 border-t border-white/10">
                   <span>Total</span>
                   <span className="text-novo-400">₹{finalPrice}</span>
                 </div>
               </div>
+
+              {bundleDiscount.discountValue > 0 && (
+                <div className="mb-6 p-3 rounded-lg bg-novo-500/10 border border-novo-500/20 text-novo-300 text-sm text-center font-medium">
+                   You saved ₹{bundleDiscount.discountValue} with bundle pricing! 🎉
+                </div>
+              )}
 
               <button onClick={() => handleOrder(false)} disabled={submitting}
                 className={`w-full flex items-center justify-center gap-3 text-lg btn-novo ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}

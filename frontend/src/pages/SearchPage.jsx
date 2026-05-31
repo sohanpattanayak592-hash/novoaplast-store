@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, Link, useNavigate } from 'react-router-dom'
 import { collectionsData } from '../data/collectionsData'
-import { Heart, Download, ShoppingBag } from 'lucide-react'
+import { fanClubsData } from '../data/fanClubsData'
+import { Heart, Download, ShoppingBag, Tag, Search, Shield } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { useEngagement } from '../context/EngagementContext'
 import { motion } from 'framer-motion'
+import { POSTER_SIZES, CURRENCY } from '../data/pricingConfig'
+import SEOHead from '../components/SEOHead'
+
+const POPULAR_TAGS = ['RCB', 'Messi', 'Anime', 'Football', 'Motivation', 'Gaming', 'Cars']
 
 export default function SearchPage() {
   const location = useLocation()
@@ -13,6 +18,7 @@ export default function SearchPage() {
   
   const [collectionResults, setCollectionResults] = useState([])
   const [posterResults, setPosterResults] = useState([])
+  const [fanClubResults, setFanClubResults] = useState([])
   
   const { addToCart } = useCart()
   const { isFavorite, toggleFavorite } = useEngagement()
@@ -21,16 +27,27 @@ export default function SearchPage() {
     if (!query.trim()) {
       setCollectionResults([])
       setPosterResults([])
+      setFanClubResults([])
       return
     }
 
     const q = query.toLowerCase()
     
-    // Search Collections
+    // Search Fan Clubs
+    const fResults = Object.values(fanClubsData).filter(fc =>
+      fc.name.toLowerCase().includes(q) ||
+      fc.shortName.toLowerCase().includes(q) ||
+      fc.tags.some(tag => tag.toLowerCase().includes(q))
+    )
+    setFanClubResults(fResults)
+
+    // Search Collections (Prioritize higher priority)
     const cResults = collectionsData.filter(c => 
       c.title.toLowerCase().includes(q) || 
-      c.genreName.toLowerCase().includes(q)
-    )
+      c.genreName.toLowerCase().includes(q) ||
+      (c.tags && c.tags.some(tag => tag.toLowerCase().includes(q)))
+    ).sort((a, b) => (a.priority || 5) - (b.priority || 5))
+    
     setCollectionResults(cResults)
 
     // Search Posters across all collections
@@ -58,33 +75,104 @@ export default function SearchPage() {
     }
   }
 
+  const handleTagClick = (tag) => {
+    navigate(`/search?q=${encodeURIComponent(tag)}`)
+  }
+
+  const getDefaultPosterCartItem = (poster) => {
+    const defaultSize = POSTER_SIZES[0] // A4
+    return {
+      productId: poster.id,
+      productName: poster.title,
+      image: poster.image,
+      currency: CURRENCY,
+      variant: 'standard',
+      category: 'posters',
+      selectedSize: `${defaultSize.label} - ${defaultSize.dimensions}`,
+      sizeId: defaultSize.id,
+      selectedQty: '1',
+      totalPrice: defaultSize.price,
+    }
+  }
+
   return (
     <div className="min-h-screen pt-32 pb-20 px-4 max-w-7xl mx-auto">
       <div className="mb-12">
         <h1 className="text-4xl font-display font-bold text-white mb-6">
-          Search Results for <span className="text-novo-400">"{query}"</span>
+          {query ? (
+            <>Search Results for <span className="text-novo-400">"{query}"</span></>
+          ) : (
+            'Discover Premium Posters'
+          )}
         </h1>
         
-        <form onSubmit={handleSearchSubmit} className="relative w-full md:w-1/2">
+        <form onSubmit={handleSearchSubmit} className="relative w-full md:w-1/2 mb-8">
           <input 
             type="text" 
             name="q"
             defaultValue={query}
             placeholder="Search collections, themes, or posters..."
-            className="w-full bg-dark-800 border border-white/10 rounded-full py-4 pl-6 pr-12 text-white placeholder:text-white/40 focus:outline-none focus:border-novo-500/50 text-lg"
+            className="w-full bg-dark-800 border border-white/10 rounded-full py-4 pl-6 pr-12 text-white placeholder:text-white/40 focus:outline-none focus:border-novo-500/50 text-lg transition-colors"
           />
           <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 text-novo-500 hover:text-novo-400">
             Search
           </button>
         </form>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-white/40 text-sm flex items-center gap-1"><Tag className="w-4 h-4" /> Popular:</span>
+          {POPULAR_TAGS.map(tag => (
+            <button 
+              key={tag}
+              onClick={() => handleTagClick(tag)}
+              className={`px-4 py-1.5 rounded-full text-sm transition-all ${
+                query.toLowerCase() === tag.toLowerCase() 
+                  ? 'bg-novo-500 text-dark-950 font-bold shadow-[0_0_15px_rgba(139,204,99,0.3)]' 
+                  : 'bg-dark-800 text-white/70 hover:bg-white/10 border border-white/5'
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
       </div>
 
       {!query && (
-        <p className="text-white/50 text-lg">Type something above to start searching.</p>
+        <div className="py-20 text-center">
+          <div className="w-24 h-24 bg-novo-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Search className="w-10 h-10 text-novo-400" />
+          </div>
+          <h2 className="text-2xl font-display font-bold text-white mb-3">What are you looking for?</h2>
+          <p className="text-white/50 max-w-md mx-auto">Explore our huge collection of indestructible posters. Type a keyword above or pick a popular tag to get started.</p>
+        </div>
       )}
 
-      {query && collectionResults.length === 0 && posterResults.length === 0 && (
-        <p className="text-white/50 text-lg">No results found. Try a different keyword like "Football", "Motivation", or "Batman".</p>
+      {query && collectionResults.length === 0 && posterResults.length === 0 && fanClubResults.length === 0 && (
+        <div className="py-20 text-center">
+          <p className="text-white/50 text-xl">No results found for "{query}".</p>
+          <p className="text-white/30 mt-2">Try different keywords or browse our popular categories.</p>
+        </div>
+      )}
+
+      {fanClubResults.length > 0 && (
+        <div className="mb-16">
+          <h2 className="text-2xl font-display font-bold text-white mb-6 flex items-center gap-2">
+            <Shield className="text-blue-500 w-6 h-6" /> Fan Clubs ({fanClubResults.length})
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {fanClubResults.map(club => (
+              <Link to={`/fanclub/${club.id}`} key={club.id} className="group relative rounded-2xl overflow-hidden glass-card aspect-video block">
+                <img src={club.banner} alt={club.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent" />
+                <div className="absolute inset-0" style={{ backgroundColor: `${club.primaryColor}20` }} />
+                <div className="absolute bottom-4 left-4">
+                  <span className="badge-durable mb-2 inline-block text-[10px]">{club.sport}</span>
+                  <h3 className="text-xl font-display font-bold text-white">{club.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
 
       {collectionResults.length > 0 && (
@@ -123,17 +211,7 @@ export default function SearchPage() {
                       <button 
                         onClick={(e) => {
                           e.preventDefault();
-                          const item = {
-                            productId: poster.id,
-                            productName: poster.title,
-                            image: poster.image,
-                            currency: '₹',
-                            variant: 'standard',
-                            selectedSize: 'A4 - 8.2" x 11.7"',
-                            selectedQty: '1',
-                            totalPrice: poster.price || 299,
-                          }
-                          addToCart(item);
+                          addToCart(getDefaultPosterCartItem(poster));
                           alert('Added to Cart!');
                         }}
                         className="p-2.5 rounded-full backdrop-blur-md transition-all bg-dark-900/60 text-white hover:bg-novo-500 hover:text-dark-950"
@@ -161,17 +239,7 @@ export default function SearchPage() {
                         <button 
                           onClick={(e) => {
                             e.preventDefault();
-                            const item = {
-                              productId: poster.id,
-                              productName: poster.title,
-                              image: poster.image,
-                              currency: '₹',
-                              variant: 'standard',
-                              selectedSize: 'A4 - 8.2" x 11.7"',
-                              selectedQty: '1',
-                              totalPrice: poster.price || 299,
-                            }
-                            addToCart(item);
+                            addToCart(getDefaultPosterCartItem(poster));
                             navigate('/checkout');
                           }}
                           className="text-xs font-semibold bg-novo-500 text-dark-950 px-4 py-2 rounded-full hover:bg-novo-400 shadow-[0_0_15px_rgba(139,204,99,0.3)] transition-all"

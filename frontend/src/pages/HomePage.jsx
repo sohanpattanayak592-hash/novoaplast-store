@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Droplets, Sun, Infinity, Star, Sparkles, Box, Truck, ShoppingCart } from 'lucide-react'
 import { products } from '../data/products'
 import { getTrendingCollections, getBestSellers, getAllGenres, getCollectionsByGenre } from '../data/collectionsData'
+import { fanClubsData } from '../data/fanClubsData'
+import SEOHead from '../components/SEOHead'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -18,6 +20,10 @@ export default function HomePage() {
 
   return (
     <div className="relative">
+      <SEOHead 
+        title="NOVOPLAST — Premium Non-Tearable Plastic Prints" 
+        description="Premium waterproof posters and aesthetic room decor. Browse our collections today."
+      />
       {/* ===== HERO ===== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero-section">
         {/* BG image */}
@@ -116,6 +122,42 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-display font-bold text-lg text-white group-hover:text-novo-400 transition-colors">{collection.title}</h3>
                 <p className="text-white/40 text-sm mt-1">{collection.posters.length} Posters</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 🛡️ OFFICIAL FAN CLUBS ===== */}
+      <section className="py-20 px-4 bg-dark-900" id="fan-clubs">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+              <span className="text-blue-500">🛡️</span> Official Fan Clubs
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {Object.values(fanClubsData).map(club => (
+              <Link 
+                key={club.id} 
+                to={`/fanclub/${club.id}`}
+                className="group block relative rounded-2xl overflow-hidden glass-card border border-white/5 hover:border-novo-500/50 transition-colors h-[200px]"
+              >
+                <img 
+                  src={club.banner} 
+                  alt={club.name} 
+                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent" />
+                <div className="absolute inset-0" style={{ backgroundColor: `${club.primaryColor}20` }} />
+                
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="inline-block px-2 py-1 mb-2 rounded bg-black/50 backdrop-blur border border-white/10 text-[10px] font-bold text-white tracking-widest uppercase">
+                    {club.sport}
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-white leading-tight">{club.name}</h3>
+                </div>
               </Link>
             ))}
           </div>

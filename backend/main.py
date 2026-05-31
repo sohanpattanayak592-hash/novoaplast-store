@@ -231,6 +231,45 @@ async def list_orders(api_key: Optional[str] = Header(None)):
     return {"source": "memory_no_supabase", "orders": orders_store}
 
 
+@app.get("/api/user-orders")
+async def get_user_orders(email: Optional[str] = None, user_id: Optional[str] = None):
+    """Get orders for a specific user ID or email."""
+    if not email and not user_id:
+        return {"orders": []}
+
+    found_orders = []
+    
+    if supabase:
+        try:
+            query = supabase.table("orders").select("*")
+            if user_id:
+                query = query.eq("user_id", user_id)
+            elif email:
+                # Need to use JSON operator to filter by customer email inside jsonb
+                # Just falling back to fetch all and filter in python if simple query fails
+                res = query.execute()
+                all_orders = res.data
+                for o in all_orders:
+                    if o.get("customer") and o["customer"].get("email") == email:
+                        found_orders.append(o)
+                return {"orders": found_orders}
+            
+            res = query.execute()
+            return {"orders": res.data}
+        except Exception as e:
+            print(f"Supabase select error: {e}")
+            # Fallback to memory if supabase query fails
+
+    # Fallback to memory
+    for o in orders_store:
+        if user_id and o.get("user_id") == user_id:
+            found_orders.append(o)
+        elif email and o.get("customer") and o["customer"].get("email") == email:
+            found_orders.append(o)
+            
+    return {"orders": found_orders}
+
+
 @app.get("/api/orders/{order_id}")
 async def get_order(order_id: str):
     """Get a specific order by ID."""

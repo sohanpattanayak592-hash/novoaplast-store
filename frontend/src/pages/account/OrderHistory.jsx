@@ -12,13 +12,19 @@ export default function OrderHistory() {
   useEffect(() => {
     async function fetchOrders() {
       if (!user) return
-      const { data } = await supabase
-        .from('orders')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-      if (data) setOrders(data)
-      setLoading(false)
+      try {
+        const response = await fetch(`/api/user-orders?user_id=${user.id}`)
+        if (response.ok) {
+          const result = await response.json()
+          // Sort by newest first
+          const sorted = (result.orders || []).sort((a, b) => new Date(b.created_at || b.order_id) - new Date(a.created_at || a.order_id))
+          setOrders(sorted)
+        }
+      } catch (err) {
+        console.error('Failed to fetch orders:', err)
+      } finally {
+        setLoading(false)
+      }
     }
     fetchOrders()
   }, [user])

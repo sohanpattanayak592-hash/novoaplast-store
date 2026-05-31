@@ -21,6 +21,9 @@ import Wishlist from './pages/account/Wishlist'
 import Support from './pages/account/Support'
 import ProfileSettings from './pages/account/ProfileSettings'
 import { AuthProvider } from './context/AuthContext'
+import { AboutUs, ShippingPolicy, RefundPolicy, ContactUs, PrivacyPolicy, TermsOfService } from './pages/LegalPages'
+import AdminPage from './pages/AdminPage'
+import FanClubPage from './pages/FanClubPage'
 
 function App() {
   return (
@@ -41,6 +44,12 @@ function App() {
                 <Route path="/login" element={<AuthPage />} />
                 <Route path="/track" element={<TrackOrder />} />
                 
+                {/* Admin Dashboard */}
+                <Route path="/admin" element={<AdminPage />} />
+                
+                {/* Fan Club Pages */}
+                <Route path="/fanclub/:id" element={<FanClubPage />} />
+                
                 {/* Account Dashboard Routes */}
                 <Route path="/account" element={<AccountLayout />}>
                   <Route index element={<Dashboard />} />
@@ -50,6 +59,14 @@ function App() {
                   <Route path="support" element={<Support />} />
                   <Route path="settings" element={<ProfileSettings />} />
                 </Route>
+
+                {/* Legal & Info Pages */}
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/shipping" element={<ShippingPolicy />} />
+                <Route path="/refund" element={<RefundPolicy />} />
+                <Route path="/contact" element={<ContactUs />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
               </Routes>
             </main>
             <Footer />
