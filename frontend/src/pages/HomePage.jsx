@@ -55,7 +55,7 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/collections/rcb-ipl-2026-champions" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
+            <Link to="/collections/col_1" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
               Shop Champions Collection <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="/product/custom-posters" className="btn-outline-novo flex items-center justify-center gap-2 w-full sm:w-auto">
@@ -86,8 +86,8 @@ export default function HomePage() {
       <section className="bg-dark-900 border-y border-white/5 py-4 overflow-hidden sticky top-16 z-40 backdrop-blur-xl bg-dark-900/80">
         <div className="flex overflow-x-auto gap-4 px-4 scrollbar-hide snap-x">
           {[
-            { name: 'RCB Champions', path: '/collections/rcb-ipl-2026-champions' },
-            { name: 'Virat Kohli', path: '/collections/virat-kohli-collection' },
+            { name: 'RCB Champions', path: '/collections/col_1' },
+            { name: 'Virat Kohli', path: '/collections/col_10' },
             { name: 'Cricket', path: '/collections' },
             { name: 'Football', path: '/collections' },
             { name: 'Cars', path: '/collections/supercars-hypercars' },
@@ -157,14 +157,14 @@ export default function HomePage() {
             <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
               <span className="text-yellow-500">🏆</span> RCB Champions 2026
             </h2>
-            <Link to="/collections/rcb-ipl-2026-champions" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+            <Link to="/collections/col_1" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
               Shop Now <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
             {collectionsData.find(c => c.id === 'col_1')?.posters.slice(0, 8).map(poster => (
-              <Link key={poster.id} to="/collections/rcb-ipl-2026-champions" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+              <Link key={poster.id} to="/collections/col_1" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-2 left-2 flex flex-col gap-1">
@@ -192,14 +192,14 @@ export default function HomePage() {
             <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
               <span className="text-orange-500">👑</span> King Kohli Collection
             </h2>
-            <Link to="/collections/virat-kohli-collection" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+            <Link to="/collections/col_10" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
             {collectionsData.find(c => c.id === 'col_10')?.posters.slice(0, 8).map(poster => (
-              <Link key={poster.id} to="/collections/virat-kohli-collection" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+              <Link key={poster.id} to="/collections/col_10" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-2 left-2 flex flex-col gap-1">
@@ -227,14 +227,14 @@ export default function HomePage() {
             <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
               <span className="text-red-500">❤️</span> RCB Fan Favorites
             </h2>
-            <Link to="/collections/rcb-fan-collection" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+            <Link to="/collections/col_16" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
               View All <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
             {collectionsData.find(c => c.id === 'col_16')?.posters.slice(0, 8).map(poster => (
-              <Link key={poster.id} to="/collections/rcb-fan-collection" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+              <Link key={poster.id} to="/collections/col_16" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-2 left-2 flex flex-col gap-1">
