@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Collections', path: '/collections', hasDropdown: true },
   { name: 'Custom Posters', path: '/product/custom-posters' },
-  { name: 'Spiritual Prints', path: '/product/spiritual-prints' },
+  { name: 'Divine & Spiritual', path: '/collections/col_26' },
   { name: 'Custom Stickers', path: '/product/custom-stickers' },
 ]
 

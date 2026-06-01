@@ -3580,6 +3580,776 @@ export const collectionsData = [
       }
     ],
     "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b7738?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "col_26",
+    "title": "Divine & Spiritual",
+    "slug": "divine-spiritual",
+    "description": "Premium divine and spiritual posters featuring gods, temples, sacred symbols, meditation themes, devotional artwork, and inspirational spiritual wall decor.",
+    "genre": "spiritual",
+    "genreName": "Spiritual",
+    "priority": 1,
+    "tags": [
+      "spiritual",
+      "divine",
+      "meditation",
+      "god"
+    ],
+    "posters": [
+      {
+        "id": "p_divine_1",
+        "title": "Divine Artwork 1",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.30 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1639,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_divine_2",
+        "title": "Divine Artwork 2",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.30 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1984,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_3",
+        "title": "Divine Artwork 3",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.30 PM.jpeg",
+        "price": 199,
+        "downloads": 5374,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_4",
+        "title": "Divine Artwork 4",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.31 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3634,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_5",
+        "title": "Divine Artwork 5",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.31 PM.jpeg",
+        "price": 199,
+        "downloads": 3292,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_6",
+        "title": "Divine Artwork 6",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2695,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_7",
+        "title": "Divine Artwork 7",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1205,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_8",
+        "title": "Divine Artwork 8",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM.jpeg",
+        "price": 199,
+        "downloads": 5335,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_9",
+        "title": "Divine Artwork 9",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.33 PM (1).jpeg",
+        "price": 199,
+        "downloads": 786,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_10",
+        "title": "Divine Artwork 10",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.33 PM.jpeg",
+        "price": 199,
+        "downloads": 638,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_divine_11",
+        "title": "Divine Artwork 11",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.34 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1544,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_12",
+        "title": "Divine Artwork 12",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.34 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1972,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_13",
+        "title": "Divine Artwork 13",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.34 PM.jpeg",
+        "price": 199,
+        "downloads": 906,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_14",
+        "title": "Divine Artwork 14",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.35 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1239,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_15",
+        "title": "Divine Artwork 15",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.35 PM.jpeg",
+        "price": 199,
+        "downloads": 4880,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_16",
+        "title": "Divine Artwork 16",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.36 PM (1).jpeg",
+        "price": 199,
+        "downloads": 605,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_17",
+        "title": "Divine Artwork 17",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.36 PM (2).jpeg",
+        "price": 199,
+        "downloads": 4728,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_18",
+        "title": "Divine Artwork 18",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.36 PM.jpeg",
+        "price": 199,
+        "downloads": 983,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_19",
+        "title": "Divine Artwork 19",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.37 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3199,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_20",
+        "title": "Divine Artwork 20",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.37 PM.jpeg",
+        "price": 199,
+        "downloads": 987,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_21",
+        "title": "Divine Artwork 21",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.38 PM (1).jpeg",
+        "price": 199,
+        "downloads": 5322,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_22",
+        "title": "Divine Artwork 22",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.38 PM (2).jpeg",
+        "price": 199,
+        "downloads": 889,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_23",
+        "title": "Divine Artwork 23",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.38 PM.jpeg",
+        "price": 199,
+        "downloads": 5421,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_24",
+        "title": "Divine Artwork 24",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.39 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3089,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_25",
+        "title": "Divine Artwork 25",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.39 PM.jpeg",
+        "price": 199,
+        "downloads": 1602,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_26",
+        "title": "Divine Artwork 26",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.40 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3699,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_27",
+        "title": "Divine Artwork 27",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.40 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2933,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_28",
+        "title": "Divine Artwork 28",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.40 PM.jpeg",
+        "price": 199,
+        "downloads": 5342,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_29",
+        "title": "Divine Artwork 29",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.41 PM (1).jpeg",
+        "price": 199,
+        "downloads": 5040,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_30",
+        "title": "Divine Artwork 30",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.41 PM.jpeg",
+        "price": 199,
+        "downloads": 3973,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_31",
+        "title": "Divine Artwork 31",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1827,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_32",
+        "title": "Divine Artwork 32",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2083,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_33",
+        "title": "Divine Artwork 33",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM.jpeg",
+        "price": 199,
+        "downloads": 3819,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_34",
+        "title": "Divine Artwork 34",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.43 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1414,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_35",
+        "title": "Divine Artwork 35",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.43 PM.jpeg",
+        "price": 199,
+        "downloads": 3683,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_36",
+        "title": "Divine Artwork 36",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM (1).jpeg",
+        "price": 199,
+        "downloads": 4035,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_37",
+        "title": "Divine Artwork 37",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM (2).jpeg",
+        "price": 199,
+        "downloads": 5424,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_38",
+        "title": "Divine Artwork 38",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM.jpeg",
+        "price": 199,
+        "downloads": 1613,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_39",
+        "title": "Divine Artwork 39",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.45 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1833,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_40",
+        "title": "Divine Artwork 40",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.45 PM.jpeg",
+        "price": 199,
+        "downloads": 5396,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_41",
+        "title": "Divine Artwork 41",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.46 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2570,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_42",
+        "title": "Divine Artwork 42",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.46 PM (2).jpeg",
+        "price": 199,
+        "downloads": 4695,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_43",
+        "title": "Divine Artwork 43",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.46 PM.jpeg",
+        "price": 199,
+        "downloads": 3904,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_44",
+        "title": "Divine Artwork 44",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.47 PM (1).jpeg",
+        "price": 199,
+        "downloads": 797,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_45",
+        "title": "Divine Artwork 45",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.47 PM (2).jpeg",
+        "price": 199,
+        "downloads": 4998,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_46",
+        "title": "Divine Artwork 46",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.47 PM.jpeg",
+        "price": 199,
+        "downloads": 4937,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_divine_47",
+        "title": "Divine Artwork 47",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.48 PM.jpeg",
+        "price": 199,
+        "downloads": 3489,
+        "tags": [
+          "divine",
+          "spiritual",
+          "god",
+          "peace"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      }
+    ],
+    "thumbnail": "/curated/WhatsApp Image 2026-06-01 at 5.14.30 PM (1).jpeg"
   }
 ];
 
