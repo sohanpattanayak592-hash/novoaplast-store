@@ -4,8 +4,8 @@ import { POSTER_SIZES } from './pricingConfig';
 export const collectionsData = [
   {
     "id": "col_1",
-    "title": "IPL 2025 Champions",
-    "slug": "ipl-2025-champions",
+    "title": "RCB IPL 2026 Champions",
+    "slug": "rcb-ipl-2026-champions",
     "description": "IPL 2025 Championship Celebration Posters",
     "genre": "sports",
     "genreName": "Sports Events",
@@ -839,8 +839,8 @@ export const collectionsData = [
   },
   {
     "id": "col_6",
-    "title": "Virat Kohli Trophy Celebrations",
-    "slug": "virat-kohli-trophy-celebrations",
+    "title": "RCB Celebration Posters",
+    "slug": "rcb-celebration-posters",
     "description": "Virat Kohli Lifting Trophies",
     "genre": "sports",
     "genreName": "Iconic Moments",
@@ -1111,8 +1111,8 @@ export const collectionsData = [
   },
   {
     "id": "col_8",
-    "title": "Dhoni World Cup Winning Moments",
-    "slug": "dhoni-world-cup-winning-moments",
+    "title": "Trophy Moments",
+    "slug": "trophy-moments",
     "description": "MS Dhoni 2011 World Cup Six",
     "genre": "sports",
     "genreName": "Iconic Moments",
@@ -1519,7 +1519,7 @@ export const collectionsData = [
   },
   {
     "id": "col_11",
-    "title": "MS Dhoni Collection",
+    "title": "Cricket Legends",
     "slug": "ms-dhoni",
     "description": "Premium posters of MS Dhoni",
     "genre": "athletes",
@@ -1655,7 +1655,7 @@ export const collectionsData = [
   },
   {
     "id": "col_12",
-    "title": "Rohit Sharma Collection",
+    "title": "Fan Club Posters",
     "slug": "rohit-sharma",
     "description": "Premium posters of Rohit Sharma",
     "genre": "athletes",

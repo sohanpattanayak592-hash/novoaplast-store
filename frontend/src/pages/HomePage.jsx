@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Droplets, Sun, Infinity, Star, Sparkles, Box, Truck, ShoppingCart } from 'lucide-react'
 import { products } from '../data/products'
-import { getTrendingCollections, getBestSellers, getAllGenres, getCollectionsByGenre } from '../data/collectionsData'
+import { getTrendingCollections, getBestSellers, getAllGenres, collectionsData } from '../data/collectionsData'
 import { fanClubsData } from '../data/fanClubsData'
 import PosterImage from '../components/PosterImage'
 import SEOHead from '../components/SEOHead'
@@ -22,8 +22,8 @@ export default function HomePage() {
   return (
     <div className="relative">
       <SEOHead 
-        title="NOVOPLAST — Premium Non-Tearable Plastic Prints" 
-        description="Premium waterproof posters and aesthetic room decor. Browse our collections today."
+        title="NOVOPLAST — India's Premium Poster Brand | RCB 2026 Champions" 
+        description="Shop the exclusive RCB IPL 2026 Champions collection, Virat Kohli fan art, and premium waterproof posters starting at ₹199. Aesthetic room decor delivered across India."
       />
       {/* ===== HERO ===== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero-section">
@@ -46,17 +46,17 @@ export default function HomePage() {
           </motion.div>
 
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1} className="section-heading mt-4 mb-6">
-            <span className="text-white">Premium Waterproof Posters for </span>
-            <span className="text-novo-gradient">Every Passion.</span>
+            <span className="text-white">Celebrate the </span>
+            <span className="text-novo-gradient">RCB IPL 2026 Champions!</span>
           </motion.h1>
 
           <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={2} className="text-white/50 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Starting at ₹199. Waterproof. Fade-resistant. Perfect for Hostels, Bedrooms & Gaming Setups.
+            Own a piece of history. Premium waterproof posters starting at ₹199.
           </motion.p>
 
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/collections" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
-              Shop Collections <ArrowRight className="w-4 h-4" />
+            <Link to="/collections/rcb-ipl-2026-champions" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
+              Shop Champions Collection <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="/product/custom-posters" className="btn-outline-novo flex items-center justify-center gap-2 w-full sm:w-auto">
               Custom Posters
@@ -79,6 +79,27 @@ export default function HomePage() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ===== CATEGORY STRIP ===== */}
+      <section className="bg-dark-900 border-y border-white/5 py-4 overflow-hidden sticky top-16 z-40 backdrop-blur-xl bg-dark-900/80">
+        <div className="flex overflow-x-auto gap-4 px-4 scrollbar-hide snap-x">
+          {[
+            { name: 'RCB Champions', path: '/collections/rcb-ipl-2026-champions' },
+            { name: 'Virat Kohli', path: '/collections/virat-kohli-collection' },
+            { name: 'Cricket', path: '/collections' },
+            { name: 'Football', path: '/collections' },
+            { name: 'Cars', path: '/collections/supercars-hypercars' },
+            { name: 'Anime', path: '/collections/anime-manga' },
+            { name: 'Travel', path: '/collections/travel-nature' },
+            { name: 'Motivation', path: '/collections/motivation-quotes' },
+            { name: 'Gaming', path: '/collections/gaming-setups' }
+          ].map(cat => (
+            <Link key={cat.name} to={cat.path} className="snap-start shrink-0 px-4 py-2 rounded-full border border-white/10 hover:border-novo-500/50 hover:bg-novo-500/10 text-white/70 hover:text-white transition-all text-sm font-medium whitespace-nowrap">
+              {cat.name}
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -129,6 +150,112 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== 🏆 IPL 2026 CHAMPIONS CAROUSEL ===== */}
+      <section className="py-20 px-4 border-y border-white/5" id="champions-carousel">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+              <span className="text-yellow-500">🏆</span> RCB Champions 2026
+            </h2>
+            <Link to="/collections/rcb-ipl-2026-champions" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+              Shop Now <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          
+          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
+            {collectionsData.find(c => c.id === 'col_1')?.posters.slice(0, 8).map(poster => (
+              <Link key={poster.id} to="/collections/rcb-ipl-2026-champions" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2 left-2 flex flex-col gap-1">
+                    <span className="bg-red-500/20 backdrop-blur text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                      CHAMPIONS
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display font-bold text-white mb-1 truncate text-sm">{poster.title}</h3>
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-novo-400 font-bold text-sm">₹{poster.price}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 👑 VIRAT KOHLI CAROUSEL ===== */}
+      <section className="py-20 px-4 bg-dark-950 border-y border-white/5" id="virat-carousel">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+              <span className="text-orange-500">👑</span> King Kohli Collection
+            </h2>
+            <Link to="/collections/virat-kohli-collection" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+              View All <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          
+          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
+            {collectionsData.find(c => c.id === 'col_10')?.posters.slice(0, 8).map(poster => (
+              <Link key={poster.id} to="/collections/virat-kohli-collection" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2 left-2 flex flex-col gap-1">
+                    <span className="bg-dark-900/80 backdrop-blur border border-white/10 text-white/80 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                      VIRAT KOHLI
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display font-bold text-white mb-1 truncate text-sm">{poster.title}</h3>
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-novo-400 font-bold text-sm">₹{poster.price}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ❤️ RCB FAN FAVORITES CAROUSEL ===== */}
+      <section className="py-20 px-4 border-y border-white/5" id="rcb-fan-carousel">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+              <span className="text-red-500">❤️</span> RCB Fan Favorites
+            </h2>
+            <Link to="/collections/rcb-fan-collection" className="text-novo-400 hover:text-novo-300 text-sm font-medium transition-colors flex items-center gap-1">
+              View All <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          
+          <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scrollbar-hide">
+            {collectionsData.find(c => c.id === 'col_16')?.posters.slice(0, 8).map(poster => (
+              <Link key={poster.id} to="/collections/rcb-fan-collection" className="snap-start shrink-0 w-[200px] md:w-[240px] group block glass-card rounded-2xl overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2 left-2 flex flex-col gap-1">
+                    <span className="bg-dark-900/80 backdrop-blur border border-white/10 text-white/80 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                      FAN CLUB
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-display font-bold text-white mb-1 truncate text-sm">{poster.title}</h3>
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-novo-400 font-bold text-sm">₹{poster.price}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* ===== 🛡️ OFFICIAL FAN CLUBS ===== */}
       <section className="py-20 px-4 bg-dark-900" id="fan-clubs">
         <div className="max-w-[1400px] mx-auto">
@@ -165,7 +292,85 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== BESTSELLERS GRID ===== */}
+      
+      {/* ===== RECENTLY ADDED ===== */}
+      <section className="py-24 px-4 bg-dark-900" id="recently-added">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <span className="badge-durable mb-4 inline-flex">Fresh Drops</span>
+            <h2 className="section-heading text-white mt-2">
+              Recently <span className="text-novo-gradient">Added</span>
+            </h2>
+            <p className="text-white/40 mt-4 max-w-xl mx-auto">The newest arrivals in our premium poster collection.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {collectionsData.flatMap(c => c.posters.map(p => ({...p, collectionTitle: c.title, collectionId: c.id}))).filter(p => p.isNew).slice(0, 8).map((poster, i) => (
+              <motion.div key={poster.id} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+                <Link to={`/collections/${poster.collectionId}`} className="block glass-card rounded-2xl overflow-hidden group">
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-2 left-2 flex flex-col gap-1">
+                      <span className="bg-dark-900/80 backdrop-blur border border-white/10 text-white/80 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        {poster.collectionTitle}
+                      </span>
+                      <span className="bg-novo-500/20 backdrop-blur text-novo-400 border border-novo-500/30 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        NEW
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-display font-bold text-white mb-1 truncate text-sm md:text-base">{poster.title}</h3>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-novo-400 font-bold">₹{poster.price}</span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== POPULAR THIS WEEK ===== */}
+      <section className="py-24 px-4 border-y border-white/5" id="popular-this-week">
+        <div className="max-w-7xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <span className="badge-durable mb-4 inline-flex">Trending High</span>
+            <h2 className="section-heading text-white mt-2">
+              Popular <span className="text-novo-gradient">This Week</span>
+            </h2>
+            <p className="text-white/40 mt-4 max-w-xl mx-auto">Based on the highest views and orders across India.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {collectionsData.flatMap(c => c.posters.map(p => ({...p, collectionTitle: c.title, collectionId: c.id}))).sort((a, b) => b.downloads - a.downloads).slice(0, 8).map((poster, i) => (
+              <motion.div key={poster.id} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+                <Link to={`/collections/${poster.collectionId}`} className="block glass-card rounded-2xl overflow-hidden group">
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-2 left-2 flex flex-col gap-1">
+                      <span className="bg-dark-900/80 backdrop-blur border border-white/10 text-white/80 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        {poster.collectionTitle}
+                      </span>
+                      <span className="bg-orange-500/20 backdrop-blur text-orange-400 border border-orange-500/30 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+                        {Math.floor(poster.downloads / 100) * 100}+ SOLD
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-display font-bold text-white mb-1 truncate text-sm md:text-base">{poster.title}</h3>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="text-novo-400 font-bold">₹{poster.price}</span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+{/* ===== BESTSELLERS GRID ===== */}
       <section className="py-24 px-4" id="bestsellers">
         <div className="max-w-7xl mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
