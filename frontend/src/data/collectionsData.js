@@ -19,7 +19,7 @@ export const collectionsData = [
       {
         "id": "p_1",
         "title": "IPL 2025 Champions Moment 1",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/1cf4e6b3-0bdd-4230-a496-6264378b6f69.avif",
         "price": 199,
         "downloads": 3574,
         "tags": [
@@ -34,7 +34,7 @@ export const collectionsData = [
       {
         "id": "p_2",
         "title": "IPL 2025 Champions Moment 2",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/317e198b-46b7-4e9b-a776-8fd3881287bb.avif",
         "price": 199,
         "downloads": 4227,
         "tags": [
@@ -49,7 +49,7 @@ export const collectionsData = [
       {
         "id": "p_3",
         "title": "IPL 2025 Champions Moment 3",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/3a660364-f8b2-4098-bc79-b8cd07524be1.avif",
         "price": 199,
         "downloads": 1413,
         "tags": [
@@ -64,7 +64,7 @@ export const collectionsData = [
       {
         "id": "p_4",
         "title": "IPL 2025 Champions Moment 4",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/4827a831-e840-4fa6-8f39-2b68392476b8.avif",
         "price": 199,
         "downloads": 4790,
         "tags": [
@@ -94,7 +94,7 @@ export const collectionsData = [
       {
         "id": "p_6",
         "title": "IPL 2025 Champions Moment 6",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/ipl 2026 champions.webp",
         "price": 199,
         "downloads": 3269,
         "tags": [
@@ -109,7 +109,7 @@ export const collectionsData = [
       {
         "id": "p_7",
         "title": "IPL 2025 Champions Moment 7",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/0443f931-b727-4de6-8a35-cac66a92e265.avif",
         "price": 199,
         "downloads": 970,
         "tags": [
@@ -124,7 +124,7 @@ export const collectionsData = [
       {
         "id": "p_8",
         "title": "IPL 2025 Champions Moment 8",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/0480be2d-a02b-43c0-a338-04b658755377.avif",
         "price": 199,
         "downloads": 2014,
         "tags": [
@@ -139,7 +139,7 @@ export const collectionsData = [
       {
         "id": "p_9",
         "title": "IPL 2025 Champions Moment 9",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/061b2208-0dda-41ba-a3c0-7183596556c8.avif",
         "price": 199,
         "downloads": 1160,
         "tags": [
@@ -154,7 +154,7 @@ export const collectionsData = [
       {
         "id": "p_10",
         "title": "IPL 2025 Champions Moment 10",
-        "image": "/curated/ipl2025champions.jpg",
+        "image": "/curated/071be717-eede-426c-a2d2-eb2b8f5aa504.avif",
         "price": 199,
         "downloads": 3558,
         "tags": [
@@ -167,7 +167,7 @@ export const collectionsData = [
         "badge": null
       }
     ],
-    "thumbnail": "/curated/ipl2025champions.jpg"
+    "thumbnail": "/curated/0e105afa-1686-4e1a-ad9e-afa7f13462e8.avif"
   },
   {
     "id": "col_2",
@@ -2218,7 +2218,7 @@ export const collectionsData = [
       {
         "id": "p_131",
         "title": "RCB Fan Poster 1",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/c7f63b0e-49ba-4854-8e37-decd8a52406b.avif",
         "price": 199,
         "downloads": 3957,
         "tags": [
@@ -2233,7 +2233,7 @@ export const collectionsData = [
       {
         "id": "p_132",
         "title": "RCB Fan Poster 2",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/cb55e405-01e7-4687-8647-8d734ad0b7bb.avif",
         "price": 199,
         "downloads": 4930,
         "tags": [
@@ -2248,7 +2248,7 @@ export const collectionsData = [
       {
         "id": "p_133",
         "title": "RCB Fan Poster 3",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/dbb962eb-024c-4651-90e5-04e03165078a.avif",
         "price": 199,
         "downloads": 4370,
         "tags": [
@@ -2263,7 +2263,7 @@ export const collectionsData = [
       {
         "id": "p_134",
         "title": "RCB Fan Poster 4",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/e0a25344-d253-4593-a399-8d5b24ed00e4.avif",
         "price": 199,
         "downloads": 1100,
         "tags": [
@@ -2293,7 +2293,7 @@ export const collectionsData = [
       {
         "id": "p_136",
         "title": "RCB Fan Poster 6",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/90013e3d-4a5f-4a0f-9106-d74667e3053e.avif",
         "price": 199,
         "downloads": 256,
         "tags": [
@@ -2308,7 +2308,7 @@ export const collectionsData = [
       {
         "id": "p_137",
         "title": "RCB Fan Poster 7",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/95019e76-41ba-4976-b555-fd3baa16e952.avif",
         "price": 199,
         "downloads": 3702,
         "tags": [
@@ -2323,7 +2323,7 @@ export const collectionsData = [
       {
         "id": "p_138",
         "title": "RCB Fan Poster 8",
-        "image": "/curated/rcb.jpg",
+        "image": "/curated/9debc4b0-b528-4d54-adf6-b9ff4a5e4f75.avif",
         "price": 199,
         "downloads": 2829,
         "tags": [
@@ -2374,7 +2374,7 @@ export const collectionsData = [
       {
         "id": "p_140",
         "title": "CSK Fan Poster 2",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/5aaf5d1f-e915-4c5c-9ac2-fbef212fa037.avif",
         "price": 199,
         "downloads": 1725,
         "tags": [
@@ -2389,7 +2389,7 @@ export const collectionsData = [
       {
         "id": "p_141",
         "title": "CSK Fan Poster 3",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/5c735b73-6a9e-4044-b80c-7b03f5e59694.avif",
         "price": 199,
         "downloads": 125,
         "tags": [
@@ -2404,7 +2404,7 @@ export const collectionsData = [
       {
         "id": "p_142",
         "title": "CSK Fan Poster 4",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/61d9a090-2642-4176-ac12-fe8270def8c0.avif",
         "price": 199,
         "downloads": 2680,
         "tags": [
@@ -2419,7 +2419,7 @@ export const collectionsData = [
       {
         "id": "p_143",
         "title": "CSK Fan Poster 5",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/6468e5aa-5d12-44f5-9443-1b1272f64193.avif",
         "price": 199,
         "downloads": 3704,
         "tags": [
@@ -2434,7 +2434,7 @@ export const collectionsData = [
       {
         "id": "p_144",
         "title": "CSK Fan Poster 6",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/671839d8-1cb6-4362-a6db-fa3a406fa3d2.avif",
         "price": 199,
         "downloads": 1587,
         "tags": [
@@ -2449,7 +2449,7 @@ export const collectionsData = [
       {
         "id": "p_145",
         "title": "CSK Fan Poster 7",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/85d100be-6662-4c6c-aba1-b2cfeeacdefb.avif",
         "price": 199,
         "downloads": 1556,
         "tags": [
@@ -2464,7 +2464,7 @@ export const collectionsData = [
       {
         "id": "p_146",
         "title": "CSK Fan Poster 8",
-        "image": "/curated/csk.jpg",
+        "image": "/curated/85e1be4e-2b9e-4e67-abe1-f09afac1f557.avif",
         "price": 199,
         "downloads": 4141,
         "tags": [
@@ -2477,7 +2477,7 @@ export const collectionsData = [
         "badge": "BESTSELLER"
       }
     ],
-    "thumbnail": "/curated/csk.jpg"
+    "thumbnail": "/curated/85d100be-6662-4c6c-aba1-b2cfeeacdefb.avif"
   },
   {
     "id": "col_18",
