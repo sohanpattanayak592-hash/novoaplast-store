@@ -214,9 +214,8 @@ export default function CollectionDetails() {
         )}
       </AnimatePresence>
 
-      {/* Header Banner */}
-      <div className="relative h-[40vh] w-full flex items-end">
-        <img src={collection.thumbnail} alt={collection.title} className="absolute inset-0 w-full h-full object-cover" />
+      <div className="relative h-[40vh] w-full flex items-end bg-dark-800">
+        {collection.thumbnail && <img src={collection.thumbnail} alt={collection.title} className="absolute inset-0 w-full h-full object-cover" />}
         <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent" />
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
