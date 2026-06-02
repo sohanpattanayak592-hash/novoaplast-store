@@ -184,157 +184,631 @@ export const collectionsData = [
     ],
     "posters": [
       {
-        "id": "p_11",
-        "title": "FIFA World Cup Champions Moment 1",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2001",
+        "title": "FIFA World Cup Champions Poster 1",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245700414-612x612.jpg",
         "price": 199,
-        "downloads": 4550,
+        "downloads": 3375,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2002",
+        "title": "FIFA World Cup Champions Poster 2",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245702170-612x612.jpg",
+        "price": 199,
+        "downloads": 717,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2003",
+        "title": "FIFA World Cup Champions Poster 3",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245709167-612x612.jpg",
+        "price": 199,
+        "downloads": 3163,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2004",
+        "title": "FIFA World Cup Champions Poster 4",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245709365-612x612.jpg",
+        "price": 199,
+        "downloads": 532,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_2005",
+        "title": "FIFA World Cup Champions Poster 5",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245710275-612x612.jpg",
+        "price": 199,
+        "downloads": 4149,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2006",
+        "title": "FIFA World Cup Champions Poster 6",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245712188-612x612.jpg",
+        "price": 199,
+        "downloads": 4029,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2007",
+        "title": "FIFA World Cup Champions Poster 7",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245718349-612x612.jpg",
+        "price": 199,
+        "downloads": 1160,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2008",
+        "title": "FIFA World Cup Champions Poster 8",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245718386-612x612.jpg",
+        "price": 199,
+        "downloads": 3109,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2009",
+        "title": "FIFA World Cup Champions Poster 9",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450111748-612x612.jpg",
+        "price": 199,
+        "downloads": 4161,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2010",
+        "title": "FIFA World Cup Champions Poster 10",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450111803-612x612.jpg",
+        "price": 199,
+        "downloads": 1094,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_2011",
+        "title": "FIFA World Cup Champions Poster 11",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450111806-612x612.jpg",
+        "price": 199,
+        "downloads": 2854,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_2012",
+        "title": "FIFA World Cup Champions Poster 12",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450111904-612x612.jpg",
+        "price": 199,
+        "downloads": 1156,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2013",
+        "title": "FIFA World Cup Champions Poster 13",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450111995-612x612.jpg",
+        "price": 199,
+        "downloads": 3725,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2014",
+        "title": "FIFA World Cup Champions Poster 14",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450128513-612x612.jpg",
+        "price": 199,
+        "downloads": 526,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2015",
+        "title": "FIFA World Cup Champions Poster 15",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450131693-612x612.jpg",
+        "price": 199,
+        "downloads": 3460,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2016",
+        "title": "FIFA World Cup Champions Poster 16",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450133026-612x612.jpg",
+        "price": 199,
+        "downloads": 2280,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
         ],
         "isNew": false,
         "isTrending": false,
         "badge": "TRENDING"
       },
       {
-        "id": "p_12",
-        "title": "FIFA World Cup Champions Moment 2",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2017",
+        "title": "FIFA World Cup Champions Poster 17",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450147218-612x612.jpg",
         "price": 199,
-        "downloads": 3099,
+        "downloads": 3990,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": true,
-        "badge": "FAN FAVORITE"
+        "badge": null
       },
       {
-        "id": "p_13",
-        "title": "FIFA World Cup Champions Moment 3",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2018",
+        "title": "FIFA World Cup Champions Poster 18",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450147231-612x612.jpg",
         "price": 199,
-        "downloads": 4624,
+        "downloads": 1116,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2019",
+        "title": "FIFA World Cup Champions Poster 19",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212599-612x612.jpg",
+        "price": 199,
+        "downloads": 2493,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "FAN FAVORITE"
+        "badge": null
       },
       {
-        "id": "p_14",
-        "title": "FIFA World Cup Champions Moment 4",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2020",
+        "title": "FIFA World Cup Champions Poster 20",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212603-612x612.jpg",
         "price": 199,
-        "downloads": 3334,
+        "downloads": 3777,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_2021",
+        "title": "FIFA World Cup Champions Poster 21",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212607-612x612.jpg",
+        "price": 199,
+        "downloads": 1653,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2022",
+        "title": "FIFA World Cup Champions Poster 22",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450215984-612x612.jpg",
+        "price": 199,
+        "downloads": 1305,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2023",
+        "title": "FIFA World Cup Champions Poster 23",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450225396-612x612.jpg",
+        "price": 199,
+        "downloads": 3877,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2024",
+        "title": "FIFA World Cup Champions Poster 24",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450225400-612x612.jpg",
+        "price": 199,
+        "downloads": 2505,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2025",
+        "title": "FIFA World Cup Champions Poster 25",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450229405-612x612.jpg",
+        "price": 199,
+        "downloads": 4132,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_2026",
+        "title": "FIFA World Cup Champions Poster 26",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450229425-612x612.jpg",
+        "price": 199,
+        "downloads": 1077,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2027",
+        "title": "FIFA World Cup Champions Poster 27",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450245706-612x612.jpg",
+        "price": 199,
+        "downloads": 2725,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2028",
+        "title": "FIFA World Cup Champions Poster 28",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450266745-612x612.jpg",
+        "price": 199,
+        "downloads": 3283,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2029",
+        "title": "FIFA World Cup Champions Poster 29",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215216-612x612.jpg",
+        "price": 199,
+        "downloads": 4272,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
         ],
         "isNew": true,
         "isTrending": false,
         "badge": "BESTSELLER"
       },
       {
-        "id": "p_15",
-        "title": "FIFA World Cup Champions Moment 5",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2030",
+        "title": "FIFA World Cup Champions Poster 30",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215218-612x612.jpg",
         "price": 199,
-        "downloads": 3958,
+        "downloads": 595,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
         ],
         "isNew": false,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_16",
-        "title": "FIFA World Cup Champions Moment 6",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2031",
+        "title": "FIFA World Cup Champions Poster 31",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215268-612x612.jpg",
         "price": 199,
-        "downloads": 2035,
+        "downloads": 4211,
         "tags": [
           "football",
           "champion",
-          "event"
+          "event",
+          "sync"
         ],
         "isNew": false,
-        "isTrending": false,
-        "badge": "FAN FAVORITE"
+        "isTrending": true,
+        "badge": "BESTSELLER"
       },
       {
-        "id": "p_17",
-        "title": "FIFA World Cup Champions Moment 7",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
+        "id": "p_sync_2032",
+        "title": "FIFA World Cup Champions Poster 32",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215269-612x612.jpg",
         "price": 199,
-        "downloads": 2237,
+        "downloads": 2940,
         "tags": [
           "football",
           "champion",
-          "event"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": "FAN FAVORITE"
-      },
-      {
-        "id": "p_18",
-        "title": "FIFA World Cup Champions Moment 8",
-        "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=800&q=80",
-        "price": 199,
-        "downloads": 2818,
-        "tags": [
-          "football",
-          "champion",
-          "event"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_19",
-        "title": "FIFA World Cup Champions Moment 9",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
-        "price": 199,
-        "downloads": 352,
-        "tags": [
-          "football",
-          "champion",
-          "event"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
-        "id": "p_20",
-        "title": "FIFA World Cup Champions Moment 10",
-        "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80",
-        "price": 199,
-        "downloads": 3961,
-        "tags": [
-          "football",
-          "champion",
-          "event"
+          "event",
+          "sync"
         ],
         "isNew": false,
         "isTrending": true,
         "badge": null
+      },
+      {
+        "id": "p_sync_2033",
+        "title": "FIFA World Cup Champions Poster 33",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215317-612x612.jpg",
+        "price": 199,
+        "downloads": 2976,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_2034",
+        "title": "FIFA World Cup Champions Poster 34",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215329-612x612.jpg",
+        "price": 199,
+        "downloads": 1141,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2035",
+        "title": "FIFA World Cup Champions Poster 35",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215370-612x612.jpg",
+        "price": 199,
+        "downloads": 962,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2036",
+        "title": "FIFA World Cup Champions Poster 36",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215393-612x612.jpg",
+        "price": 199,
+        "downloads": 3773,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2037",
+        "title": "FIFA World Cup Champions Poster 37",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215414-612x612.jpg",
+        "price": 199,
+        "downloads": 4258,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2038",
+        "title": "FIFA World Cup Champions Poster 38",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1453215451-612x612.jpg",
+        "price": 199,
+        "downloads": 1121,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_2039",
+        "title": "FIFA World Cup Champions Poster 39",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-2008858981-612x612.jpg",
+        "price": 199,
+        "downloads": 3972,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
       }
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80"
+    "thumbnail": "/curated/FIFA World Cup Champions/gettyimages-1245700414-612x612.jpg"
   },
   {
     "id": "col_3",
@@ -1513,6 +1987,36 @@ export const collectionsData = [
         "isNew": false,
         "isTrending": false,
         "badge": "TRENDING"
+      },
+      {
+        "id": "p_90_a",
+        "title": "Virat Kohli Legend Poster 9",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1205,
+        "tags": [
+          "viratkohli",
+          "legend",
+          "player"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_90_b",
+        "title": "Virat Kohli Legend Poster 10",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2083,
+        "tags": [
+          "viratkohli",
+          "legend",
+          "player"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
       }
     ],
     "thumbnail": "/curated/virat.jpg"
@@ -3577,6 +4081,21 @@ export const collectionsData = [
         "isNew": false,
         "isTrending": false,
         "badge": null
+      },
+      {
+        "id": "p_210_a",
+        "title": "Samurai Poster",
+        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM (2).jpeg",
+        "price": 199,
+        "downloads": 5424,
+        "tags": [
+          "anime",
+          "samurai",
+          "lifestyle"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
       }
     ],
     "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b7738?auto=format&fit=crop&w=800&q=80"
@@ -3682,22 +4201,6 @@ export const collectionsData = [
         "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM (1).jpeg",
         "price": 199,
         "downloads": 2695,
-        "tags": [
-          "divine",
-          "spiritual",
-          "god",
-          "peace"
-        ],
-        "isNew": true,
-        "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_divine_7",
-        "title": "Divine Artwork 7",
-        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.32 PM (2).jpeg",
-        "price": 199,
-        "downloads": 1205,
         "tags": [
           "divine",
           "spiritual",
@@ -4093,22 +4596,6 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_divine_32",
-        "title": "Divine Artwork 32",
-        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM (2).jpeg",
-        "price": 199,
-        "downloads": 2083,
-        "tags": [
-          "divine",
-          "spiritual",
-          "god",
-          "peace"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
         "id": "p_divine_33",
         "title": "Divine Artwork 33",
         "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.42 PM.jpeg",
@@ -4162,22 +4649,6 @@ export const collectionsData = [
         "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM (1).jpeg",
         "price": 199,
         "downloads": 4035,
-        "tags": [
-          "divine",
-          "spiritual",
-          "god",
-          "peace"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_divine_37",
-        "title": "Divine Artwork 37",
-        "image": "/curated/WhatsApp Image 2026-06-01 at 5.14.44 PM (2).jpeg",
-        "price": 199,
-        "downloads": 5424,
         "tags": [
           "divine",
           "spiritual",
