@@ -108,7 +108,7 @@ export default function ProductPage() {
           {/* LEFT — Product Image */}
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
             <div className={`relative rounded-3xl overflow-hidden ${isNeon ? 'glow-ring-neon' : 'glow-ring-novo'}`}>
-              <img src={product.image} alt={product.name} className="w-full aspect-[4/3] object-cover" />
+              <img src={product.image} alt={product.name} className="w-full aspect-[2/3] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
                 <DurabilityStrip variant={badgeVariant} />

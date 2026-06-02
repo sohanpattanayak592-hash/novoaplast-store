@@ -40,7 +40,7 @@ const SizeSelectorModal = ({ poster, isOpen, onClose, onAdd, onBuy }) => {
 
         {/* Poster Preview */}
         <div className="w-full md:w-1/2 bg-dark-900 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-white/5">
-           <img src={poster.image} alt={poster.title} className="max-w-full max-h-[40vh] md:max-h-[60vh] object-contain shadow-2xl rounded" />
+           <img src={poster.image} alt={poster.title} className="h-[40vh] md:h-[60vh] aspect-[2/3] object-cover shadow-2xl rounded" />
         </div>
 
         {/* Size Selection */}
