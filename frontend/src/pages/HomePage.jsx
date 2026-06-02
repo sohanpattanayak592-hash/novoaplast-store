@@ -26,62 +26,6 @@ export default function HomePage() {
         title="NOVOPLAST — India's Premium Poster Brand | RCB 2026 Champions" 
         description="Shop the exclusive RCB IPL 2026 Champions collection, Virat Kohli fan art, and premium waterproof posters starting at ₹199. Aesthetic room decor delivered across India."
       />
-      {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="hero-section">
-        {/* BG image */}
-        <div className="absolute inset-0">
-          <img src="/aesthetic_candid_poster.png" alt="NOVOPLAST Hero" className="w-full h-full object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-900/60 via-dark-900/80 to-dark-900" />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark-900/80 via-transparent to-dark-900/80 opacity-80" />
-        </div>
-
-        {/* Floating orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-novo-500/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-neon-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-24">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-            <span className="badge-durable mb-6 inline-flex">
-              <Sparkles className="w-3.5 h-3.5" /> India's Premium Poster Brand
-            </span>
-          </motion.div>
-
-          <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1} className="section-heading mt-4 mb-6">
-            <span className="text-white">Celebrate the </span>
-            <span className="text-novo-gradient">RCB IPL 2026 Champions!</span>
-          </motion.h1>
-
-          <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={2} className="text-white/50 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Own a piece of history. Premium waterproof posters starting at ₹199.
-          </motion.p>
-
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/collections/col_1" className="btn-novo flex items-center justify-center gap-2 w-full sm:w-auto" id="cta-shop-now">
-              Shop Champions Collection <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link to="/product/custom-posters" className="btn-outline-novo flex items-center justify-center gap-2 w-full sm:w-auto">
-              Custom Posters
-            </Link>
-          </motion.div>
-
-          {/* Trust strip */}
-          <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={4} className="mt-12 sm:mt-16 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white/30 text-xs sm:text-sm">
-            {[
-              { icon: Droplets, text: 'Waterproof' },
-              { icon: Star, text: 'HD Print' },
-              { icon: Sun, text: 'Fade Resistant' },
-              { icon: Shield, text: 'Premium Finish' },
-              { icon: Box, text: 'Secure Packaging' },
-              { icon: Truck, text: 'Fast Shipping' }
-            ].map((item) => (
-              <div key={item.text} className="flex items-center gap-2">
-                <item.icon className="w-4 h-4 text-novo-500/50" />
-                <span>{item.text}</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* ===== DYNAMIC COLLECTIONS MARQUEE ===== */}
       <CollectionsMarquee />
