@@ -8,6 +8,7 @@ import { fanClubsData } from '../data/fanClubsData'
 import PosterImage from '../components/PosterImage'
 import SEOHead from '../components/SEOHead'
 import CollectionsMarquee from '../components/CollectionsMarquee'
+import InspirationShowroom from '../components/InspirationShowroom'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -112,6 +113,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== 🌟 INSPIRATION IN ACTION SHOWROOM ===== */}
+      <InspirationShowroom />
       
       {/* ===== ✨ DIVINE & SPIRITUAL COLLECTION CARD ===== */}
       <section className="py-20 px-4 bg-dark-950 border-y border-white/5" id="divine-collection">
