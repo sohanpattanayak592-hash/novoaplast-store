@@ -149,9 +149,20 @@ export default function SearchPage() {
       )}
 
       {query && collectionResults.length === 0 && posterResults.length === 0 && fanClubResults.length === 0 && (
-        <div className="py-20 text-center">
-          <p className="text-white/50 text-xl">No results found for "{query}".</p>
-          <p className="text-white/30 mt-2">Try different keywords or browse our popular categories.</p>
+        <div className="py-20 text-center max-w-2xl mx-auto">
+          <div className="w-24 h-24 bg-dark-800 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Search className="w-10 h-10 text-white/30" />
+          </div>
+          <p className="text-white text-2xl font-display font-bold mb-4">No results found for "{query}"</p>
+          <p className="text-white/50 mb-8">
+            We couldn't find exactly what you were looking for. But don't worry, you can easily print your own design!
+          </p>
+          <Link 
+            to="/product/custom-posters"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-novo-600 hover:bg-novo-500 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-novo-900/20"
+          >
+            Create Custom Poster
+          </Link>
         </div>
       )}
 

@@ -72,13 +72,22 @@ const InspirationShowroom = () => {
               Visualize exactly how these masterpieces will elevate your daily environment.
             </p>
             
-            <Link 
-              to={`/collections/${motivationCollection.id}`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-novo-600 hover:bg-novo-500 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 group shadow-lg shadow-novo-900/20"
-            >
-              Explore Collection
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Link 
+                to={`/collections/${motivationCollection.id}`}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-novo-600 hover:bg-novo-500 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 group shadow-lg shadow-novo-900/20"
+              >
+                Explore Collection
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link 
+                to="/product/custom-posters"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-dark-800 hover:bg-dark-700 border border-white/10 text-white font-bold rounded-xl transition-all hover:scale-105 active:scale-95 group shadow-lg"
+              >
+                Customized Print
+              </Link>
+            </div>
           </motion.div>
         </div>
 
