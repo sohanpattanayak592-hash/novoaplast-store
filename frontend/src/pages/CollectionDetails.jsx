@@ -32,19 +32,19 @@ const SizeSelectorModal = ({ poster, isOpen, onClose, onAdd, onBuy }) => {
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="relative w-full max-w-3xl glass-card border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row z-10 shadow-2xl"
+        className="relative w-full max-w-4xl max-h-[70vh] glass-card border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row z-10 shadow-2xl"
       >
         <button onClick={onClose} className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-dark-900/50 hover:bg-white/10 text-white/60 hover:text-white transition-colors">
           <X className="w-5 h-5" />
         </button>
 
         {/* Poster Preview */}
-        <div className="w-full md:w-1/2 bg-dark-900 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-white/5">
-           <img src={poster.image} alt={poster.title} className="h-[40vh] md:h-[60vh] aspect-[2/3] object-cover shadow-2xl rounded" />
+        <div className="w-full md:w-1/2 bg-dark-900 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-white/5 h-[30vh] md:h-auto">
+           <img src={poster.image} alt={poster.title} className="max-h-full aspect-[2/3] object-cover shadow-2xl rounded" />
         </div>
 
         {/* Size Selection */}
-        <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col">
+        <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col overflow-y-auto">
           <div className="mb-2">
             {poster.badge && <span className="badge-novo mb-2 inline-block px-2 py-0.5 text-[10px]">{poster.badge}</span>}
             <h3 className="text-2xl font-display font-bold text-white">{poster.title}</h3>
