@@ -48,7 +48,7 @@ const InspirationShowroom = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-dark-950/90 via-dark-900/60 to-transparent"></div>
       </motion.div>
 
-      <div className="relative z-10 w-full h-full max-w-[1400px] mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between">
+      <div className="relative z-10 w-full h-full max-w-[1400px] mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between pt-24 lg:pt-32">
         
         {/* Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center h-full pt-12 lg:pt-0">

@@ -28,6 +28,9 @@ export default function HomePage() {
         description="Shop the exclusive RCB IPL 2026 Champions collection, Virat Kohli fan art, and premium waterproof posters starting at ₹199. Aesthetic room decor delivered across India."
       />
 
+      {/* ===== 🌟 INSPIRATION IN ACTION SHOWROOM ===== */}
+      <InspirationShowroom />
+
       {/* ===== DYNAMIC COLLECTIONS MARQUEE ===== */}
       <CollectionsMarquee />
 
@@ -113,8 +116,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 🌟 INSPIRATION IN ACTION SHOWROOM ===== */}
-      <InspirationShowroom />
+
       
       {/* ===== ✨ DIVINE & SPIRITUAL COLLECTION CARD ===== */}
       <section className="py-20 px-4 bg-dark-950 border-y border-white/5" id="divine-collection">

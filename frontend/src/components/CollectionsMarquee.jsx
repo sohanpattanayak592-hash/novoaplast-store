@@ -14,7 +14,7 @@ export default function CollectionsMarquee() {
   const row2 = validCollections.slice(midPoint);
 
   return (
-    <section className="pt-32 pb-12 bg-dark-950 overflow-hidden border-b border-white/5 relative z-20">
+    <section className="py-12 bg-dark-950 overflow-hidden border-y border-white/5 relative z-20">
       <div className="max-w-[1600px] mx-auto px-4 mb-8">
         <h2 className="text-white/60 font-medium text-sm md:text-base text-center uppercase tracking-widest flex items-center justify-center gap-4">
           <span className="w-12 h-px bg-white/20"></span>
