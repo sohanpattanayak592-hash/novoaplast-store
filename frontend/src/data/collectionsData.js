@@ -21,23 +21,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 1",
         "image": "/curated/RCB IPL 2026 Champions/0443f931-b727-4de6-8a35-cac66a92e265.avif",
         "price": 199,
-        "downloads": 1792,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3002",
-        "title": "RCB IPL 2026 Champions Poster 2",
-        "image": "/curated/RCB IPL 2026 Champions/061b2208-0dda-41ba-a3c0-7183596556c8.avif",
-        "price": 199,
-        "downloads": 1789,
+        "downloads": 941,
         "tags": [
           "cricket",
           "champion",
@@ -49,11 +33,27 @@ export const collectionsData = [
         "badge": null
       },
       {
+        "id": "p_sync_3002",
+        "title": "RCB IPL 2026 Champions Poster 2",
+        "image": "/curated/RCB IPL 2026 Champions/061b2208-0dda-41ba-a3c0-7183596556c8.avif",
+        "price": 199,
+        "downloads": 3846,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
         "id": "p_sync_3003",
         "title": "RCB IPL 2026 Champions Poster 3",
         "image": "/curated/RCB IPL 2026 Champions/0e105afa-1686-4e1a-ad9e-afa7f13462e8.avif",
         "price": 199,
-        "downloads": 3807,
+        "downloads": 999,
         "tags": [
           "cricket",
           "champion",
@@ -69,23 +69,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 4",
         "image": "/curated/RCB IPL 2026 Champions/14ba60de-268e-45cb-87bd-d526e98fe3a6.avif",
         "price": 199,
-        "downloads": 2018,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3005",
-        "title": "RCB IPL 2026 Champions Poster 5",
-        "image": "/curated/RCB IPL 2026 Champions/1cf4e6b3-0bdd-4230-a496-6264378b6f69.avif",
-        "price": 199,
-        "downloads": 3165,
+        "downloads": 3597,
         "tags": [
           "cricket",
           "champion",
@@ -97,11 +81,27 @@ export const collectionsData = [
         "badge": null
       },
       {
+        "id": "p_sync_3005",
+        "title": "RCB IPL 2026 Champions Poster 5",
+        "image": "/curated/RCB IPL 2026 Champions/1cf4e6b3-0bdd-4230-a496-6264378b6f69.avif",
+        "price": 199,
+        "downloads": 1007,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
         "id": "p_sync_3006",
         "title": "RCB IPL 2026 Champions Poster 6",
         "image": "/curated/RCB IPL 2026 Champions/317e198b-46b7-4e9b-a776-8fd3881287bb.avif",
         "price": 199,
-        "downloads": 711,
+        "downloads": 682,
         "tags": [
           "cricket",
           "champion",
@@ -117,23 +117,23 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 7",
         "image": "/curated/RCB IPL 2026 Champions/3a660364-f8b2-4098-bc79-b8cd07524be1.avif",
         "price": 199,
-        "downloads": 1119,
+        "downloads": 1199,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": true,
-        "badge": "BESTSELLER"
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
       },
       {
         "id": "p_sync_3008",
         "title": "RCB IPL 2026 Champions Poster 8",
         "image": "/curated/RCB IPL 2026 Champions/52360c53-711d-47c1-98a2-f1957d3c112c.avif",
         "price": 199,
-        "downloads": 1038,
+        "downloads": 3165,
         "tags": [
           "cricket",
           "champion",
@@ -149,14 +149,14 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 9",
         "image": "/curated/RCB IPL 2026 Champions/52ad5986-c445-4536-8d90-9ec5cef1e947.avif",
         "price": 199,
-        "downloads": 1145,
+        "downloads": 2049,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -165,7 +165,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 10",
         "image": "/curated/RCB IPL 2026 Champions/54becc5b-4466-4865-bf43-1c218262a13e.avif",
         "price": 199,
-        "downloads": 635,
+        "downloads": 4042,
         "tags": [
           "cricket",
           "champion",
@@ -181,14 +181,14 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 11",
         "image": "/curated/RCB IPL 2026 Champions/5aaf5d1f-e915-4c5c-9ac2-fbef212fa037.avif",
         "price": 199,
-        "downloads": 4289,
+        "downloads": 3960,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -197,14 +197,14 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 12",
         "image": "/curated/RCB IPL 2026 Champions/6468e5aa-5d12-44f5-9443-1b1272f64193.avif",
         "price": 199,
-        "downloads": 828,
+        "downloads": 790,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -213,7 +213,23 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 13",
         "image": "/curated/RCB IPL 2026 Champions/85e1be4e-2b9e-4e67-abe1-f09afac1f557.avif",
         "price": 199,
-        "downloads": 799,
+        "downloads": 1050,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3014",
+        "title": "RCB IPL 2026 Champions Poster 14",
+        "image": "/curated/RCB IPL 2026 Champions/88c136f7-26e5-4229-a18b-88c36bd6d15f.avif",
+        "price": 199,
+        "downloads": 3509,
         "tags": [
           "cricket",
           "champion",
@@ -225,34 +241,18 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3014",
-        "title": "RCB IPL 2026 Champions Poster 14",
-        "image": "/curated/RCB IPL 2026 Champions/88c136f7-26e5-4229-a18b-88c36bd6d15f.avif",
-        "price": 199,
-        "downloads": 1343,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
         "id": "p_sync_3015",
         "title": "RCB IPL 2026 Champions Poster 15",
         "image": "/curated/RCB IPL 2026 Champions/90013e3d-4a5f-4a0f-9106-d74667e3053e.avif",
         "price": 199,
-        "downloads": 3773,
+        "downloads": 1218,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -261,15 +261,15 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 16",
         "image": "/curated/RCB IPL 2026 Champions/95019e76-41ba-4976-b555-fd3baa16e952.avif",
         "price": 199,
-        "downloads": 4155,
+        "downloads": 1205,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": false,
+        "isNew": true,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -277,7 +277,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 17",
         "image": "/curated/RCB IPL 2026 Champions/c16302e1-74de-45a8-b455-529577d666c4.avif",
         "price": 199,
-        "downloads": 3001,
+        "downloads": 3105,
         "tags": [
           "cricket",
           "champion",
@@ -293,14 +293,14 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 18",
         "image": "/curated/RCB IPL 2026 Champions/c7763ac1-3570-42d5-beee-7684e7c74b18.avif",
         "price": 199,
-        "downloads": 3639,
+        "downloads": 3323,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -309,7 +309,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 19",
         "image": "/curated/RCB IPL 2026 Champions/c7f63b0e-49ba-4854-8e37-decd8a52406b.avif",
         "price": 199,
-        "downloads": 3390,
+        "downloads": 998,
         "tags": [
           "cricket",
           "champion",
@@ -325,7 +325,7 @@ export const collectionsData = [
         "title": "RCB IPL 2026 Champions Poster 20",
         "image": "/curated/RCB IPL 2026 Champions/cb55e405-01e7-4687-8647-8d734ad0b7bb.avif",
         "price": 199,
-        "downloads": 2067,
+        "downloads": 1521,
         "tags": [
           "cricket",
           "champion",
@@ -334,7 +334,7 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": "TRENDING"
       }
     ],
     "thumbnail": "/curated/RCB IPL 2026 Champions/0443f931-b727-4de6-8a35-cac66a92e265.avif"
@@ -358,7 +358,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 1",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245700414-612x612.jpg",
         "price": 199,
-        "downloads": 4001,
+        "downloads": 1773,
         "tags": [
           "football",
           "champion",
@@ -374,14 +374,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 2",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245702170-612x612.jpg",
         "price": 199,
-        "downloads": 512,
+        "downloads": 2691,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": true,
         "badge": null
       },
@@ -390,23 +390,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 3",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245709167-612x612.jpg",
         "price": 199,
-        "downloads": 767,
-        "tags": [
-          "football",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3024",
-        "title": "FIFA World Cup Champions Poster 4",
-        "image": "/curated/FIFA World Cup Champions/gettyimages-1245709365-612x612.jpg",
-        "price": 199,
-        "downloads": 1042,
+        "downloads": 3038,
         "tags": [
           "football",
           "champion",
@@ -415,21 +399,37 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": null
+        "badge": "BESTSELLER"
       },
       {
-        "id": "p_sync_3025",
-        "title": "FIFA World Cup Champions Poster 5",
-        "image": "/curated/FIFA World Cup Champions/gettyimages-1245710275-612x612.jpg",
+        "id": "p_sync_3024",
+        "title": "FIFA World Cup Champions Poster 4",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245709365-612x612.jpg",
         "price": 199,
-        "downloads": 2293,
+        "downloads": 2190,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
+        "isTrending": true,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3025",
+        "title": "FIFA World Cup Champions Poster 5",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1245710275-612x612.jpg",
+        "price": 199,
+        "downloads": 4004,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -438,14 +438,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 6",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245712188-612x612.jpg",
         "price": 199,
-        "downloads": 670,
+        "downloads": 1174,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -454,7 +454,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 7",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245718349-612x612.jpg",
         "price": 199,
-        "downloads": 3625,
+        "downloads": 4387,
         "tags": [
           "football",
           "champion",
@@ -470,14 +470,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 8",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1245718386-612x612.jpg",
         "price": 199,
-        "downloads": 1955,
+        "downloads": 1171,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -486,7 +486,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 9",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450111748-612x612.jpg",
         "price": 199,
-        "downloads": 3232,
+        "downloads": 1159,
         "tags": [
           "football",
           "champion",
@@ -502,14 +502,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 10",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450111803-612x612.jpg",
         "price": 199,
-        "downloads": 4428,
+        "downloads": 1976,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": "BESTSELLER"
       },
@@ -518,14 +518,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 11",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450111806-612x612.jpg",
         "price": 199,
-        "downloads": 3217,
+        "downloads": 2869,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -534,7 +534,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 12",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450111904-612x612.jpg",
         "price": 199,
-        "downloads": 3899,
+        "downloads": 850,
         "tags": [
           "football",
           "champion",
@@ -542,7 +542,7 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -550,7 +550,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 13",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450111995-612x612.jpg",
         "price": 199,
-        "downloads": 1105,
+        "downloads": 619,
         "tags": [
           "football",
           "champion",
@@ -566,7 +566,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 14",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450128513-612x612.jpg",
         "price": 199,
-        "downloads": 772,
+        "downloads": 2230,
         "tags": [
           "football",
           "champion",
@@ -575,22 +575,22 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3035",
         "title": "FIFA World Cup Champions Poster 15",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450131693-612x612.jpg",
         "price": 199,
-        "downloads": 3974,
+        "downloads": 3334,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": false,
+        "isNew": true,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -598,14 +598,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 16",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450133026-612x612.jpg",
         "price": 199,
-        "downloads": 3861,
+        "downloads": 1889,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -614,7 +614,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 17",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450147218-612x612.jpg",
         "price": 199,
-        "downloads": 2533,
+        "downloads": 4396,
         "tags": [
           "football",
           "champion",
@@ -623,14 +623,62 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3038",
         "title": "FIFA World Cup Champions Poster 18",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450147231-612x612.jpg",
         "price": 199,
-        "downloads": 3878,
+        "downloads": 2176,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3039",
+        "title": "FIFA World Cup Champions Poster 19",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212599-612x612.jpg",
+        "price": 199,
+        "downloads": 2675,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3040",
+        "title": "FIFA World Cup Champions Poster 20",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212603-612x612.jpg",
+        "price": 199,
+        "downloads": 620,
+        "tags": [
+          "football",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3041",
+        "title": "FIFA World Cup Champions Poster 21",
+        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212607-612x612.jpg",
+        "price": 199,
+        "downloads": 3676,
         "tags": [
           "football",
           "champion",
@@ -642,59 +690,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3039",
-        "title": "FIFA World Cup Champions Poster 19",
-        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212599-612x612.jpg",
-        "price": 199,
-        "downloads": 1143,
-        "tags": [
-          "football",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3040",
-        "title": "FIFA World Cup Champions Poster 20",
-        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212603-612x612.jpg",
-        "price": 199,
-        "downloads": 2179,
-        "tags": [
-          "football",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3041",
-        "title": "FIFA World Cup Champions Poster 21",
-        "image": "/curated/FIFA World Cup Champions/gettyimages-1450212607-612x612.jpg",
-        "price": 199,
-        "downloads": 1491,
-        "tags": [
-          "football",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
-      },
-      {
         "id": "p_sync_3042",
         "title": "FIFA World Cup Champions Poster 22",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450215984-612x612.jpg",
         "price": 199,
-        "downloads": 2054,
+        "downloads": 4397,
         "tags": [
           "football",
           "champion",
@@ -703,14 +703,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3043",
         "title": "FIFA World Cup Champions Poster 23",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450225396-612x612.jpg",
         "price": 199,
-        "downloads": 4026,
+        "downloads": 2059,
         "tags": [
           "football",
           "champion",
@@ -726,14 +726,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 24",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450225400-612x612.jpg",
         "price": 199,
-        "downloads": 4288,
+        "downloads": 1501,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -742,7 +742,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 25",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450229405-612x612.jpg",
         "price": 199,
-        "downloads": 3307,
+        "downloads": 1662,
         "tags": [
           "football",
           "champion",
@@ -751,14 +751,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": true,
-        "badge": null
+        "badge": "BESTSELLER"
       },
       {
         "id": "p_sync_3046",
         "title": "FIFA World Cup Champions Poster 26",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450229425-612x612.jpg",
         "price": 199,
-        "downloads": 2691,
+        "downloads": 505,
         "tags": [
           "football",
           "champion",
@@ -774,7 +774,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 27",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450245706-612x612.jpg",
         "price": 199,
-        "downloads": 4026,
+        "downloads": 2005,
         "tags": [
           "football",
           "champion",
@@ -790,7 +790,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 28",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1450266745-612x612.jpg",
         "price": 199,
-        "downloads": 815,
+        "downloads": 3873,
         "tags": [
           "football",
           "champion",
@@ -806,7 +806,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 29",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215216-612x612.jpg",
         "price": 199,
-        "downloads": 2913,
+        "downloads": 3300,
         "tags": [
           "football",
           "champion",
@@ -822,7 +822,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 30",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215218-612x612.jpg",
         "price": 199,
-        "downloads": 2549,
+        "downloads": 4385,
         "tags": [
           "football",
           "champion",
@@ -831,30 +831,30 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3051",
         "title": "FIFA World Cup Champions Poster 31",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215268-612x612.jpg",
         "price": 199,
-        "downloads": 3764,
+        "downloads": 4468,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
-        "badge": "TRENDING"
+        "badge": null
       },
       {
         "id": "p_sync_3052",
         "title": "FIFA World Cup Champions Poster 32",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215269-612x612.jpg",
         "price": 199,
-        "downloads": 2552,
+        "downloads": 2294,
         "tags": [
           "football",
           "champion",
@@ -870,14 +870,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 33",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215317-612x612.jpg",
         "price": 199,
-        "downloads": 1266,
+        "downloads": 2373,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -886,7 +886,7 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 34",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215329-612x612.jpg",
         "price": 199,
-        "downloads": 599,
+        "downloads": 791,
         "tags": [
           "football",
           "champion",
@@ -894,15 +894,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
-        "badge": null
+        "isTrending": false,
+        "badge": "TRENDING"
       },
       {
         "id": "p_sync_3055",
         "title": "FIFA World Cup Champions Poster 35",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215370-612x612.jpg",
         "price": 199,
-        "downloads": 2613,
+        "downloads": 3464,
         "tags": [
           "football",
           "champion",
@@ -910,7 +910,7 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -918,14 +918,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 36",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215393-612x612.jpg",
         "price": 199,
-        "downloads": 3474,
+        "downloads": 4024,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -934,14 +934,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 37",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215414-612x612.jpg",
         "price": 199,
-        "downloads": 1194,
+        "downloads": 1254,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -950,14 +950,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 38",
         "image": "/curated/FIFA World Cup Champions/gettyimages-1453215451-612x612.jpg",
         "price": 199,
-        "downloads": 2955,
+        "downloads": 519,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -966,14 +966,14 @@ export const collectionsData = [
         "title": "FIFA World Cup Champions Poster 39",
         "image": "/curated/FIFA World Cup Champions/gettyimages-2008858981-612x612.jpg",
         "price": 199,
-        "downloads": 3793,
+        "downloads": 1811,
         "tags": [
           "football",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       }
@@ -999,14 +999,14 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 1",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1156258735-612x612.jpg",
         "price": 199,
-        "downloads": 4355,
+        "downloads": 2554,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1015,7 +1015,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 2",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1158611138-612x612.jpg",
         "price": 199,
-        "downloads": 4099,
+        "downloads": 2555,
         "tags": [
           "cricket",
           "champion",
@@ -1024,78 +1024,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3062",
         "title": "ICC Cricket World Cup Moments Poster 3",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1160958359-612x612.jpg",
         "price": 199,
-        "downloads": 2392,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3063",
-        "title": "ICC Cricket World Cup Moments Poster 4",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161158206-612x612.jpg",
-        "price": 199,
-        "downloads": 2181,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3064",
-        "title": "ICC Cricket World Cup Moments Poster 5",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161186916-612x612.jpg",
-        "price": 199,
-        "downloads": 1249,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": "BESTSELLER"
-      },
-      {
-        "id": "p_sync_3065",
-        "title": "ICC Cricket World Cup Moments Poster 6",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161191426-612x612.jpg",
-        "price": 199,
-        "downloads": 4452,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": "BESTSELLER"
-      },
-      {
-        "id": "p_sync_3066",
-        "title": "ICC Cricket World Cup Moments Poster 7",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161193075-612x612.jpg",
-        "price": 199,
-        "downloads": 3096,
+        "downloads": 4336,
         "tags": [
           "cricket",
           "champion",
@@ -1107,11 +1043,75 @@ export const collectionsData = [
         "badge": "TRENDING"
       },
       {
+        "id": "p_sync_3063",
+        "title": "ICC Cricket World Cup Moments Poster 4",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161158206-612x612.jpg",
+        "price": 199,
+        "downloads": 3642,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3064",
+        "title": "ICC Cricket World Cup Moments Poster 5",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161186916-612x612.jpg",
+        "price": 199,
+        "downloads": 3153,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3065",
+        "title": "ICC Cricket World Cup Moments Poster 6",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161191426-612x612.jpg",
+        "price": 199,
+        "downloads": 4369,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3066",
+        "title": "ICC Cricket World Cup Moments Poster 7",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161193075-612x612.jpg",
+        "price": 199,
+        "downloads": 2885,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": "BESTSELLER"
+      },
+      {
         "id": "p_sync_3067",
         "title": "ICC Cricket World Cup Moments Poster 8",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1161194042-612x612.jpg",
         "price": 199,
-        "downloads": 3144,
+        "downloads": 3425,
         "tags": [
           "cricket",
           "champion",
@@ -1127,7 +1127,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 9",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1162173751-612x612.jpg",
         "price": 199,
-        "downloads": 2701,
+        "downloads": 2592,
         "tags": [
           "cricket",
           "champion",
@@ -1143,7 +1143,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 10",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1162386007-612x612.jpg",
         "price": 199,
-        "downloads": 1304,
+        "downloads": 3231,
         "tags": [
           "cricket",
           "champion",
@@ -1159,15 +1159,15 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 11",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1719133275-612x612.jpg",
         "price": 199,
-        "downloads": 590,
+        "downloads": 4149,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": false,
+        "isNew": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -1175,7 +1175,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 12",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1723521014-612x612.jpg",
         "price": 199,
-        "downloads": 2157,
+        "downloads": 2049,
         "tags": [
           "cricket",
           "champion",
@@ -1191,7 +1191,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 13",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1723525825-612x612.jpg",
         "price": 199,
-        "downloads": 1603,
+        "downloads": 2841,
         "tags": [
           "cricket",
           "champion",
@@ -1207,14 +1207,14 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 14",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1744788583-612x612.jpg",
         "price": 199,
-        "downloads": 4010,
+        "downloads": 4031,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -1223,7 +1223,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 15",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1776191577-612x612.jpg",
         "price": 199,
-        "downloads": 4363,
+        "downloads": 3613,
         "tags": [
           "cricket",
           "champion",
@@ -1239,7 +1239,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 16",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1783012716-612x612.jpg",
         "price": 199,
-        "downloads": 4282,
+        "downloads": 2680,
         "tags": [
           "cricket",
           "champion",
@@ -1248,14 +1248,14 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3076",
         "title": "ICC Cricket World Cup Moments Poster 17",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1783032822-612x612.jpg",
         "price": 199,
-        "downloads": 3332,
+        "downloads": 1486,
         "tags": [
           "cricket",
           "champion",
@@ -1263,22 +1263,22 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
-        "badge": "BESTSELLER"
+        "isTrending": true,
+        "badge": null
       },
       {
         "id": "p_sync_3077",
         "title": "ICC Cricket World Cup Moments Poster 18",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1783575039-612x612.jpg",
         "price": 199,
-        "downloads": 1964,
+        "downloads": 2453,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1287,7 +1287,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 19",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790442078-612x612.jpg",
         "price": 199,
-        "downloads": 4099,
+        "downloads": 2187,
         "tags": [
           "cricket",
           "champion",
@@ -1295,15 +1295,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
-        "badge": null
+        "isTrending": true,
+        "badge": "BESTSELLER"
       },
       {
         "id": "p_sync_3079",
         "title": "ICC Cricket World Cup Moments Poster 20",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790608508-612x612.jpg",
         "price": 199,
-        "downloads": 4118,
+        "downloads": 2615,
         "tags": [
           "cricket",
           "champion",
@@ -1319,7 +1319,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 21",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790885207-612x612.jpg",
         "price": 199,
-        "downloads": 3651,
+        "downloads": 2750,
         "tags": [
           "cricket",
           "champion",
@@ -1328,22 +1328,22 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3081",
         "title": "ICC Cricket World Cup Moments Poster 22",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790885308-612x612.jpg",
         "price": 199,
-        "downloads": 1794,
+        "downloads": 4150,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": false,
+        "isNew": true,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -1351,7 +1351,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 23",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790933276-612x612.jpg",
         "price": 199,
-        "downloads": 930,
+        "downloads": 3866,
         "tags": [
           "cricket",
           "champion",
@@ -1367,7 +1367,23 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 24",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1790971151-612x612.jpg",
         "price": 199,
-        "downloads": 2421,
+        "downloads": 1534,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3084",
+        "title": "ICC Cricket World Cup Moments Poster 25",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791027958-612x612.jpg",
+        "price": 199,
+        "downloads": 3815,
         "tags": [
           "cricket",
           "champion",
@@ -1376,14 +1392,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3084",
-        "title": "ICC Cricket World Cup Moments Poster 25",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791027958-612x612.jpg",
+        "id": "p_sync_3085",
+        "title": "ICC Cricket World Cup Moments Poster 26",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791028842-612x612.jpg",
         "price": 199,
-        "downloads": 1872,
+        "downloads": 4173,
         "tags": [
           "cricket",
           "champion",
@@ -1391,22 +1407,6 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3085",
-        "title": "ICC Cricket World Cup Moments Poster 26",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791028842-612x612.jpg",
-        "price": 199,
-        "downloads": 1593,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1415,7 +1415,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 27",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791051878-612x612.jpg",
         "price": 199,
-        "downloads": 3088,
+        "downloads": 1337,
         "tags": [
           "cricket",
           "champion",
@@ -1424,30 +1424,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
         "id": "p_sync_3087",
         "title": "ICC Cricket World Cup Moments Poster 28",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1791335233-612x612.jpg",
         "price": 199,
-        "downloads": 2521,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3088",
-        "title": "ICC Cricket World Cup Moments Poster 29",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794723048-612x612.jpg",
-        "price": 199,
-        "downloads": 3598,
+        "downloads": 3285,
         "tags": [
           "cricket",
           "champion",
@@ -1455,31 +1439,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3089",
-        "title": "ICC Cricket World Cup Moments Poster 30",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794724689-612x612.jpg",
+        "id": "p_sync_3088",
+        "title": "ICC Cricket World Cup Moments Poster 29",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794723048-612x612.jpg",
         "price": 199,
-        "downloads": 833,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3090",
-        "title": "ICC Cricket World Cup Moments Poster 31",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794752654-612x612.jpg",
-        "price": 199,
-        "downloads": 945,
+        "downloads": 3518,
         "tags": [
           "cricket",
           "champion",
@@ -1491,11 +1459,27 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3091",
-        "title": "ICC Cricket World Cup Moments Poster 32",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794753842-612x612.jpg",
+        "id": "p_sync_3089",
+        "title": "ICC Cricket World Cup Moments Poster 30",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794724689-612x612.jpg",
         "price": 199,
-        "downloads": 592,
+        "downloads": 1303,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3090",
+        "title": "ICC Cricket World Cup Moments Poster 31",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794752654-612x612.jpg",
+        "price": 199,
+        "downloads": 2805,
         "tags": [
           "cricket",
           "champion",
@@ -1507,11 +1491,27 @@ export const collectionsData = [
         "badge": null
       },
       {
+        "id": "p_sync_3091",
+        "title": "ICC Cricket World Cup Moments Poster 32",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794753842-612x612.jpg",
+        "price": 199,
+        "downloads": 2928,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
         "id": "p_sync_3092",
         "title": "ICC Cricket World Cup Moments Poster 33",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794765882-612x612.jpg",
         "price": 199,
-        "downloads": 3450,
+        "downloads": 1451,
         "tags": [
           "cricket",
           "champion",
@@ -1527,39 +1527,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 34",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794769626-612x612.jpg",
         "price": 199,
-        "downloads": 2665,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3094",
-        "title": "ICC Cricket World Cup Moments Poster 35",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794769639-612x612.jpg",
-        "price": 199,
-        "downloads": 857,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3095",
-        "title": "ICC Cricket World Cup Moments Poster 36",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794771248-612x612.jpg",
-        "price": 199,
-        "downloads": 2465,
+        "downloads": 1254,
         "tags": [
           "cricket",
           "champion",
@@ -1571,11 +1539,43 @@ export const collectionsData = [
         "badge": null
       },
       {
+        "id": "p_sync_3094",
+        "title": "ICC Cricket World Cup Moments Poster 35",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794769639-612x612.jpg",
+        "price": 199,
+        "downloads": 3408,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3095",
+        "title": "ICC Cricket World Cup Moments Poster 36",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794771248-612x612.jpg",
+        "price": 199,
+        "downloads": 3353,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
         "id": "p_sync_3096",
         "title": "ICC Cricket World Cup Moments Poster 37",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794786364-612x612.jpg",
         "price": 199,
-        "downloads": 706,
+        "downloads": 4209,
         "tags": [
           "cricket",
           "champion",
@@ -1591,7 +1591,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 38",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1794799191-612x612.jpg",
         "price": 199,
-        "downloads": 1934,
+        "downloads": 3999,
         "tags": [
           "cricket",
           "champion",
@@ -1600,21 +1600,21 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3098",
         "title": "ICC Cricket World Cup Moments Poster 39",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1795412586-612x612.jpg",
         "price": 199,
-        "downloads": 2080,
+        "downloads": 3679,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -1623,7 +1623,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 40",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1795995847-612x612.jpg",
         "price": 199,
-        "downloads": 615,
+        "downloads": 933,
         "tags": [
           "cricket",
           "champion",
@@ -1631,23 +1631,23 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
-        "badge": null
+        "isTrending": false,
+        "badge": "TRENDING"
       },
       {
         "id": "p_sync_3100",
         "title": "ICC Cricket World Cup Moments Poster 41",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422348-612x612.jpg",
         "price": 199,
-        "downloads": 1684,
+        "downloads": 3122,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": true,
+        "isNew": false,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -1655,23 +1655,7 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 42",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422349-612x612.jpg",
         "price": 199,
-        "downloads": 1001,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3102",
-        "title": "ICC Cricket World Cup Moments Poster 43",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422866-612x612.jpg",
-        "price": 199,
-        "downloads": 2670,
+        "downloads": 1714,
         "tags": [
           "cricket",
           "champion",
@@ -1679,31 +1663,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
-        "id": "p_sync_3103",
-        "title": "ICC Cricket World Cup Moments Poster 44",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422869-612x612.jpg",
-        "price": 199,
-        "downloads": 3987,
-        "tags": [
-          "cricket",
-          "champion",
-          "event",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3104",
-        "title": "ICC Cricket World Cup Moments Poster 45",
-        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1797934309-612x612.jpg",
+        "id": "p_sync_3102",
+        "title": "ICC Cricket World Cup Moments Poster 43",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422866-612x612.jpg",
         "price": 199,
-        "downloads": 975,
+        "downloads": 3187,
         "tags": [
           "cricket",
           "champion",
@@ -1715,11 +1683,43 @@ export const collectionsData = [
         "badge": "BESTSELLER"
       },
       {
+        "id": "p_sync_3103",
+        "title": "ICC Cricket World Cup Moments Poster 44",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1796422869-612x612.jpg",
+        "price": 199,
+        "downloads": 1411,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3104",
+        "title": "ICC Cricket World Cup Moments Poster 45",
+        "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1797934309-612x612.jpg",
+        "price": 199,
+        "downloads": 2668,
+        "tags": [
+          "cricket",
+          "champion",
+          "event",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
         "id": "p_sync_3105",
         "title": "ICC Cricket World Cup Moments Poster 46",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1801853631-612x612.jpg",
         "price": 199,
-        "downloads": 4001,
+        "downloads": 2374,
         "tags": [
           "cricket",
           "champion",
@@ -1735,14 +1735,14 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 47",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1801894053-612x612.jpg",
         "price": 199,
-        "downloads": 3704,
+        "downloads": 3322,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1751,15 +1751,15 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 48",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1801933235-612x612.jpg",
         "price": 199,
-        "downloads": 3719,
+        "downloads": 4044,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": true,
+        "isNew": false,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -1767,14 +1767,14 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 49",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1802424394-612x612.jpg",
         "price": 199,
-        "downloads": 541,
+        "downloads": 750,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1783,14 +1783,14 @@ export const collectionsData = [
         "title": "ICC Cricket World Cup Moments Poster 50",
         "image": "/curated/ICC Cricket World Cup Moments/gettyimages-1802478089-612x612.jpg",
         "price": 199,
-        "downloads": 3819,
+        "downloads": 2076,
         "tags": [
           "cricket",
           "champion",
           "event",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       }
@@ -1952,28 +1952,28 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 1",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1148305998-612x612.jpg",
         "price": 199,
-        "downloads": 1292,
+        "downloads": 2967,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
-        "badge": null
+        "badge": "BESTSELLER"
       },
       {
         "id": "p_sync_3111",
         "title": "Cristiano Ronaldo Collection Poster 2",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1148778896-612x612.jpg",
         "price": 199,
-        "downloads": 3205,
+        "downloads": 1240,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -1982,7 +1982,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 3",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1153911551-612x612.jpg",
         "price": 199,
-        "downloads": 2572,
+        "downloads": 3733,
         "tags": [
           "ronaldo",
           "legend",
@@ -1997,7 +1997,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 4",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1153929661-612x612.jpg",
         "price": 199,
-        "downloads": 4119,
+        "downloads": 4442,
         "tags": [
           "ronaldo",
           "legend",
@@ -2005,20 +2005,20 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "TRENDING"
+        "badge": null
       },
       {
         "id": "p_sync_3114",
         "title": "Cristiano Ronaldo Collection Poster 5",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245182905-612x612.jpg",
         "price": 199,
-        "downloads": 3555,
+        "downloads": 1775,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -2027,7 +2027,22 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 6",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245183251-612x612.jpg",
         "price": 199,
-        "downloads": 2464,
+        "downloads": 885,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3116",
+        "title": "Cristiano Ronaldo Collection Poster 7",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245511277-612x612.jpg",
+        "price": 199,
+        "downloads": 950,
         "tags": [
           "ronaldo",
           "legend",
@@ -2038,33 +2053,18 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3116",
-        "title": "Cristiano Ronaldo Collection Poster 7",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245511277-612x612.jpg",
-        "price": 199,
-        "downloads": 2165,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
-      },
-      {
         "id": "p_sync_3117",
         "title": "Cristiano Ronaldo Collection Poster 8",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245514014-612x612.jpg",
         "price": 199,
-        "downloads": 2328,
+        "downloads": 3541,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2072,14 +2072,14 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 9",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1245533395-612x612.jpg",
         "price": 199,
-        "downloads": 4065,
+        "downloads": 3561,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2087,7 +2087,22 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 10",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1247565429-612x612.jpg",
         "price": 199,
-        "downloads": 633,
+        "downloads": 3071,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3120",
+        "title": "Cristiano Ronaldo Collection Poster 11",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1442847713-612x612.jpg",
+        "price": 199,
+        "downloads": 1421,
         "tags": [
           "ronaldo",
           "legend",
@@ -2098,26 +2113,11 @@ export const collectionsData = [
         "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3120",
-        "title": "Cristiano Ronaldo Collection Poster 11",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1442847713-612x612.jpg",
-        "price": 199,
-        "downloads": 1930,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
         "id": "p_sync_3121",
         "title": "Cristiano Ronaldo Collection Poster 12",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1444228076-612x612.jpg",
         "price": 199,
-        "downloads": 2544,
+        "downloads": 4130,
         "tags": [
           "ronaldo",
           "legend",
@@ -2132,7 +2132,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 13",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1445248226-612x612.jpg",
         "price": 199,
-        "downloads": 2690,
+        "downloads": 4137,
         "tags": [
           "ronaldo",
           "legend",
@@ -2147,7 +2147,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 14",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1445259714-612x612.jpg",
         "price": 199,
-        "downloads": 3653,
+        "downloads": 1249,
         "tags": [
           "ronaldo",
           "legend",
@@ -2162,7 +2162,22 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 15",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1447182191-612x612.jpg",
         "price": 199,
-        "downloads": 3765,
+        "downloads": 1430,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3125",
+        "title": "Cristiano Ronaldo Collection Poster 16",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448158186-612x612.jpg",
+        "price": 199,
+        "downloads": 3614,
         "tags": [
           "ronaldo",
           "legend",
@@ -2170,21 +2185,6 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3125",
-        "title": "Cristiano Ronaldo Collection Poster 16",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448158186-612x612.jpg",
-        "price": 199,
-        "downloads": 2648,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
         "badge": null
       },
       {
@@ -2192,37 +2192,37 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 17",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448158195-612x612.jpg",
         "price": 199,
-        "downloads": 1727,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3127",
-        "title": "Cristiano Ronaldo Collection Poster 18",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448159693-612x612.jpg",
-        "price": 199,
-        "downloads": 3156,
+        "downloads": 4288,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
-        "badge": null
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3127",
+        "title": "Cristiano Ronaldo Collection Poster 18",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448159693-612x612.jpg",
+        "price": 199,
+        "downloads": 980,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
       },
       {
         "id": "p_sync_3128",
         "title": "Cristiano Ronaldo Collection Poster 19",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448163992-612x612.jpg",
         "price": 199,
-        "downloads": 2319,
+        "downloads": 3842,
         "tags": [
           "ronaldo",
           "legend",
@@ -2237,13 +2237,13 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 20",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448183921-612x612.jpg",
         "price": 199,
-        "downloads": 4442,
+        "downloads": 1421,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -2252,7 +2252,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 21",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448192870-612x612.jpg",
         "price": 199,
-        "downloads": 2997,
+        "downloads": 3363,
         "tags": [
           "ronaldo",
           "legend",
@@ -2267,14 +2267,14 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 22",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448213553-612x612.jpg",
         "price": 199,
-        "downloads": 2074,
+        "downloads": 1029,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": true,
+        "isNew": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2282,7 +2282,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 23",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448213555-612x612.jpg",
         "price": 199,
-        "downloads": 3006,
+        "downloads": 1209,
         "tags": [
           "ronaldo",
           "legend",
@@ -2297,29 +2297,29 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 24",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448213556-612x612.jpg",
         "price": 199,
-        "downloads": 3181,
+        "downloads": 3140,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
       },
       {
         "id": "p_sync_3134",
         "title": "Cristiano Ronaldo Collection Poster 25",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-1448394498-612x612.jpg",
         "price": 199,
-        "downloads": 996,
+        "downloads": 3963,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": true,
+        "isNew": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2327,14 +2327,14 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 26",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2157346280-612x612.jpg",
         "price": 199,
-        "downloads": 3245,
+        "downloads": 2719,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": true,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2342,22 +2342,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 27",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2159073149-612x612.jpg",
         "price": 199,
-        "downloads": 2260,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3137",
-        "title": "Cristiano Ronaldo Collection Poster 28",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2170251506-612x612.jpg",
-        "price": 199,
-        "downloads": 4010,
+        "downloads": 1423,
         "tags": [
           "ronaldo",
           "legend",
@@ -2365,6 +2350,21 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3137",
+        "title": "Cristiano Ronaldo Collection Poster 28",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2170251506-612x612.jpg",
+        "price": 199,
+        "downloads": 2135,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -2372,14 +2372,14 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 29",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2184254399-612x612.jpg",
         "price": 199,
-        "downloads": 2782,
+        "downloads": 2988,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": false,
+        "isNew": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -2387,13 +2387,13 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 30",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2206560017-612x612.jpg",
         "price": 199,
-        "downloads": 2575,
+        "downloads": 2975,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -2402,14 +2402,14 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 31",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2234200623-612x612.jpg",
         "price": 199,
-        "downloads": 2320,
+        "downloads": 1307,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
@@ -2417,7 +2417,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 32",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2234547470-612x612.jpg",
         "price": 199,
-        "downloads": 2816,
+        "downloads": 2140,
         "tags": [
           "ronaldo",
           "legend",
@@ -2432,7 +2432,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 33",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2240637520-612x612.jpg",
         "price": 199,
-        "downloads": 1273,
+        "downloads": 2838,
         "tags": [
           "ronaldo",
           "legend",
@@ -2447,13 +2447,13 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 34",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2240651558-612x612.jpg",
         "price": 199,
-        "downloads": 1737,
+        "downloads": 1018,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -2462,22 +2462,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 35",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2240658355-612x612.jpg",
         "price": 199,
-        "downloads": 3745,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
-        "id": "p_sync_3145",
-        "title": "Cristiano Ronaldo Collection Poster 36",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2240658587-612x612.jpg",
-        "price": 199,
-        "downloads": 2748,
+        "downloads": 4413,
         "tags": [
           "ronaldo",
           "legend",
@@ -2485,21 +2470,36 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
+      },
+      {
+        "id": "p_sync_3145",
+        "title": "Cristiano Ronaldo Collection Poster 36",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-2240658587-612x612.jpg",
+        "price": 199,
+        "downloads": 3659,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
       },
       {
         "id": "p_sync_3146",
         "title": "Cristiano Ronaldo Collection Poster 37",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-461443244-612x612.jpg",
         "price": 199,
-        "downloads": 834,
+        "downloads": 3941,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
-        "isTrending": false,
+        "isNew": false,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -2507,28 +2507,28 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 38",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-481655506-612x612.jpg",
         "price": 199,
-        "downloads": 1162,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
-        "id": "p_sync_3148",
-        "title": "Cristiano Ronaldo Collection Poster 39",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-493642573-612x612.jpg",
-        "price": 199,
-        "downloads": 2601,
+        "downloads": 4156,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3148",
+        "title": "Cristiano Ronaldo Collection Poster 39",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-493642573-612x612.jpg",
+        "price": 199,
+        "downloads": 4037,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -2537,7 +2537,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 40",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-493651899-612x612.jpg",
         "price": 199,
-        "downloads": 1113,
+        "downloads": 4463,
         "tags": [
           "ronaldo",
           "legend",
@@ -2545,21 +2545,21 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": true,
-        "badge": "BESTSELLER"
+        "badge": null
       },
       {
         "id": "p_sync_3150",
         "title": "Cristiano Ronaldo Collection Poster 41",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-493806663-612x612.jpg",
         "price": 199,
-        "downloads": 3282,
+        "downloads": 3817,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": false,
+        "isNew": true,
+        "isTrending": true,
         "badge": null
       },
       {
@@ -2567,7 +2567,22 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 42",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-494005847-612x612.jpg",
         "price": 199,
-        "downloads": 1714,
+        "downloads": 3829,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3152",
+        "title": "Cristiano Ronaldo Collection Poster 43",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-525758114-612x612.jpg",
+        "price": 199,
+        "downloads": 2056,
         "tags": [
           "ronaldo",
           "legend",
@@ -2578,26 +2593,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3152",
-        "title": "Cristiano Ronaldo Collection Poster 43",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-525758114-612x612.jpg",
-        "price": 199,
-        "downloads": 943,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
         "id": "p_sync_3153",
         "title": "Cristiano Ronaldo Collection Poster 44",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-525758440-612x612.jpg",
         "price": 199,
-        "downloads": 755,
+        "downloads": 2845,
         "tags": [
           "ronaldo",
           "legend",
@@ -2612,13 +2612,13 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 45",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-527154792-612x612.jpg",
         "price": 199,
-        "downloads": 2135,
+        "downloads": 3950,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
@@ -2627,7 +2627,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 46",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-532545652-612x612.jpg",
         "price": 199,
-        "downloads": 2452,
+        "downloads": 2238,
         "tags": [
           "ronaldo",
           "legend",
@@ -2642,22 +2642,7 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 47",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-532545798-612x612.jpg",
         "price": 199,
-        "downloads": 3838,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3157",
-        "title": "Cristiano Ronaldo Collection Poster 48",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-535033590-612x612.jpg",
-        "price": 199,
-        "downloads": 1034,
+        "downloads": 4333,
         "tags": [
           "ronaldo",
           "legend",
@@ -2665,20 +2650,35 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": null
+        "badge": "BESTSELLER"
       },
       {
-        "id": "p_sync_3158",
-        "title": "Cristiano Ronaldo Collection Poster 49",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-631342540-612x612.jpg",
+        "id": "p_sync_3157",
+        "title": "Cristiano Ronaldo Collection Poster 48",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-535033590-612x612.jpg",
         "price": 199,
-        "downloads": 2107,
+        "downloads": 4445,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3158",
+        "title": "Cristiano Ronaldo Collection Poster 49",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-631342540-612x612.jpg",
+        "price": 199,
+        "downloads": 1823,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
@@ -2687,7 +2687,22 @@ export const collectionsData = [
         "title": "Cristiano Ronaldo Collection Poster 50",
         "image": "/curated/Cristiano Ronaldo Collection/gettyimages-631347224-612x612.jpg",
         "price": 199,
-        "downloads": 905,
+        "downloads": 2233,
+        "tags": [
+          "ronaldo",
+          "legend",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3160",
+        "title": "Cristiano Ronaldo Collection Poster 51",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-865478880-612x612.jpg",
+        "price": 199,
+        "downloads": 1449,
         "tags": [
           "ronaldo",
           "legend",
@@ -2698,32 +2713,17 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3160",
-        "title": "Cristiano Ronaldo Collection Poster 51",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-865478880-612x612.jpg",
+        "id": "p_sync_3161",
+        "title": "Cristiano Ronaldo Collection Poster 52",
+        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-969444350-612x612.jpg",
         "price": 199,
-        "downloads": 2835,
+        "downloads": 2791,
         "tags": [
           "ronaldo",
           "legend",
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
-        "badge": "TRENDING"
-      },
-      {
-        "id": "p_sync_3161",
-        "title": "Cristiano Ronaldo Collection Poster 52",
-        "image": "/curated/Cristiano Ronaldo Collection/gettyimages-969444350-612x612.jpg",
-        "price": 199,
-        "downloads": 2891,
-        "tags": [
-          "ronaldo",
-          "legend",
-          "sync"
-        ],
-        "isNew": true,
         "isTrending": false,
         "badge": null
       }
@@ -3858,8 +3858,667 @@ export const collectionsData = [
     "tags": [
       "hindu"
     ],
-    "posters": [],
-    "thumbnail": null
+    "posters": [
+      {
+        "id": "p_sync_3162",
+        "title": "Hindu Deities Poster 1",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.30 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1800,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3163",
+        "title": "Hindu Deities Poster 2",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.30 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2975,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3164",
+        "title": "Hindu Deities Poster 3",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.30 PM.jpeg",
+        "price": 199,
+        "downloads": 2116,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3165",
+        "title": "Hindu Deities Poster 4",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.31 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2332,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3166",
+        "title": "Hindu Deities Poster 5",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.31 PM.jpeg",
+        "price": 199,
+        "downloads": 3339,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3167",
+        "title": "Hindu Deities Poster 6",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.32 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1073,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3168",
+        "title": "Hindu Deities Poster 7",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.32 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1627,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3169",
+        "title": "Hindu Deities Poster 8",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.32 PM.jpeg",
+        "price": 199,
+        "downloads": 2793,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3170",
+        "title": "Hindu Deities Poster 9",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.33 PM (1).jpeg",
+        "price": 199,
+        "downloads": 989,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3171",
+        "title": "Hindu Deities Poster 10",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.33 PM.jpeg",
+        "price": 199,
+        "downloads": 4411,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3172",
+        "title": "Hindu Deities Poster 11",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.34 PM (1).jpeg",
+        "price": 199,
+        "downloads": 850,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3173",
+        "title": "Hindu Deities Poster 12",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.34 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2688,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3174",
+        "title": "Hindu Deities Poster 13",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.34 PM.jpeg",
+        "price": 199,
+        "downloads": 3397,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3175",
+        "title": "Hindu Deities Poster 14",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.35 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1544,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3176",
+        "title": "Hindu Deities Poster 15",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.35 PM.jpeg",
+        "price": 199,
+        "downloads": 1653,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3177",
+        "title": "Hindu Deities Poster 16",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.36 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1078,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3178",
+        "title": "Hindu Deities Poster 17",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.36 PM (2).jpeg",
+        "price": 199,
+        "downloads": 4009,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3179",
+        "title": "Hindu Deities Poster 18",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.36 PM.jpeg",
+        "price": 199,
+        "downloads": 1665,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3180",
+        "title": "Hindu Deities Poster 19",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.37 PM (1).jpeg",
+        "price": 199,
+        "downloads": 4240,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3181",
+        "title": "Hindu Deities Poster 20",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.37 PM.jpeg",
+        "price": 199,
+        "downloads": 2930,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3182",
+        "title": "Hindu Deities Poster 21",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.38 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2547,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3183",
+        "title": "Hindu Deities Poster 22",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.38 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2570,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3184",
+        "title": "Hindu Deities Poster 23",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.38 PM.jpeg",
+        "price": 199,
+        "downloads": 1524,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3185",
+        "title": "Hindu Deities Poster 24",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.39 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2357,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3186",
+        "title": "Hindu Deities Poster 25",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.39 PM.jpeg",
+        "price": 199,
+        "downloads": 1829,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3187",
+        "title": "Hindu Deities Poster 26",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.40 PM (1).jpeg",
+        "price": 199,
+        "downloads": 950,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3188",
+        "title": "Hindu Deities Poster 27",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.40 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2768,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3189",
+        "title": "Hindu Deities Poster 28",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.40 PM.jpeg",
+        "price": 199,
+        "downloads": 2616,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3190",
+        "title": "Hindu Deities Poster 29",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.41 PM (1).jpeg",
+        "price": 199,
+        "downloads": 4488,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3191",
+        "title": "Hindu Deities Poster 30",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.41 PM.jpeg",
+        "price": 199,
+        "downloads": 1798,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3192",
+        "title": "Hindu Deities Poster 31",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.42 PM (1).jpeg",
+        "price": 199,
+        "downloads": 2137,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3193",
+        "title": "Hindu Deities Poster 32",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.42 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1579,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3194",
+        "title": "Hindu Deities Poster 33",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.42 PM.jpeg",
+        "price": 199,
+        "downloads": 4407,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3195",
+        "title": "Hindu Deities Poster 34",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.43 PM (1).jpeg",
+        "price": 199,
+        "downloads": 1828,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "TRENDING"
+      },
+      {
+        "id": "p_sync_3196",
+        "title": "Hindu Deities Poster 35",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.43 PM.jpeg",
+        "price": 199,
+        "downloads": 3841,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3197",
+        "title": "Hindu Deities Poster 36",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.44 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3410,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3198",
+        "title": "Hindu Deities Poster 37",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.44 PM (2).jpeg",
+        "price": 199,
+        "downloads": 2306,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3199",
+        "title": "Hindu Deities Poster 38",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.44 PM.jpeg",
+        "price": 199,
+        "downloads": 3260,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3200",
+        "title": "Hindu Deities Poster 39",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.45 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3795,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3201",
+        "title": "Hindu Deities Poster 40",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.45 PM.jpeg",
+        "price": 199,
+        "downloads": 2061,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3202",
+        "title": "Hindu Deities Poster 41",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.46 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3519,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3203",
+        "title": "Hindu Deities Poster 42",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.46 PM (2).jpeg",
+        "price": 199,
+        "downloads": 1376,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3204",
+        "title": "Hindu Deities Poster 43",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.46 PM.jpeg",
+        "price": 199,
+        "downloads": 2130,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3205",
+        "title": "Hindu Deities Poster 44",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.47 PM (1).jpeg",
+        "price": 199,
+        "downloads": 3396,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": true,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3206",
+        "title": "Hindu Deities Poster 45",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.47 PM (2).jpeg",
+        "price": 199,
+        "downloads": 3177,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3207",
+        "title": "Hindu Deities Poster 46",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.47 PM.jpeg",
+        "price": 199,
+        "downloads": 1778,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3208",
+        "title": "Hindu Deities Poster 47",
+        "image": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.48 PM.jpeg",
+        "price": 199,
+        "downloads": 955,
+        "tags": [
+          "hindu",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      }
+    ],
+    "thumbnail": "/curated/Hindu Deities/WhatsApp Image 2026-06-01 at 5.14.30 PM (1).jpeg"
   },
   {
     "id": "col_116",
@@ -4086,11 +4745,11 @@ export const collectionsData = [
     ],
     "posters": [
       {
-        "id": "p_sync_3162",
+        "id": "p_sync_3209",
         "title": "Cars & Bikes Poster 1",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.15 AM.jpeg",
         "price": 199,
-        "downloads": 1833,
+        "downloads": 1421,
         "tags": [
           "cars",
           "bikes",
@@ -4102,11 +4761,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3163",
+        "id": "p_sync_3210",
         "title": "Cars & Bikes Poster 2",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.16 AM (1).jpeg",
         "price": 199,
-        "downloads": 2892,
+        "downloads": 2282,
         "tags": [
           "cars",
           "bikes",
@@ -4118,11 +4777,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3164",
+        "id": "p_sync_3211",
         "title": "Cars & Bikes Poster 3",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.16 AM.jpeg",
         "price": 199,
-        "downloads": 3278,
+        "downloads": 4494,
         "tags": [
           "cars",
           "bikes",
@@ -4130,31 +4789,31 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3165",
+        "id": "p_sync_3212",
         "title": "Cars & Bikes Poster 4",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.17 AM (1).jpeg",
         "price": 199,
-        "downloads": 585,
+        "downloads": 1231,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": true,
+        "isNew": true,
+        "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3166",
+        "id": "p_sync_3213",
         "title": "Cars & Bikes Poster 5",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.17 AM.jpeg",
         "price": 199,
-        "downloads": 3712,
+        "downloads": 1947,
         "tags": [
           "cars",
           "bikes",
@@ -4166,27 +4825,27 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3167",
+        "id": "p_sync_3214",
         "title": "Cars & Bikes Poster 6",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.18 AM (1).jpeg",
         "price": 199,
-        "downloads": 2961,
+        "downloads": 4414,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3168",
+        "id": "p_sync_3215",
         "title": "Cars & Bikes Poster 7",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.18 AM.jpeg",
         "price": 199,
-        "downloads": 2460,
+        "downloads": 2431,
         "tags": [
           "cars",
           "bikes",
@@ -4194,15 +4853,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": true,
+        "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3169",
+        "id": "p_sync_3216",
         "title": "Cars & Bikes Poster 8",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.19 AM.jpeg",
         "price": 199,
-        "downloads": 681,
+        "downloads": 3171,
         "tags": [
           "cars",
           "bikes",
@@ -4210,31 +4869,31 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3170",
+        "id": "p_sync_3217",
         "title": "Cars & Bikes Poster 9",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.20 AM (1).jpeg",
         "price": 199,
-        "downloads": 2430,
+        "downloads": 3781,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3171",
+        "id": "p_sync_3218",
         "title": "Cars & Bikes Poster 10",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.20 AM.jpeg",
         "price": 199,
-        "downloads": 1995,
+        "downloads": 2296,
         "tags": [
           "cars",
           "bikes",
@@ -4246,11 +4905,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3172",
+        "id": "p_sync_3219",
         "title": "Cars & Bikes Poster 11",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.21 AM (1).jpeg",
         "price": 199,
-        "downloads": 1172,
+        "downloads": 3523,
         "tags": [
           "cars",
           "bikes",
@@ -4262,27 +4921,27 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3173",
+        "id": "p_sync_3220",
         "title": "Cars & Bikes Poster 12",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.21 AM.jpeg",
         "price": 199,
-        "downloads": 2418,
+        "downloads": 4320,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3174",
+        "id": "p_sync_3221",
         "title": "Cars & Bikes Poster 13",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.22 AM (1).jpeg",
         "price": 199,
-        "downloads": 2761,
+        "downloads": 664,
         "tags": [
           "cars",
           "bikes",
@@ -4290,15 +4949,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3175",
+        "id": "p_sync_3222",
         "title": "Cars & Bikes Poster 14",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.22 AM.jpeg",
         "price": 199,
-        "downloads": 4425,
+        "downloads": 1157,
         "tags": [
           "cars",
           "bikes",
@@ -4310,27 +4969,27 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3176",
+        "id": "p_sync_3223",
         "title": "Cars & Bikes Poster 15",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.23 AM.jpeg",
         "price": 199,
-        "downloads": 1287,
+        "downloads": 2787,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3177",
+        "id": "p_sync_3224",
         "title": "Cars & Bikes Poster 16",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.24 AM (1).jpeg",
         "price": 199,
-        "downloads": 2759,
+        "downloads": 2821,
         "tags": [
           "cars",
           "bikes",
@@ -4339,14 +4998,14 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": null
+        "badge": "BESTSELLER"
       },
       {
-        "id": "p_sync_3178",
+        "id": "p_sync_3225",
         "title": "Cars & Bikes Poster 17",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.24 AM.jpeg",
         "price": 199,
-        "downloads": 1460,
+        "downloads": 1231,
         "tags": [
           "cars",
           "bikes",
@@ -4355,14 +5014,14 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": true,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3179",
+        "id": "p_sync_3226",
         "title": "Cars & Bikes Poster 18",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.25 AM.jpeg",
         "price": 199,
-        "downloads": 4049,
+        "downloads": 1359,
         "tags": [
           "cars",
           "bikes",
@@ -4371,14 +5030,14 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": "TRENDING"
+        "badge": null
       },
       {
-        "id": "p_sync_3180",
+        "id": "p_sync_3227",
         "title": "Cars & Bikes Poster 19",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.26 AM (1).jpeg",
         "price": 199,
-        "downloads": 514,
+        "downloads": 1949,
         "tags": [
           "cars",
           "bikes",
@@ -4390,27 +5049,27 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3181",
+        "id": "p_sync_3228",
         "title": "Cars & Bikes Poster 20",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.26 AM.jpeg",
         "price": 199,
-        "downloads": 2979,
+        "downloads": 579,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3182",
+        "id": "p_sync_3229",
         "title": "Cars & Bikes Poster 21",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.27 AM (1).jpeg",
         "price": 199,
-        "downloads": 4040,
+        "downloads": 923,
         "tags": [
           "cars",
           "bikes",
@@ -4419,46 +5078,46 @@ export const collectionsData = [
         ],
         "isNew": false,
         "isTrending": false,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3183",
+        "id": "p_sync_3230",
         "title": "Cars & Bikes Poster 22",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.27 AM.jpeg",
         "price": 199,
-        "downloads": 1045,
+        "downloads": 4288,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3184",
+        "id": "p_sync_3231",
         "title": "Cars & Bikes Poster 23",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.28 AM (1).jpeg",
         "price": 199,
-        "downloads": 2154,
+        "downloads": 3797,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3185",
+        "id": "p_sync_3232",
         "title": "Cars & Bikes Poster 24",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.28 AM.jpeg",
         "price": 199,
-        "downloads": 851,
+        "downloads": 816,
         "tags": [
           "cars",
           "bikes",
@@ -4470,43 +5129,43 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3186",
+        "id": "p_sync_3233",
         "title": "Cars & Bikes Poster 25",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.29 AM (1).jpeg",
         "price": 199,
-        "downloads": 3423,
+        "downloads": 3969,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3187",
+        "id": "p_sync_3234",
         "title": "Cars & Bikes Poster 26",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.29 AM.jpeg",
         "price": 199,
-        "downloads": 3313,
+        "downloads": 2412,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
-        "badge": "TRENDING"
+        "badge": null
       },
       {
-        "id": "p_sync_3188",
+        "id": "p_sync_3235",
         "title": "Cars & Bikes Poster 27",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.30 AM (1).jpeg",
         "price": 199,
-        "downloads": 1113,
+        "downloads": 3091,
         "tags": [
           "cars",
           "bikes",
@@ -4518,11 +5177,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3189",
+        "id": "p_sync_3236",
         "title": "Cars & Bikes Poster 28",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.30 AM.jpeg",
         "price": 199,
-        "downloads": 4123,
+        "downloads": 2640,
         "tags": [
           "cars",
           "bikes",
@@ -4534,27 +5193,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3190",
+        "id": "p_sync_3237",
         "title": "Cars & Bikes Poster 29",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.31 AM.jpeg",
         "price": 199,
-        "downloads": 4334,
-        "tags": [
-          "cars",
-          "bikes",
-          "supercars",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3191",
-        "title": "Cars & Bikes Poster 30",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.32 AM (1).jpeg",
-        "price": 199,
-        "downloads": 4233,
+        "downloads": 3354,
         "tags": [
           "cars",
           "bikes",
@@ -4566,27 +5209,43 @@ export const collectionsData = [
         "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3192",
+        "id": "p_sync_3238",
+        "title": "Cars & Bikes Poster 30",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.32 AM (1).jpeg",
+        "price": 199,
+        "downloads": 928,
+        "tags": [
+          "cars",
+          "bikes",
+          "supercars",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": "BESTSELLER"
+      },
+      {
+        "id": "p_sync_3239",
         "title": "Cars & Bikes Poster 31",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.32 AM.jpeg",
         "price": 199,
-        "downloads": 2707,
+        "downloads": 3597,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": false,
+        "isNew": true,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3193",
+        "id": "p_sync_3240",
         "title": "Cars & Bikes Poster 32",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.33 AM.jpeg",
         "price": 199,
-        "downloads": 3375,
+        "downloads": 958,
         "tags": [
           "cars",
           "bikes",
@@ -4598,11 +5257,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3194",
+        "id": "p_sync_3241",
         "title": "Cars & Bikes Poster 33",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.34 AM (1).jpeg",
         "price": 199,
-        "downloads": 2272,
+        "downloads": 2436,
         "tags": [
           "cars",
           "bikes",
@@ -4614,11 +5273,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3195",
+        "id": "p_sync_3242",
         "title": "Cars & Bikes Poster 34",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.34 AM.jpeg",
         "price": 199,
-        "downloads": 1404,
+        "downloads": 2175,
         "tags": [
           "cars",
           "bikes",
@@ -4626,15 +5285,15 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": true,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3196",
+        "id": "p_sync_3243",
         "title": "Cars & Bikes Poster 35",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.35 AM (1).jpeg",
         "price": 199,
-        "downloads": 1569,
+        "downloads": 3635,
         "tags": [
           "cars",
           "bikes",
@@ -4642,111 +5301,79 @@ export const collectionsData = [
           "sync"
         ],
         "isNew": false,
-        "isTrending": false,
+        "isTrending": true,
         "badge": null
       },
       {
-        "id": "p_sync_3197",
+        "id": "p_sync_3244",
         "title": "Cars & Bikes Poster 36",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.35 AM.jpeg",
         "price": 199,
-        "downloads": 3414,
+        "downloads": 4461,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": true,
+        "isNew": false,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3198",
+        "id": "p_sync_3245",
         "title": "Cars & Bikes Poster 37",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.36 AM (1).jpeg",
         "price": 199,
-        "downloads": 519,
+        "downloads": 1638,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
-        "isTrending": true,
-        "badge": "BESTSELLER"
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
       },
       {
-        "id": "p_sync_3199",
+        "id": "p_sync_3246",
         "title": "Cars & Bikes Poster 38",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.36 AM.jpeg",
         "price": 199,
-        "downloads": 2408,
+        "downloads": 1810,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
         "badge": null
       },
       {
-        "id": "p_sync_3200",
+        "id": "p_sync_3247",
         "title": "Cars & Bikes Poster 39",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.37 AM (1).jpeg",
         "price": 199,
-        "downloads": 979,
+        "downloads": 3991,
         "tags": [
           "cars",
           "bikes",
           "supercars",
           "sync"
         ],
-        "isNew": false,
+        "isNew": true,
         "isTrending": false,
-        "badge": null
+        "badge": "TRENDING"
       },
       {
-        "id": "p_sync_3201",
+        "id": "p_sync_3248",
         "title": "Cars & Bikes Poster 40",
         "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.37 AM.jpeg",
         "price": 199,
-        "downloads": 1577,
-        "tags": [
-          "cars",
-          "bikes",
-          "supercars",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3202",
-        "title": "Cars & Bikes Poster 41",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.38 AM (1).jpeg",
-        "price": 199,
-        "downloads": 1777,
-        "tags": [
-          "cars",
-          "bikes",
-          "supercars",
-          "sync"
-        ],
-        "isNew": true,
-        "isTrending": false,
-        "badge": null
-      },
-      {
-        "id": "p_sync_3203",
-        "title": "Cars & Bikes Poster 42",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.38 AM.jpeg",
-        "price": 199,
-        "downloads": 1799,
+        "downloads": 3782,
         "tags": [
           "cars",
           "bikes",
@@ -4758,11 +5385,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3204",
-        "title": "Cars & Bikes Poster 43",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM (1).jpeg",
+        "id": "p_sync_3249",
+        "title": "Cars & Bikes Poster 41",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.38 AM (1).jpeg",
         "price": 199,
-        "downloads": 2737,
+        "downloads": 670,
         "tags": [
           "cars",
           "bikes",
@@ -4774,27 +5401,11 @@ export const collectionsData = [
         "badge": null
       },
       {
-        "id": "p_sync_3205",
-        "title": "Cars & Bikes Poster 44",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM (2).jpeg",
+        "id": "p_sync_3250",
+        "title": "Cars & Bikes Poster 42",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.38 AM.jpeg",
         "price": 199,
-        "downloads": 2154,
-        "tags": [
-          "cars",
-          "bikes",
-          "supercars",
-          "sync"
-        ],
-        "isNew": false,
-        "isTrending": false,
-        "badge": "BESTSELLER"
-      },
-      {
-        "id": "p_sync_3206",
-        "title": "Cars & Bikes Poster 45",
-        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM.jpeg",
-        "price": 199,
-        "downloads": 2259,
+        "downloads": 3252,
         "tags": [
           "cars",
           "bikes",
@@ -4803,10 +5414,73 @@ export const collectionsData = [
         ],
         "isNew": true,
         "isTrending": false,
-        "badge": "BESTSELLER"
+        "badge": null
+      },
+      {
+        "id": "p_sync_3251",
+        "title": "Cars & Bikes Poster 43",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM (1).jpeg",
+        "price": 199,
+        "downloads": 3070,
+        "tags": [
+          "cars",
+          "bikes",
+          "supercars",
+          "sync"
+        ],
+        "isNew": true,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3252",
+        "title": "Cars & Bikes Poster 44",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM (2).jpeg",
+        "price": 199,
+        "downloads": 581,
+        "tags": [
+          "cars",
+          "bikes",
+          "supercars",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
+      },
+      {
+        "id": "p_sync_3253",
+        "title": "Cars & Bikes Poster 45",
+        "image": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.39 AM.jpeg",
+        "price": 199,
+        "downloads": 2356,
+        "tags": [
+          "cars",
+          "bikes",
+          "supercars",
+          "sync"
+        ],
+        "isNew": false,
+        "isTrending": false,
+        "badge": null
       }
     ],
     "thumbnail": "/curated/Cars & Bikes/WhatsApp Image 2026-06-02 at 11.57.15 AM.jpeg"
+  },
+  {
+    "id": "col_132",
+    "title": "Divine",
+    "slug": "divine",
+    "description": "Premium Divine Posters",
+    "genre": "spiritual",
+    "genreName": "Spiritual & Divine",
+    "priority": 5,
+    "tags": [
+      "divine",
+      "spiritual"
+    ],
+    "posters": [],
+    "thumbnail": null
   }
 ];
 
