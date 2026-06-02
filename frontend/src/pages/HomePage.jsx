@@ -7,6 +7,7 @@ import { getTrendingCollections, getBestSellers, getAllGenres, collectionsData, 
 import { fanClubsData } from '../data/fanClubsData'
 import PosterImage from '../components/PosterImage'
 import SEOHead from '../components/SEOHead'
+import CollectionsMarquee from '../components/CollectionsMarquee'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -82,26 +83,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== CATEGORY STRIP ===== */}
-      <section className="bg-dark-900 border-y border-white/5 py-4 overflow-hidden sticky top-16 z-40 backdrop-blur-xl bg-dark-900/80">
-        <div className="flex overflow-x-auto gap-4 px-4 scrollbar-hide snap-x">
-          {[
-            { name: 'RCB Champions', path: '/collections/col_1' },
-            { name: 'Virat Kohli', path: '/collections/col_10' },
-            { name: 'Cricket', path: '/collections' },
-            { name: 'Football', path: '/collections' },
-            { name: 'Cars', path: '/collections/supercars-hypercars' },
-            { name: 'Anime', path: '/collections/anime-manga' },
-            { name: 'Travel', path: '/collections/travel-nature' },
-            { name: 'Motivation', path: '/collections/motivation-quotes' },
-            { name: 'Gaming', path: '/collections/gaming-setups' }
-          ].map(cat => (
-            <Link key={cat.name} to={cat.path} className="snap-start shrink-0 px-4 py-2 rounded-full border border-white/10 hover:border-novo-500/50 hover:bg-novo-500/10 text-white/70 hover:text-white transition-all text-sm font-medium whitespace-nowrap">
-              {cat.name}
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* ===== DYNAMIC COLLECTIONS MARQUEE ===== */}
+      <CollectionsMarquee />
 
       {/* ===== 🔥 TRENDING COLLECTIONS (Horizontal Scroll) ===== */}
       <section className="py-20 px-4 bg-dark-950 border-y border-white/5" id="trending-collections">
