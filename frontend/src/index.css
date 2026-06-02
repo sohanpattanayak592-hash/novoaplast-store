@@ -116,6 +116,12 @@
     transform: translateY(-8px);
   }
 
+  /* Virtualized rendering for massive grids */
+  .virtualized-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 350px;
+  }
+
   /* Glow ring effect */
   .glow-ring-novo {
     box-shadow: 0 0 0 1px rgba(139, 204, 99, 0.1),

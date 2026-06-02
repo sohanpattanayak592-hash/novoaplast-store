@@ -38,6 +38,7 @@ export default function PosterImage({ src, alt, className = "", skeletonClassNam
           onError={handleError}
           className={`w-full h-full object-cover ${!isLoaded ? 'opacity-0' : 'opacity-100'} ${className}`}
           loading="lazy"
+          decoding="async"
         />
       )}
     </div>

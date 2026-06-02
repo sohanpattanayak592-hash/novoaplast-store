@@ -213,7 +213,7 @@ export default function SearchPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   key={poster.id}
-                  className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card cursor-pointer"
+                  className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card virtualized-card cursor-pointer"
                 >
                   <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-700" />
                   

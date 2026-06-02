@@ -26,7 +26,7 @@ export default function CollectionsMarquee() {
       <div className="flex flex-col gap-4 md:gap-6 relative">
         {/* Row 1 - Scrolls Left */}
         <div className="relative flex overflow-hidden group">
-          <div className="flex animate-marquee-left group-hover:[animation-play-state:paused] w-max">
+          <div className="flex animate-marquee-left group-hover:[animation-play-state:paused] w-max will-change-transform [transform:translateZ(0)]">
             {[...row1, ...row1, ...row1, ...row1].map((col, index) => (
               <MarqueeCard key={`r1-${index}`} collection={col} />
             ))}
@@ -35,7 +35,7 @@ export default function CollectionsMarquee() {
 
         {/* Row 2 - Scrolls Right */}
         <div className="relative flex overflow-hidden group">
-          <div className="flex animate-marquee-right group-hover:[animation-play-state:paused] w-max">
+          <div className="flex animate-marquee-right group-hover:[animation-play-state:paused] w-max will-change-transform [transform:translateZ(0)]">
             {[...row2, ...row2, ...row2, ...row2].map((col, index) => (
               <MarqueeCard key={`r2-${index}`} collection={col} />
             ))}
