@@ -36,22 +36,22 @@ const InspirationShowroom = () => {
   const currentPoster = posters[currentIndex];
 
   return (
-    <section className="relative w-full h-[600px] md:h-[800px] overflow-hidden bg-dark-950 border-y border-white/5">
+    <section className="relative w-full min-h-[800px] lg:h-[800px] overflow-hidden bg-dark-950 border-y border-white/5 flex flex-col justify-center">
       {/* Background Image with slow zoom parallax */}
       <motion.div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center md:bg-top"
         style={{ backgroundImage: `url('/showroom-bg.png')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 10, ease: 'easeOut' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-950/90 via-dark-900/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-dark-950/95 via-dark-900/80 to-dark-950/40 lg:to-transparent"></div>
       </motion.div>
 
-      <div className="relative z-10 w-full h-full max-w-[1400px] mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between pt-24 lg:pt-32">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 flex flex-col lg:flex-row items-center justify-between pt-32 pb-20 lg:py-0">
         
         {/* Text Content */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center h-full pt-12 lg:pt-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center mb-16 lg:mb-0">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
