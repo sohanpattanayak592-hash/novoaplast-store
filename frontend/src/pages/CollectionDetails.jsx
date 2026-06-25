@@ -294,7 +294,7 @@ export default function CollectionDetails() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   key={poster.id}
                   ref={isLast ? lastElementRef : null}
-                  className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card virtualized-card cursor-pointer"
+                  className="break-inside-avoid relative group rounded-2xl overflow-hidden glass-card cursor-pointer"
                   onClick={() => openSizeSelector(poster)}
                 >
                   <PosterImage src={poster.image} alt={poster.title} className="group-hover:scale-105 transition-transform duration-700" />

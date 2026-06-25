@@ -66,6 +66,35 @@
       });
     </script>
     <div id="root"></div>
+    <script>
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        if (!root || root.innerHTML.trim() === '') {
+          var diag = document.createElement('div');
+          diag.style.position = 'fixed';
+          diag.style.top = '0';
+          diag.style.left = '0';
+          diag.style.width = '100vw';
+          diag.style.height = '100vh';
+          diag.style.backgroundColor = 'blue';
+          diag.style.color = 'white';
+          diag.style.zIndex = '999999';
+          diag.style.padding = '20px';
+          diag.style.fontFamily = 'monospace';
+          diag.style.overflow = 'auto';
+          
+          var perfEntries = performance.getEntriesByType('resource');
+          var jsFailed = perfEntries.filter(e => e.name.endsWith('.js') && (e.responseStatus >= 400 || e.responseStatus === 0));
+          
+          diag.innerHTML = '<h1>REACT FAILED TO MOUNT</h1>' +
+            '<p>Root is completely empty after 3 seconds.</p>' +
+            '<p>User Agent: ' + navigator.userAgent + '</p>' +
+            '<h2>Failed Network Resources:</h2><pre>' + JSON.stringify(jsFailed, null, 2) + '</pre>' +
+            '<h2>All JS Scripts:</h2><pre>' + JSON.stringify(perfEntries.filter(e => e.name.endsWith('.js')).map(e => e.name + ' - Status: ' + e.responseStatus), null, 2) + '</pre>';
+          document.body.appendChild(diag);
+        }
+      }, 3000);
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
