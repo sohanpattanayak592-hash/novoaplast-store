@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingBag, ArrowRight, ArrowLeft, Check, CreditCard, Tag, Truck, Trash2, Package } from 'lucide-react'
@@ -18,6 +18,18 @@ export default function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false)
   const [orderResult, setOrderResult] = useState(null) // { orderId, orderIds[] }
   const [showAuthPopup, setShowAuthPopup] = useState(false)
+
+  useEffect(() => {
+    // Dynamically load Razorpay script only on CheckoutPage
+    if (!document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]')) {
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+      script.async = true
+      script.onload = () => console.log('Razorpay loaded')
+      script.onerror = () => console.warn('Razorpay failed to load (possibly blocked by adblocker)')
+      document.body.appendChild(script)
+    }
+  }, [])
 
   const handleApplyPromo = () => {
     if (!promoInput.trim()) return
