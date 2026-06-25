@@ -10,6 +10,7 @@ import StickerUploader from '../components/StickerUploader'
 import ReviewSection from '../components/ReviewSection'
 import { useCart } from '../context/CartContext'
 import SEOHead from '../components/SEOHead'
+import RoomVisualizerModal from '../components/RoomVisualizerModal'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,6 +28,7 @@ export default function ProductPage() {
   const [selectedShloka, setSelectedShloka] = useState(null)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [showToast, setShowToast] = useState(false)
+  const [showVisualizer, setShowVisualizer] = useState(false)
   const { addToCart } = useCart()
 
   if (!product) {
@@ -244,6 +246,15 @@ export default function ProductPage() {
 
             {/* Action Buttons */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={7} className="space-y-4">
+              {isPoster && (
+                <button 
+                  onClick={() => setShowVisualizer(true)}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-display font-semibold text-sm uppercase tracking-widest border border-white/20 bg-white/5 hover:bg-white/10 text-white transition-all duration-300 shadow-lg"
+                >
+                  👁️ See It In Your Room
+                </button>
+              )}
+              
               <div className="grid grid-cols-2 gap-3">
                 <button onClick={handleAddToCart}
                   className={`flex items-center justify-center gap-2 py-4 rounded-2xl font-display font-semibold text-base border transition-all duration-300 ${
@@ -344,6 +355,12 @@ export default function ProductPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <RoomVisualizerModal 
+        isOpen={showVisualizer} 
+        onClose={() => setShowVisualizer(false)} 
+        posterImage={product.image} 
+      />
     </div>
   )
 }

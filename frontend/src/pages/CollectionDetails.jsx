@@ -7,10 +7,12 @@ import { POSTER_SIZES, CURRENCY } from '../data/pricingConfig'
 import { useEngagement } from '../context/EngagementContext'
 import { useCart } from '../context/CartContext'
 import PosterImage from '../components/PosterImage'
+import RoomVisualizerModal from '../components/RoomVisualizerModal'
 
 // Modal Component for Size Selection
 const SizeSelectorModal = ({ poster, isOpen, onClose, onAdd, onBuy }) => {
   const [selectedSizeId, setSelectedSizeId] = useState('a4')
+  const [showVisualizer, setShowVisualizer] = useState(false)
 
   if (!isOpen || !poster) return null
 
@@ -82,16 +84,30 @@ const SizeSelectorModal = ({ poster, isOpen, onClose, onAdd, onBuy }) => {
             </div>
           </div>
 
-          <div className="mt-8 flex gap-3">
-            <button onClick={handleAdd} className="flex-1 btn-outline-novo flex items-center justify-center gap-2">
-              <ShoppingBag className="w-4 h-4" /> Add to Cart
+          <div className="mt-8 space-y-3">
+            <button 
+              onClick={() => setShowVisualizer(true)}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-display font-semibold text-sm uppercase tracking-widest border border-white/20 bg-white/5 hover:bg-white/10 text-white transition-all duration-300"
+            >
+              👁️ See It In Your Room
             </button>
-            <button onClick={handleBuy} className="flex-1 btn-novo flex items-center justify-center">
-              Buy Now
-            </button>
+            <div className="flex gap-3">
+              <button onClick={handleAdd} className="flex-1 btn-outline-novo flex items-center justify-center gap-2">
+                <ShoppingBag className="w-4 h-4" /> Add to Cart
+              </button>
+              <button onClick={handleBuy} className="flex-1 btn-novo flex items-center justify-center">
+                Buy Now
+              </button>
+            </div>
           </div>
         </div>
       </motion.div>
+
+      <RoomVisualizerModal 
+        isOpen={showVisualizer} 
+        onClose={() => setShowVisualizer(false)} 
+        posterImage={poster?.image} 
+      />
     </div>
   )
 }
